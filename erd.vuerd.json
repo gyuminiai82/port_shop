@@ -79,7 +79,7 @@
     "tableEntities": {
       "3352e9a1-63f9-4710-8486-52055697e2aa": {
         "id": "3352e9a1-63f9-4710-8486-52055697e2aa",
-        "name": "MIN_User",
+        "name": "MIN_SHOP_User",
         "comment": "사용자 정보 (SSO)",
         "columnIds": [
           "18c186cc-7230-498b-876f-03878422a6cf",
@@ -116,7 +116,7 @@
       },
       "63048ef5-a212-46fd-a576-63a16dc78200": {
         "id": "63048ef5-a212-46fd-a576-63a16dc78200",
-        "name": "MIN_CATEGORY",
+        "name": "MIN_SHOP_CATEGORY",
         "comment": "상품 카테고리",
         "columnIds": [
           "3fd4def1-c216-4ac8-bdf5-ccf6f7481c35",
@@ -143,7 +143,7 @@
       },
       "2700c220-a99d-4f6b-bf31-510301f963a5": {
         "id": "2700c220-a99d-4f6b-bf31-510301f963a5",
-        "name": "MIN_PRODUCT",
+        "name": "MIN_SHOP_PRODUCT",
         "comment": "상품 마스터",
         "columnIds": [
           "65620204-b9bd-43c8-93be-c0ee8e298d47",
@@ -178,7 +178,7 @@
       },
       "405a4315-2cf4-4ffa-ade0-a925f39ded60": {
         "id": "405a4315-2cf4-4ffa-ade0-a925f39ded60",
-        "name": "MIN_PRODUCT_IMAGE",
+        "name": "MIN_SHOP_PRODUCT_IMAGE",
         "comment": "상품 상세 이미지",
         "columnIds": [
           "26b025f2-10ce-41e0-81aa-acd9adff4ff1",
@@ -207,7 +207,7 @@
       },
       "bbd68df6-c11c-4b26-bd48-f5c8c7a8d3b6": {
         "id": "bbd68df6-c11c-4b26-bd48-f5c8c7a8d3b6",
-        "name": "MIN_PRODUCT_OPTION",
+        "name": "MIN_SHOP_PRODUCT_OPTION",
         "comment": "상품 옵션 (색상/사이즈)",
         "columnIds": [
           "02b440fa-df29-4485-9476-ddaf56764a1a",
@@ -240,7 +240,7 @@
       },
       "c86e653a-18ac-4b32-971c-a25837f30dcc": {
         "id": "c86e653a-18ac-4b32-971c-a25837f30dcc",
-        "name": "MIN_REVIEW",
+        "name": "MIN_SHOP_REVIEW",
         "comment": "상품 리뷰",
         "columnIds": [
           "8761e8bd-85f4-4dae-a196-10a4e90728f4",
@@ -271,7 +271,7 @@
       },
       "fb34886a-dcc0-45fe-aa5b-198f6eacd294": {
         "id": "fb34886a-dcc0-45fe-aa5b-198f6eacd294",
-        "name": "MIN_WISHLIST",
+        "name": "MIN_SHOP_WISHLIST",
         "comment": "유저별 찜 목록",
         "columnIds": [
           "f80d2513-21bc-4331-aff6-726efa59fca0",
@@ -296,7 +296,7 @@
       },
       "0cfa84c5-4eca-46be-a0b6-1eadb7010428": {
         "id": "0cfa84c5-4eca-46be-a0b6-1eadb7010428",
-        "name": "MIN_WISHLIST_ITEM",
+        "name": "MIN_SHOP_WISHLIST_ITEM",
         "comment": "찜 목록 항목",
         "columnIds": [
           "94445e0a-c398-4202-beb6-7d0b2bf8988c",
@@ -323,7 +323,7 @@
       },
       "29fb0f58-2d17-48b9-9259-f30cc5d89c76": {
         "id": "29fb0f58-2d17-48b9-9259-f30cc5d89c76",
-        "name": "MIN_CART",
+        "name": "MIN_SHOP_CART",
         "comment": "장바구니 마스터",
         "columnIds": [
           "2b2e9053-59fa-45be-8593-885555cb61c1",
@@ -348,7 +348,7 @@
       },
       "61b8208f-f2a4-48d6-8065-7edfb933c1d3": {
         "id": "61b8208f-f2a4-48d6-8065-7edfb933c1d3",
-        "name": "MIN_CART_ITEM",
+        "name": "MIN_SHOP_CART_ITEM",
         "comment": "장바구니 담긴 상품들",
         "columnIds": [
           "0d941a6c-f580-45c1-895b-5256763fc7c9",
@@ -379,7 +379,7 @@
       },
       "bc7232f2-edcf-4537-95ec-b922eecd3eed": {
         "id": "bc7232f2-edcf-4537-95ec-b922eecd3eed",
-        "name": "MIN_ORDER",
+        "name": "MIN_SHOP_ORDER",
         "comment": "주문 마스터",
         "columnIds": [
           "36f694be-79aa-41fe-9760-e71d998ee1dc",
@@ -408,7 +408,7 @@
       },
       "c869e11b-023a-4b41-9138-b8570d4a90aa": {
         "id": "c869e11b-023a-4b41-9138-b8570d4a90aa",
-        "name": "MIN_ORDER_ITEM",
+        "name": "MIN_SHOP_ORDER_ITEM",
         "comment": "주문 상세 상품들",
         "columnIds": [
           "3330eef5-5f34-4784-8546-2c924465fe5a",
@@ -441,7 +441,7 @@
       },
       "cba47e61-d0c3-46dd-8a63-01d32a50c9c2": {
         "id": "cba47e61-d0c3-46dd-8a63-01d32a50c9c2",
-        "name": "MIN_PAYMENT",
+        "name": "MIN_SHOP_PAYMENT",
         "comment": "결제 정보",
         "columnIds": [
           "45db64ad-9f52-46ad-8df3-33e6a9214a08",
@@ -474,7 +474,7 @@
       },
       "0020ed0e-fd43-453c-a631-83754d2653b2": {
         "id": "0020ed0e-fd43-453c-a631-83754d2653b2",
-        "name": "MIN_DELIVERY",
+        "name": "MIN_SHOP_DELIVERY",
         "comment": "배송 정보",
         "columnIds": [
           "0bbc6abf-b9b2-4bb4-adec-663fcca01291",
@@ -507,7 +507,7 @@
       },
       "886c29e7-9999-49a4-a07b-eb4b97448858": {
         "id": "886c29e7-9999-49a4-a07b-eb4b97448858",
-        "name": "MIN_COUPON",
+        "name": "MIN_SHOP_COUPON",
         "comment": "쿠폰 종류 마스터",
         "columnIds": [
           "01fba20e-4507-4bc8-9f8b-4f3370deabfb",
@@ -538,7 +538,7 @@
       },
       "962b1ab3-c5be-4ee6-9957-66b832cb0352": {
         "id": "962b1ab3-c5be-4ee6-9957-66b832cb0352",
-        "name": "MIN_USER_COUPON",
+        "name": "MIN_SHOP_USER_COUPON",
         "comment": "발급받은 쿠폰 내역",
         "columnIds": [
           "a395835d-0d02-4f36-b493-2cc15f920ebf",
@@ -567,7 +567,7 @@
       },
       "3a511f97-bbd3-40d8-81b5-7cfa6f204aaa": {
         "id": "3a511f97-bbd3-40d8-81b5-7cfa6f204aaa",
-        "name": "MIN_NOTICE",
+        "name": "MIN_SHOP_NOTICE",
         "comment": "공지사항",
         "columnIds": [
           "52246e2c-58db-4f48-8ec8-d9be282fab4b",
@@ -596,7 +596,7 @@
       },
       "9ae387f6-a606-499f-904b-1d17c994966a": {
         "id": "9ae387f6-a606-499f-904b-1d17c994966a",
-        "name": "MIN_INQUIRY",
+        "name": "MIN_SHOP_INQUIRY",
         "comment": "1:1 문의",
         "columnIds": [
           "ff27d547-d6c7-45f0-9899-a15d40d959f4",
