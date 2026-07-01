@@ -40,10 +40,10 @@ export default function Footer() {
         <div>
           <h4 style={{ fontWeight: 600, marginBottom: "1.5rem" }}>고객 서비스</h4>
           <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-            <li><Link href="#" style={{ color: "var(--text-secondary)", textDecoration: "none" }}>공지사항</Link></li>
-            <li><Link href="#" style={{ color: "var(--text-secondary)", textDecoration: "none" }}>1:1 문의</Link></li>
-            <li><Link href="#" style={{ color: "var(--text-secondary)", textDecoration: "none" }}>배송 안내</Link></li>
-            <li><Link href="#" style={{ color: "var(--text-secondary)", textDecoration: "none" }}>교환/반품 안내</Link></li>
+            <li><Link href="/support/notice" style={{ color: "var(--text-secondary)", textDecoration: "none" }}>공지사항</Link></li>
+            <li><Link href="/support/inquiry" style={{ color: "var(--text-secondary)", textDecoration: "none" }}>1:1 문의</Link></li>
+            <li><Link href="/support/shipping" style={{ color: "var(--text-secondary)", textDecoration: "none" }}>배송 안내</Link></li>
+            <li><Link href="/support/returns" style={{ color: "var(--text-secondary)", textDecoration: "none" }}>교환/반품 안내</Link></li>
           </ul>
         </div>
 

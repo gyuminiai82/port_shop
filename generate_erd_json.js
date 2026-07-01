@@ -18,10 +18,13 @@ const tablesData = [
   { name: 'MIN_PAYMENT', comment: '결제 정보', cols: [{name:'id', type:'VARCHAR(191)', pk:true, comment:'결제 번호'}, {name:'orderId', type:'VARCHAR(191)', comment:'주문 ID'}, {name:'method', type:'VARCHAR(50)', comment:'결제 수단'}, {name:'amount', type:'INTEGER', comment:'승인 금액'}, {name:'transactionId', type:'VARCHAR(191)', comment:'PG사 거래번호'}, {name:'status', type:'VARCHAR(50)', comment:'결제 상태'}] },
   { name: 'MIN_DELIVERY', comment: '배송 정보', cols: [{name:'id', type:'VARCHAR(191)', pk:true, comment:'배송 번호'}, {name:'orderId', type:'VARCHAR(191)', comment:'주문 ID'}, {name:'recipient', type:'VARCHAR(191)', comment:'수령인 이름'}, {name:'address', type:'TEXT', comment:'배송지 주소'}, {name:'trackingNo', type:'VARCHAR(191)', comment:'운송장 번호'}, {name:'status', type:'VARCHAR(50)', comment:'배송 상태'}] },
   { name: 'MIN_COUPON', comment: '쿠폰 종류 마스터', cols: [{name:'id', type:'VARCHAR(191)', pk:true, comment:'쿠폰 번호'}, {name:'name', type:'VARCHAR(191)', comment:'쿠폰명'}, {name:'discountRate', type:'INTEGER', comment:'할인율(%)'}, {name:'discountAmt', type:'INTEGER', comment:'정액 할인금액'}, {name:'minOrderAmt', type:'INTEGER', comment:'최소 사용금액'}] },
-  { name: 'MIN_USER_COUPON', comment: '발급받은 쿠폰 내역', cols: [{name:'id', type:'VARCHAR(191)', pk:true, comment:'발급 번호'}, {name:'userId', type:'VARCHAR(191)', comment:'소유 유저 ID'}, {name:'couponId', type:'VARCHAR(191)', comment:'쿠폰 ID'}, {name:'isUsed', type:'BOOLEAN', comment:'사용 여부'}] }
+  { name: 'MIN_USER_COUPON', comment: '발급받은 쿠폰 내역', cols: [{name:'id', type:'VARCHAR(191)', pk:true, comment:'발급 번호'}, {name:'userId', type:'VARCHAR(191)', comment:'소유 유저 ID'}, {name:'couponId', type:'VARCHAR(191)', comment:'쿠폰 ID'}, {name:'isUsed', type:'BOOLEAN', comment:'사용 여부'}] },
+  { name: 'MIN_NOTICE', comment: '공지사항', cols: [{name:'id', type:'VARCHAR(191)', pk:true, comment:'공지사항 고유 번호'}, {name:'title', type:'VARCHAR(191)', comment:'제목'}, {name:'content', type:'TEXT', comment:'내용'}, {name:'viewCount', type:'INTEGER', comment:'조회수'}] },
+  { name: 'MIN_INQUIRY', comment: '1:1 문의', cols: [{name:'id', type:'VARCHAR(191)', pk:true, comment:'문의 고유 번호'}, {name:'userId', type:'VARCHAR(191)', comment:'작성자 유저 ID'}, {name:'type', type:'VARCHAR(191)', comment:'문의 유형'}, {name:'title', type:'VARCHAR(191)', comment:'문의 제목'}, {name:'content', type:'TEXT', comment:'문의 내용'}, {name:'status', type:'VARCHAR(50)', comment:'처리 상태'}, {name:'answer', type:'TEXT', comment:'관리자 답변'}] }
 ];
 
 const relationsData = [
+  { start: 'MIN_User', startCol: 'id', end: 'MIN_INQUIRY', endCol: 'userId' },
   { start: 'MIN_User', startCol: 'id', end: 'MIN_CART', endCol: 'userId' },
   { start: 'MIN_User', startCol: 'id', end: 'MIN_ORDER', endCol: 'userId' },
   { start: 'MIN_User', startCol: 'id', end: 'MIN_WISHLIST', endCol: 'userId' },

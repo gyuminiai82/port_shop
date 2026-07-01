@@ -115,7 +115,7 @@ export default async function ProductDetailPage(props: { params: Promise<{ id: s
           {/* Right: Info */}
           <div className="product-info-detail" style={{ display: "flex", flexDirection: "column", padding: "2rem 0" }}>
             <div className="product-category" style={{ fontSize: "1rem", marginBottom: "1.5rem", color: "var(--accent-color)", fontWeight: 700, letterSpacing: "0.1em" }}>
-              {product.category.name}
+              {product.category?.name || "기타"}
             </div>
             <h1 style={{ fontSize: "3.5rem", fontWeight: 800, marginBottom: "1.5rem", lineHeight: 1.1, letterSpacing: "-0.04em" }}>{product.name}</h1>
             

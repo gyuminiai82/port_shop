@@ -219,3 +219,24 @@ model MIN_SHOP_ADMIN {
   createdAt DateTime @default(now()) /// 계정 생성일시
   updatedAt DateTime @updatedAt /// 계정 수정일시
 }
+
+model MIN_NOTICE {
+  id        String   @id @default(uuid()) /// 공지사항 고유 번호
+  title     String   /// 제목
+  content   String   @db.Text /// 내용
+  viewCount Int      @default(0) /// 조회수
+  createdAt DateTime @default(now()) /// 작성일시
+  updatedAt DateTime @updatedAt /// 수정일시
+}
+
+model MIN_INQUIRY {
+  id        String   @id @default(uuid()) /// 1:1 문의 고유 번호
+  userId    String   /// 작성자(유저) ID
+  type      String   /// 문의 유형 (예: 배송, 교환/반품, 기타)
+  title     String   /// 문의 제목
+  content   String   @db.Text /// 문의 내용
+  status    String   @default("PENDING") /// 처리 상태 (PENDING, ANSWERED)
+  answer    String?  @db.Text /// 관리자 답변
+  createdAt DateTime @default(now()) /// 작성일시
+  updatedAt DateTime @updatedAt /// 수정일시
+}

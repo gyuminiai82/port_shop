@@ -30,7 +30,7 @@ async function main() {
   ]
   const tabletImages = [
     'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&q=80',
-    'https://images.unsplash.com/photo-1588702547923-70659a6ea861?w=800&q=80',
+    'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80',
     'https://images.unsplash.com/photo-1561154464-82e9adf32764?w=800&q=80'
   ]
   const audioImages = [
@@ -85,6 +85,28 @@ async function main() {
     { catId: catAccessories.id, name: '매직 키보드 (Touch ID)', price: 179000, images: [accImages[1]], desc: '터치 아이디가 포함된 가장 완벽한 타이핑 경험.' },
     { catId: catAccessories.id, name: '키크론 Q1 Pro 기계식 키보드', price: 299000, images: [accImages[2]], desc: '풀 알루미늄 바디의 커스텀 무선 기계식 키보드.' }
   ];
+
+  // Procedurally generate more products to make it "왕창"
+  const generateMore = 30; // 30 more products per category
+  const categoriesList = [
+    { catId: catLaptop.id, nameBase: '프로 랩탑', images: laptopImages },
+    { catId: catTablet.id, nameBase: '울트라 패드', images: tabletImages },
+    { catId: catAudio.id, nameBase: '스튜디오 오디오', images: audioImages },
+    { catId: catSmartwatch.id, nameBase: '스마트 피트니스 워치', images: watchImages },
+    { catId: catAccessories.id, nameBase: '스튜디오 에센셜 기기', images: accImages },
+  ];
+  
+  categoriesList.forEach((cat) => {
+    for (let i = 1; i <= generateMore; i++) {
+      productsData.push({
+        catId: cat.catId,
+        name: `${cat.nameBase} Gen${i} 에디션`,
+        price: Math.floor(Math.random() * 200 + 5) * 10000,
+        images: [cat.images[Math.floor(Math.random() * cat.images.length)]],
+        desc: `혁신적인 기술이 집약된 ${cat.nameBase} Gen${i} 한정판 에디션입니다. 뛰어난 내구성과 세련된 디자인을 자랑합니다.`
+      });
+    }
+  });
 
   for (let i = 0; i < productsData.length; i++) {
     const pData = productsData[i];

@@ -64,18 +64,61 @@ export default async function Home(props: {
     <>
       <main className="main-content">
         <section className="hero" style={{ position: "relative", overflow: "hidden" }}>
-          {/* Dynamic Ambient Background Glow */}
+          {/* Dynamic Ambient Background Glows */}
           <div style={{
             position: "absolute",
             top: 0,
             left: 0,
             right: 0,
-            height: "100%",
-            background: `radial-gradient(circle at 50% 0%, ${getCategoryColor(currentCategory)} 0%, transparent 70%)`,
+            bottom: 0,
             pointerEvents: "none",
             zIndex: 0,
-            transition: "background 0.5s ease-in-out"
-          }} />
+          }}>
+            {/* Primary Glow */}
+            <div style={{
+              position: "absolute",
+              top: "-30%",
+              left: "10%",
+              width: "70vw",
+              height: "70vw",
+              maxWidth: "800px",
+              maxHeight: "800px",
+              background: `radial-gradient(circle at center, ${getCategoryColor(currentCategory)} 0%, transparent 60%)`,
+              filter: "blur(60px)",
+              animation: "float 12s ease-in-out infinite",
+              transition: "background 0.5s ease-in-out"
+            }} />
+            
+            {/* Secondary Glow */}
+            <div style={{
+              position: "absolute",
+              bottom: "-20%",
+              right: "-10%",
+              width: "60vw",
+              height: "60vw",
+              maxWidth: "600px",
+              maxHeight: "600px",
+              background: `radial-gradient(circle at center, ${getCategoryColor(currentCategory).replace('0.25', '0.15')} 0%, transparent 60%)`,
+              filter: "blur(80px)",
+              animation: "float 15s ease-in-out infinite reverse, pulse-slow 8s ease-in-out infinite",
+              transition: "background 0.5s ease-in-out"
+            }} />
+            
+            {/* Tertiary Subdued Glow */}
+            <div style={{
+              position: "absolute",
+              top: "40%",
+              left: "40%",
+              width: "40vw",
+              height: "40vw",
+              maxWidth: "500px",
+              maxHeight: "500px",
+              background: `radial-gradient(circle at center, ${getCategoryColor(currentCategory).replace('0.25', '0.1')} 0%, transparent 70%)`,
+              filter: "blur(100px)",
+              animation: "float 18s ease-in-out infinite 2s",
+              transition: "background 0.5s ease-in-out"
+            }} />
+          </div>
 
           <div className="hero-content" style={{ position: "relative", zIndex: 1 }}>
             <h1 style={{ transition: "color 0.3s ease" }}>{currentCategory ? `${currentCategory}` : 'Premium Lifestyle'}</h1>

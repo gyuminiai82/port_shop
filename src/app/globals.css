@@ -411,3 +411,27 @@ nav {
   border-color: var(--accent-color);
   background: rgba(59, 130, 246, 0.05);
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  33% {
+    transform: translateY(-20px) scale(1.05);
+  }
+  66% {
+    transform: translateY(15px) scale(0.95);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
