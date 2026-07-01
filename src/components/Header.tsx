@@ -42,7 +42,9 @@ export default async function Header() {
         <div className="nav-links" style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
           {user ? (
             <>
-              <span style={{ fontSize: '0.875rem', fontWeight: 500 }}>{user.name}님</span>
+              <Link href="/profile" style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--text-primary)', textDecoration: 'none', padding: '0.5rem', borderRadius: '8px', transition: 'background 0.2s' }} className="user-profile-link">
+                {user.name}님
+              </Link>
               <Link href="/cart" className="btn btn-secondary" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}>
                 장바구니
               </Link>

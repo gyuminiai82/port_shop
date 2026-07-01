@@ -31,67 +31,75 @@
   },
   "doc": {
     "tableIds": [
-      "8c6f34fe-3970-4691-b034-89b336985e4c",
-      "7c58d7c6-a8f1-4021-a7d5-2f9fdfc72c2c",
-      "ea2894fe-a496-423a-a532-95ef5ba176a3",
-      "1cd4ba4c-0042-45b9-b53a-0e7e5dca489b",
-      "e3a13a8a-df83-455c-8e30-2ee784b69ff5",
-      "7db5c8be-5a26-48b3-89f4-30634ce42e69",
-      "aaabab82-9277-48dc-8db2-2407c2d74fb6",
-      "1348bf32-10f1-4d23-be99-344eb9891a86",
-      "0a4b3722-80e7-440e-99b0-302026bf4a73",
-      "bde9948e-26e6-4890-a9b1-c498f57bb693",
-      "374635d4-80c9-4951-93b0-6a3f9f3e2580",
-      "43d29105-4dda-46d0-816b-49fd9ade22e0",
-      "d16fb211-4055-428d-a749-8294b73b4e79",
-      "6ab08d1e-fd4b-4e3e-a690-1fc99279fc34",
-      "4ccae532-2e58-417e-b9f0-7d17cf45ff56",
-      "ec1e1f42-e2e0-4869-9c83-7495f121fdf2",
-      "add36d92-c5c7-47a3-8165-ca770cc582e6",
-      "a7fb941e-af50-4ce2-bd05-7914b69ff8e3"
+      "3352e9a1-63f9-4710-8486-52055697e2aa",
+      "63048ef5-a212-46fd-a576-63a16dc78200",
+      "2700c220-a99d-4f6b-bf31-510301f963a5",
+      "405a4315-2cf4-4ffa-ade0-a925f39ded60",
+      "bbd68df6-c11c-4b26-bd48-f5c8c7a8d3b6",
+      "c86e653a-18ac-4b32-971c-a25837f30dcc",
+      "fb34886a-dcc0-45fe-aa5b-198f6eacd294",
+      "0cfa84c5-4eca-46be-a0b6-1eadb7010428",
+      "29fb0f58-2d17-48b9-9259-f30cc5d89c76",
+      "61b8208f-f2a4-48d6-8065-7edfb933c1d3",
+      "bc7232f2-edcf-4537-95ec-b922eecd3eed",
+      "c869e11b-023a-4b41-9138-b8570d4a90aa",
+      "cba47e61-d0c3-46dd-8a63-01d32a50c9c2",
+      "0020ed0e-fd43-453c-a631-83754d2653b2",
+      "886c29e7-9999-49a4-a07b-eb4b97448858",
+      "962b1ab3-c5be-4ee6-9957-66b832cb0352",
+      "3a511f97-bbd3-40d8-81b5-7cfa6f204aaa",
+      "9ae387f6-a606-499f-904b-1d17c994966a"
     ],
     "relationshipIds": [
-      "fda40de1-7dc8-41f9-afa8-93e927d7a6a6",
-      "c136ef6b-dfa7-4652-8956-1efda28fac34",
-      "13f44846-a356-40b5-9bf2-4a9d3f291b45",
-      "32ceb94c-ed5c-484d-997f-e565c38c1400",
-      "96cd80a3-c5ad-43de-aaa6-e50545ff91a0",
-      "50635faa-5c82-48a3-9da6-85784b38e33f",
-      "c69b1a8f-e519-4b24-b179-9f77800ee8a4",
-      "541208f7-efbc-425d-8809-d0e8589e2a00",
-      "4a011340-b8f7-4ac5-b314-2f8fb9a09455",
-      "a3fb3e7b-e174-4bcc-a1bd-1a2916becf2f",
-      "54f9bb9e-5849-4737-9d62-0c9fba5d8c00",
-      "78942865-df77-4d0f-8f15-e3966e65200e",
-      "ccc584b9-9a2b-4a92-818b-9c812bb72293",
-      "2fbe7a33-7d3a-47c0-b218-aa6cb8ab82bd",
-      "bdaa33ab-2d21-4e11-8b03-0a3a01c4fbba",
-      "b73dbbbe-3b0b-4cf7-a912-30f7dbf52138",
-      "7d3d3195-a16a-49f6-b3d7-7bea4e2961da",
-      "9ee14003-2d1a-4071-8c06-9955fec6efab",
-      "8a2f3076-2a92-406e-bc7e-fd5de394277d",
-      "e84a098e-1715-40fe-9923-5cfa5362fc9a"
+      "15a48a9d-38de-42e1-9258-b41adf0a1382",
+      "455a1df6-738a-4909-bfdf-db8a2f22fd0d",
+      "905bd46b-20f0-46d4-adec-c737406da7db",
+      "f623e1f4-0575-4042-82bd-adce90467b69",
+      "7d2db5d4-a6ea-41d3-b103-5a3723127e0d",
+      "275b98c0-3513-42c1-b33c-27e861d67041",
+      "c458dfbc-e416-4e23-934d-1dd0eeae8e5e",
+      "a24e4cb2-7c84-4b84-bd6f-41ebdb80fd12",
+      "0a0451c3-bc65-48bb-8ec6-4ed764b69866",
+      "bd7df6bc-306e-4382-ac4b-f126b14d8173",
+      "86ef4c3c-5f81-4072-80c0-c5c9786c7aea",
+      "9f60d096-1015-4972-aabc-3f920f953778",
+      "aaff0466-ede5-4e49-9fd6-4dec4778db64",
+      "9dd92481-b075-42ef-9283-5ee89c64a524",
+      "abe629e2-6df1-405a-99d5-44efdcce0d09",
+      "ba145286-2185-4fdb-8b01-56d25024c29a",
+      "ef59d8db-a2e1-4289-b089-d6ca94c51ad7",
+      "d3a6dc59-7d96-4a1e-83b6-3dc277bb959d",
+      "fe1a2ae2-6cc3-4624-995d-b933e3726c43",
+      "88dccaaa-598b-4eb8-94c2-b1340f6b0688"
     ],
     "indexIds": [],
     "memoIds": []
   },
   "collections": {
     "tableEntities": {
-      "8c6f34fe-3970-4691-b034-89b336985e4c": {
-        "id": "8c6f34fe-3970-4691-b034-89b336985e4c",
+      "3352e9a1-63f9-4710-8486-52055697e2aa": {
+        "id": "3352e9a1-63f9-4710-8486-52055697e2aa",
         "name": "MIN_User",
         "comment": "사용자 정보 (SSO)",
         "columnIds": [
-          "cd2f3a20-ff77-4430-b557-3fa0b3c74221",
-          "475e7808-c6a7-4414-9c4c-4abd465fd395",
-          "414e88ec-23a3-4856-905e-b178d9459d40",
-          "82ba4272-4bba-456e-b129-3d050b206107"
+          "18c186cc-7230-498b-876f-03878422a6cf",
+          "0a478696-8a54-49fc-99b5-97234a504114",
+          "eca1ab59-bc1c-4923-9c43-60deb3f13776",
+          "4bb67714-d186-4e06-acc7-f906446b36a3",
+          "7c0abd92-775c-404a-877a-ca4e3ee42d26",
+          "54667c16-7877-4735-9126-d4d18d5f06f2",
+          "24c953f1-78c3-4e6b-8cd5-168798e90f72",
+          "48202c3e-9591-4d2d-a2a2-8b725ea0d73b"
         ],
         "seqColumnIds": [
-          "cd2f3a20-ff77-4430-b557-3fa0b3c74221",
-          "475e7808-c6a7-4414-9c4c-4abd465fd395",
-          "414e88ec-23a3-4856-905e-b178d9459d40",
-          "82ba4272-4bba-456e-b129-3d050b206107"
+          "18c186cc-7230-498b-876f-03878422a6cf",
+          "0a478696-8a54-49fc-99b5-97234a504114",
+          "eca1ab59-bc1c-4923-9c43-60deb3f13776",
+          "4bb67714-d186-4e06-acc7-f906446b36a3",
+          "7c0abd92-775c-404a-877a-ca4e3ee42d26",
+          "54667c16-7877-4735-9126-d4d18d5f06f2",
+          "24c953f1-78c3-4e6b-8cd5-168798e90f72",
+          "48202c3e-9591-4d2d-a2a2-8b725ea0d73b"
         ],
         "ui": {
           "x": 100,
@@ -102,23 +110,23 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "7c58d7c6-a8f1-4021-a7d5-2f9fdfc72c2c": {
-        "id": "7c58d7c6-a8f1-4021-a7d5-2f9fdfc72c2c",
+      "63048ef5-a212-46fd-a576-63a16dc78200": {
+        "id": "63048ef5-a212-46fd-a576-63a16dc78200",
         "name": "MIN_CATEGORY",
         "comment": "상품 카테고리",
         "columnIds": [
-          "6c743699-e0f2-401b-a67d-388cf4a3a2ef",
-          "fdcd88e3-e3f2-485d-85b2-1293d97419db",
-          "2de7b77e-ff0e-4592-8b07-1be95d36f2d4"
+          "3fd4def1-c216-4ac8-bdf5-ccf6f7481c35",
+          "f09aca07-0a14-4f9b-91a5-71708f050a99",
+          "12a18794-b457-4c9e-8d2c-7ae3751f046c"
         ],
         "seqColumnIds": [
-          "6c743699-e0f2-401b-a67d-388cf4a3a2ef",
-          "fdcd88e3-e3f2-485d-85b2-1293d97419db",
-          "2de7b77e-ff0e-4592-8b07-1be95d36f2d4"
+          "3fd4def1-c216-4ac8-bdf5-ccf6f7481c35",
+          "f09aca07-0a14-4f9b-91a5-71708f050a99",
+          "12a18794-b457-4c9e-8d2c-7ae3751f046c"
         ],
         "ui": {
           "x": 400,
@@ -129,31 +137,31 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "ea2894fe-a496-423a-a532-95ef5ba176a3": {
-        "id": "ea2894fe-a496-423a-a532-95ef5ba176a3",
+      "2700c220-a99d-4f6b-bf31-510301f963a5": {
+        "id": "2700c220-a99d-4f6b-bf31-510301f963a5",
         "name": "MIN_PRODUCT",
         "comment": "상품 마스터",
         "columnIds": [
-          "6941b94b-6b37-4d97-976c-d1ece4d748b9",
-          "91a3a327-93e5-4aaf-b189-72c0d4657ee9",
-          "bdd81b27-59db-4abe-aa7b-9ce3356dbf39",
-          "780253d9-ced7-4e5c-8d6e-1fb5941fa7a7",
-          "ffbbc941-32e5-4950-8a7e-9ac79ecb8f3d",
-          "ccd52f45-9b2a-4921-b678-1b0afad19228",
-          "da3fbec9-5dcf-4dc3-b28e-144f6c294c7d"
+          "65620204-b9bd-43c8-93be-c0ee8e298d47",
+          "733f8452-42ca-4b01-b24a-9cdaf51a5e86",
+          "79826d29-ae4c-4cf7-8260-d1c30d6447ae",
+          "4d9db0e1-a2f4-4011-8fa6-bd972c2e3d4c",
+          "b0ce9c5f-ccf3-4597-9bdc-10daadc32d2b",
+          "b12e8d3d-885c-48ca-a694-b3c2a75d8368",
+          "4960fe37-74e3-4338-ac4c-a7956d0c6c66"
         ],
         "seqColumnIds": [
-          "6941b94b-6b37-4d97-976c-d1ece4d748b9",
-          "91a3a327-93e5-4aaf-b189-72c0d4657ee9",
-          "bdd81b27-59db-4abe-aa7b-9ce3356dbf39",
-          "780253d9-ced7-4e5c-8d6e-1fb5941fa7a7",
-          "ffbbc941-32e5-4950-8a7e-9ac79ecb8f3d",
-          "ccd52f45-9b2a-4921-b678-1b0afad19228",
-          "da3fbec9-5dcf-4dc3-b28e-144f6c294c7d"
+          "65620204-b9bd-43c8-93be-c0ee8e298d47",
+          "733f8452-42ca-4b01-b24a-9cdaf51a5e86",
+          "79826d29-ae4c-4cf7-8260-d1c30d6447ae",
+          "4d9db0e1-a2f4-4011-8fa6-bd972c2e3d4c",
+          "b0ce9c5f-ccf3-4597-9bdc-10daadc32d2b",
+          "b12e8d3d-885c-48ca-a694-b3c2a75d8368",
+          "4960fe37-74e3-4338-ac4c-a7956d0c6c66"
         ],
         "ui": {
           "x": 700,
@@ -164,25 +172,25 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "1cd4ba4c-0042-45b9-b53a-0e7e5dca489b": {
-        "id": "1cd4ba4c-0042-45b9-b53a-0e7e5dca489b",
+      "405a4315-2cf4-4ffa-ade0-a925f39ded60": {
+        "id": "405a4315-2cf4-4ffa-ade0-a925f39ded60",
         "name": "MIN_PRODUCT_IMAGE",
         "comment": "상품 상세 이미지",
         "columnIds": [
-          "73a9a441-5335-49aa-8a5a-b54d69e5b7b8",
-          "bebafa38-48f2-462d-8a84-0e30776dd261",
-          "3b3ae41d-3a63-4d76-a4f5-5308ec5dfb20",
-          "fcd4e2ef-6e4e-4f65-b5f6-4e0ae3c813a5"
+          "26b025f2-10ce-41e0-81aa-acd9adff4ff1",
+          "8631c7cc-e7a3-4f58-964d-9c1154178cb3",
+          "738e7e15-6210-45ea-a58f-130337a56e65",
+          "c50b0358-6358-45c5-982b-9d74ff375c01"
         ],
         "seqColumnIds": [
-          "73a9a441-5335-49aa-8a5a-b54d69e5b7b8",
-          "bebafa38-48f2-462d-8a84-0e30776dd261",
-          "3b3ae41d-3a63-4d76-a4f5-5308ec5dfb20",
-          "fcd4e2ef-6e4e-4f65-b5f6-4e0ae3c813a5"
+          "26b025f2-10ce-41e0-81aa-acd9adff4ff1",
+          "8631c7cc-e7a3-4f58-964d-9c1154178cb3",
+          "738e7e15-6210-45ea-a58f-130337a56e65",
+          "c50b0358-6358-45c5-982b-9d74ff375c01"
         ],
         "ui": {
           "x": 1000,
@@ -193,29 +201,29 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "e3a13a8a-df83-455c-8e30-2ee784b69ff5": {
-        "id": "e3a13a8a-df83-455c-8e30-2ee784b69ff5",
+      "bbd68df6-c11c-4b26-bd48-f5c8c7a8d3b6": {
+        "id": "bbd68df6-c11c-4b26-bd48-f5c8c7a8d3b6",
         "name": "MIN_PRODUCT_OPTION",
         "comment": "상품 옵션 (색상/사이즈)",
         "columnIds": [
-          "75f03bdf-c646-4d82-999f-a0869533516f",
-          "c4a0a8bf-add4-4a67-8132-b39c92d17bdf",
-          "469fbab9-bbf2-43b9-882e-9ea4feb5c904",
-          "b01c307d-b98b-456a-b55a-6d083ba128cf",
-          "07e35200-f8a6-4239-a167-e81f817258c1",
-          "7eba33b4-be8d-4b96-9b48-b18c0d7120da"
+          "02b440fa-df29-4485-9476-ddaf56764a1a",
+          "f0d27deb-0e42-4e67-bbba-5ab66e6e998f",
+          "79437af5-79f5-4e70-a21b-b22d1b1795be",
+          "e72e6f23-9e8f-46c8-9c25-cafc9f3dfa76",
+          "2dfe513c-437b-45ff-9ed9-64cb1c9715eb",
+          "d835d79f-b74d-466d-970d-328ef41131bd"
         ],
         "seqColumnIds": [
-          "75f03bdf-c646-4d82-999f-a0869533516f",
-          "c4a0a8bf-add4-4a67-8132-b39c92d17bdf",
-          "469fbab9-bbf2-43b9-882e-9ea4feb5c904",
-          "b01c307d-b98b-456a-b55a-6d083ba128cf",
-          "07e35200-f8a6-4239-a167-e81f817258c1",
-          "7eba33b4-be8d-4b96-9b48-b18c0d7120da"
+          "02b440fa-df29-4485-9476-ddaf56764a1a",
+          "f0d27deb-0e42-4e67-bbba-5ab66e6e998f",
+          "79437af5-79f5-4e70-a21b-b22d1b1795be",
+          "e72e6f23-9e8f-46c8-9c25-cafc9f3dfa76",
+          "2dfe513c-437b-45ff-9ed9-64cb1c9715eb",
+          "d835d79f-b74d-466d-970d-328ef41131bd"
         ],
         "ui": {
           "x": 1300,
@@ -226,27 +234,27 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "7db5c8be-5a26-48b3-89f4-30634ce42e69": {
-        "id": "7db5c8be-5a26-48b3-89f4-30634ce42e69",
+      "c86e653a-18ac-4b32-971c-a25837f30dcc": {
+        "id": "c86e653a-18ac-4b32-971c-a25837f30dcc",
         "name": "MIN_REVIEW",
         "comment": "상품 리뷰",
         "columnIds": [
-          "df419bcb-ec82-4d0d-a6a8-7952c154fca7",
-          "f60705b2-2c3d-48d9-af1b-9295b58390bc",
-          "1f258d7b-16cf-44d1-b94c-9cd761692b77",
-          "7033550e-011a-4475-9357-a897c4f90eca",
-          "e00dcc25-4a0e-4ead-a4bd-9b64e34ce39d"
+          "8761e8bd-85f4-4dae-a196-10a4e90728f4",
+          "a00a09f5-fa5d-46f2-bcf6-49dd8457e5ae",
+          "52e84a06-9004-4677-be06-0940047196fc",
+          "b8162bea-3120-4f3e-a264-4e5b638c44e0",
+          "bde87f81-701d-4046-b838-2698651333d1"
         ],
         "seqColumnIds": [
-          "df419bcb-ec82-4d0d-a6a8-7952c154fca7",
-          "f60705b2-2c3d-48d9-af1b-9295b58390bc",
-          "1f258d7b-16cf-44d1-b94c-9cd761692b77",
-          "7033550e-011a-4475-9357-a897c4f90eca",
-          "e00dcc25-4a0e-4ead-a4bd-9b64e34ce39d"
+          "8761e8bd-85f4-4dae-a196-10a4e90728f4",
+          "a00a09f5-fa5d-46f2-bcf6-49dd8457e5ae",
+          "52e84a06-9004-4677-be06-0940047196fc",
+          "b8162bea-3120-4f3e-a264-4e5b638c44e0",
+          "bde87f81-701d-4046-b838-2698651333d1"
         ],
         "ui": {
           "x": 100,
@@ -257,21 +265,21 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "aaabab82-9277-48dc-8db2-2407c2d74fb6": {
-        "id": "aaabab82-9277-48dc-8db2-2407c2d74fb6",
+      "fb34886a-dcc0-45fe-aa5b-198f6eacd294": {
+        "id": "fb34886a-dcc0-45fe-aa5b-198f6eacd294",
         "name": "MIN_WISHLIST",
         "comment": "유저별 찜 목록",
         "columnIds": [
-          "4163dba5-9bbe-4286-b495-731299b8c6f3",
-          "262b73bd-5112-46a8-a7b8-6af9da955cbc"
+          "f80d2513-21bc-4331-aff6-726efa59fca0",
+          "7043197c-34e6-4d67-8ff3-b136475aa6de"
         ],
         "seqColumnIds": [
-          "4163dba5-9bbe-4286-b495-731299b8c6f3",
-          "262b73bd-5112-46a8-a7b8-6af9da955cbc"
+          "f80d2513-21bc-4331-aff6-726efa59fca0",
+          "7043197c-34e6-4d67-8ff3-b136475aa6de"
         ],
         "ui": {
           "x": 400,
@@ -282,23 +290,23 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "1348bf32-10f1-4d23-be99-344eb9891a86": {
-        "id": "1348bf32-10f1-4d23-be99-344eb9891a86",
+      "0cfa84c5-4eca-46be-a0b6-1eadb7010428": {
+        "id": "0cfa84c5-4eca-46be-a0b6-1eadb7010428",
         "name": "MIN_WISHLIST_ITEM",
         "comment": "찜 목록 항목",
         "columnIds": [
-          "61edc362-8177-4140-8c1e-f843b4fc9f64",
-          "ac63adea-d0b9-4cfa-9b7d-08ccb62d5019",
-          "4b387351-eaf4-48fe-b9c5-ef1f72d420b3"
+          "94445e0a-c398-4202-beb6-7d0b2bf8988c",
+          "5883433d-3c8b-4bd0-8759-ee991b3ea206",
+          "16a25c8e-cca7-4b84-b4e9-bb077229fc17"
         ],
         "seqColumnIds": [
-          "61edc362-8177-4140-8c1e-f843b4fc9f64",
-          "ac63adea-d0b9-4cfa-9b7d-08ccb62d5019",
-          "4b387351-eaf4-48fe-b9c5-ef1f72d420b3"
+          "94445e0a-c398-4202-beb6-7d0b2bf8988c",
+          "5883433d-3c8b-4bd0-8759-ee991b3ea206",
+          "16a25c8e-cca7-4b84-b4e9-bb077229fc17"
         ],
         "ui": {
           "x": 700,
@@ -309,21 +317,21 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "0a4b3722-80e7-440e-99b0-302026bf4a73": {
-        "id": "0a4b3722-80e7-440e-99b0-302026bf4a73",
+      "29fb0f58-2d17-48b9-9259-f30cc5d89c76": {
+        "id": "29fb0f58-2d17-48b9-9259-f30cc5d89c76",
         "name": "MIN_CART",
         "comment": "장바구니 마스터",
         "columnIds": [
-          "35825339-f387-4d25-9534-bfeda6af960e",
-          "db5c937e-855c-42eb-9152-ee1ff9d72454"
+          "2b2e9053-59fa-45be-8593-885555cb61c1",
+          "3c1be0c1-4e3c-4f79-a161-65670282fe32"
         ],
         "seqColumnIds": [
-          "35825339-f387-4d25-9534-bfeda6af960e",
-          "db5c937e-855c-42eb-9152-ee1ff9d72454"
+          "2b2e9053-59fa-45be-8593-885555cb61c1",
+          "3c1be0c1-4e3c-4f79-a161-65670282fe32"
         ],
         "ui": {
           "x": 1000,
@@ -334,27 +342,27 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "bde9948e-26e6-4890-a9b1-c498f57bb693": {
-        "id": "bde9948e-26e6-4890-a9b1-c498f57bb693",
+      "61b8208f-f2a4-48d6-8065-7edfb933c1d3": {
+        "id": "61b8208f-f2a4-48d6-8065-7edfb933c1d3",
         "name": "MIN_CART_ITEM",
         "comment": "장바구니 담긴 상품들",
         "columnIds": [
-          "25e3528a-da31-4449-87cf-4a20992a727d",
-          "49fd2bea-9241-46cf-a238-7ee480d6e349",
-          "f25b0f05-52e0-470f-b886-534706e606cd",
-          "b5ad2478-71c2-4371-b7f6-6f2c22c9df33",
-          "46ab807e-89fa-463d-a7a6-d3c925a6ad22"
+          "0d941a6c-f580-45c1-895b-5256763fc7c9",
+          "52472900-1c70-498f-873f-fbb59028fdb3",
+          "fce0a2ae-0527-4ccb-a9bc-21a625c6070a",
+          "0df7b365-58bf-4897-99f0-95245357d497",
+          "13f008a0-e048-4acf-9306-482364dc097b"
         ],
         "seqColumnIds": [
-          "25e3528a-da31-4449-87cf-4a20992a727d",
-          "49fd2bea-9241-46cf-a238-7ee480d6e349",
-          "f25b0f05-52e0-470f-b886-534706e606cd",
-          "b5ad2478-71c2-4371-b7f6-6f2c22c9df33",
-          "46ab807e-89fa-463d-a7a6-d3c925a6ad22"
+          "0d941a6c-f580-45c1-895b-5256763fc7c9",
+          "52472900-1c70-498f-873f-fbb59028fdb3",
+          "fce0a2ae-0527-4ccb-a9bc-21a625c6070a",
+          "0df7b365-58bf-4897-99f0-95245357d497",
+          "13f008a0-e048-4acf-9306-482364dc097b"
         ],
         "ui": {
           "x": 1300,
@@ -365,25 +373,25 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "374635d4-80c9-4951-93b0-6a3f9f3e2580": {
-        "id": "374635d4-80c9-4951-93b0-6a3f9f3e2580",
+      "bc7232f2-edcf-4537-95ec-b922eecd3eed": {
+        "id": "bc7232f2-edcf-4537-95ec-b922eecd3eed",
         "name": "MIN_ORDER",
         "comment": "주문 마스터",
         "columnIds": [
-          "4a75b2d7-4bd1-4468-9be4-a40eb11cc084",
-          "aae18cf8-ee02-4066-9ad6-e312e611a734",
-          "57051929-0376-4904-9a0c-137c4f33e830",
-          "a23555d4-33a8-4b13-9ee1-b25a42c7e20e"
+          "36f694be-79aa-41fe-9760-e71d998ee1dc",
+          "53442985-3fd4-41aa-bd38-b57b4b6f18ad",
+          "e4d8f5ef-ae4a-4061-bb58-ab1cef0db8cd",
+          "db5f61b5-7601-4bd8-a50b-ddf764de0608"
         ],
         "seqColumnIds": [
-          "4a75b2d7-4bd1-4468-9be4-a40eb11cc084",
-          "aae18cf8-ee02-4066-9ad6-e312e611a734",
-          "57051929-0376-4904-9a0c-137c4f33e830",
-          "a23555d4-33a8-4b13-9ee1-b25a42c7e20e"
+          "36f694be-79aa-41fe-9760-e71d998ee1dc",
+          "53442985-3fd4-41aa-bd38-b57b4b6f18ad",
+          "e4d8f5ef-ae4a-4061-bb58-ab1cef0db8cd",
+          "db5f61b5-7601-4bd8-a50b-ddf764de0608"
         ],
         "ui": {
           "x": 100,
@@ -394,29 +402,29 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "43d29105-4dda-46d0-816b-49fd9ade22e0": {
-        "id": "43d29105-4dda-46d0-816b-49fd9ade22e0",
+      "c869e11b-023a-4b41-9138-b8570d4a90aa": {
+        "id": "c869e11b-023a-4b41-9138-b8570d4a90aa",
         "name": "MIN_ORDER_ITEM",
         "comment": "주문 상세 상품들",
         "columnIds": [
-          "b268f6eb-ac46-4c5e-aa74-171b6e1188a9",
-          "030fe21b-7128-421c-a3da-fe6d749a38eb",
-          "dc804836-1156-475a-9ebd-7744afff1376",
-          "4e12db4d-ac22-4271-8032-2e3da19382bf",
-          "e29e2bca-901c-41c2-b6ac-7fd974d0249e",
-          "29b7e901-7586-4bdb-9298-9d57820ffce4"
+          "3330eef5-5f34-4784-8546-2c924465fe5a",
+          "943d31cc-9082-4cb2-839d-87ed47bd1507",
+          "6b493793-53a0-4e4b-a32f-ca5aafd31894",
+          "334e5510-7e41-4466-b1c6-b0db42a56a91",
+          "80f164bb-9da6-4061-9305-8405a6c49eb3",
+          "d6c7bbd3-4d00-4333-948c-1b482648d186"
         ],
         "seqColumnIds": [
-          "b268f6eb-ac46-4c5e-aa74-171b6e1188a9",
-          "030fe21b-7128-421c-a3da-fe6d749a38eb",
-          "dc804836-1156-475a-9ebd-7744afff1376",
-          "4e12db4d-ac22-4271-8032-2e3da19382bf",
-          "e29e2bca-901c-41c2-b6ac-7fd974d0249e",
-          "29b7e901-7586-4bdb-9298-9d57820ffce4"
+          "3330eef5-5f34-4784-8546-2c924465fe5a",
+          "943d31cc-9082-4cb2-839d-87ed47bd1507",
+          "6b493793-53a0-4e4b-a32f-ca5aafd31894",
+          "334e5510-7e41-4466-b1c6-b0db42a56a91",
+          "80f164bb-9da6-4061-9305-8405a6c49eb3",
+          "d6c7bbd3-4d00-4333-948c-1b482648d186"
         ],
         "ui": {
           "x": 400,
@@ -427,29 +435,29 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "d16fb211-4055-428d-a749-8294b73b4e79": {
-        "id": "d16fb211-4055-428d-a749-8294b73b4e79",
+      "cba47e61-d0c3-46dd-8a63-01d32a50c9c2": {
+        "id": "cba47e61-d0c3-46dd-8a63-01d32a50c9c2",
         "name": "MIN_PAYMENT",
         "comment": "결제 정보",
         "columnIds": [
-          "8ce7ed7c-da9e-47f9-b17c-e69ee15f6f3f",
-          "4dbd883f-fed6-4529-b946-4f4f0db783e0",
-          "f3fa532b-855c-45f9-95a8-6138ccdb50f8",
-          "22b1a493-9e02-44a5-8478-6a5d350b566a",
-          "3cdb0f18-bdc1-4d11-9fcb-7fdf06383699",
-          "5a3bc9da-6242-425c-8805-834b394f9bc6"
+          "45db64ad-9f52-46ad-8df3-33e6a9214a08",
+          "db0928f0-b7a7-4657-bc1a-5fc0a1b7431f",
+          "9f6321b6-e4d3-42e0-ad5e-3dd4743c387f",
+          "485e6516-8c2a-4b7a-ae06-6bfc1b912e2c",
+          "df600648-e5e8-40fc-84ff-a1f28c5eeabe",
+          "64b92c2a-d143-45c4-bc35-7ebd51a00a54"
         ],
         "seqColumnIds": [
-          "8ce7ed7c-da9e-47f9-b17c-e69ee15f6f3f",
-          "4dbd883f-fed6-4529-b946-4f4f0db783e0",
-          "f3fa532b-855c-45f9-95a8-6138ccdb50f8",
-          "22b1a493-9e02-44a5-8478-6a5d350b566a",
-          "3cdb0f18-bdc1-4d11-9fcb-7fdf06383699",
-          "5a3bc9da-6242-425c-8805-834b394f9bc6"
+          "45db64ad-9f52-46ad-8df3-33e6a9214a08",
+          "db0928f0-b7a7-4657-bc1a-5fc0a1b7431f",
+          "9f6321b6-e4d3-42e0-ad5e-3dd4743c387f",
+          "485e6516-8c2a-4b7a-ae06-6bfc1b912e2c",
+          "df600648-e5e8-40fc-84ff-a1f28c5eeabe",
+          "64b92c2a-d143-45c4-bc35-7ebd51a00a54"
         ],
         "ui": {
           "x": 700,
@@ -460,29 +468,29 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "6ab08d1e-fd4b-4e3e-a690-1fc99279fc34": {
-        "id": "6ab08d1e-fd4b-4e3e-a690-1fc99279fc34",
+      "0020ed0e-fd43-453c-a631-83754d2653b2": {
+        "id": "0020ed0e-fd43-453c-a631-83754d2653b2",
         "name": "MIN_DELIVERY",
         "comment": "배송 정보",
         "columnIds": [
-          "f3054816-ee01-450c-872a-7c0761f878ac",
-          "8e4bf00b-c509-434a-be64-4db8a51744a1",
-          "f4851bd3-1f53-4846-9d8d-177e92f631b9",
-          "f12c214c-02bb-427f-8be0-fa5f1032ee07",
-          "31832a6e-fd08-4daf-8f23-69d351c1d02e",
-          "c53b1e8a-f1ee-41d5-8250-00af7f4ac45f"
+          "0bbc6abf-b9b2-4bb4-adec-663fcca01291",
+          "ea0f94fd-43ce-4c01-8219-bbe40c36d759",
+          "fc912c34-ffe7-4ad8-84fd-803cbdb262d0",
+          "b8f24d89-2387-4b46-a11d-f59f733e6c5d",
+          "9ea8da1e-7c4e-4cef-b71a-27deae5e8b92",
+          "8fdf2cc4-9855-4e30-a0a5-1be44368fd8c"
         ],
         "seqColumnIds": [
-          "f3054816-ee01-450c-872a-7c0761f878ac",
-          "8e4bf00b-c509-434a-be64-4db8a51744a1",
-          "f4851bd3-1f53-4846-9d8d-177e92f631b9",
-          "f12c214c-02bb-427f-8be0-fa5f1032ee07",
-          "31832a6e-fd08-4daf-8f23-69d351c1d02e",
-          "c53b1e8a-f1ee-41d5-8250-00af7f4ac45f"
+          "0bbc6abf-b9b2-4bb4-adec-663fcca01291",
+          "ea0f94fd-43ce-4c01-8219-bbe40c36d759",
+          "fc912c34-ffe7-4ad8-84fd-803cbdb262d0",
+          "b8f24d89-2387-4b46-a11d-f59f733e6c5d",
+          "9ea8da1e-7c4e-4cef-b71a-27deae5e8b92",
+          "8fdf2cc4-9855-4e30-a0a5-1be44368fd8c"
         ],
         "ui": {
           "x": 1000,
@@ -493,27 +501,27 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "4ccae532-2e58-417e-b9f0-7d17cf45ff56": {
-        "id": "4ccae532-2e58-417e-b9f0-7d17cf45ff56",
+      "886c29e7-9999-49a4-a07b-eb4b97448858": {
+        "id": "886c29e7-9999-49a4-a07b-eb4b97448858",
         "name": "MIN_COUPON",
         "comment": "쿠폰 종류 마스터",
         "columnIds": [
-          "54f2dc27-585a-49e2-b438-933205f59fc0",
-          "1d3f5fe2-3ace-4285-8c65-92b49f727238",
-          "ea74255f-874b-4227-8534-52215da06d0e",
-          "abcb5f7c-a24a-4d37-9b90-6a03ee52a4de",
-          "8191515b-1c78-4de8-908b-435ffe39e5a2"
+          "01fba20e-4507-4bc8-9f8b-4f3370deabfb",
+          "777cc589-8627-4450-b9d9-670a6a0d40ab",
+          "e9d5d468-083e-4989-97d9-2670e2e354a4",
+          "1604bbfd-9579-45e8-9e87-95285ea7a1fc",
+          "827437ca-b2fa-40dd-bf61-9464ee104f52"
         ],
         "seqColumnIds": [
-          "54f2dc27-585a-49e2-b438-933205f59fc0",
-          "1d3f5fe2-3ace-4285-8c65-92b49f727238",
-          "ea74255f-874b-4227-8534-52215da06d0e",
-          "abcb5f7c-a24a-4d37-9b90-6a03ee52a4de",
-          "8191515b-1c78-4de8-908b-435ffe39e5a2"
+          "01fba20e-4507-4bc8-9f8b-4f3370deabfb",
+          "777cc589-8627-4450-b9d9-670a6a0d40ab",
+          "e9d5d468-083e-4989-97d9-2670e2e354a4",
+          "1604bbfd-9579-45e8-9e87-95285ea7a1fc",
+          "827437ca-b2fa-40dd-bf61-9464ee104f52"
         ],
         "ui": {
           "x": 1300,
@@ -524,25 +532,25 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "ec1e1f42-e2e0-4869-9c83-7495f121fdf2": {
-        "id": "ec1e1f42-e2e0-4869-9c83-7495f121fdf2",
+      "962b1ab3-c5be-4ee6-9957-66b832cb0352": {
+        "id": "962b1ab3-c5be-4ee6-9957-66b832cb0352",
         "name": "MIN_USER_COUPON",
         "comment": "발급받은 쿠폰 내역",
         "columnIds": [
-          "d227f0a0-5633-43ed-aaaf-3b28e14cfd86",
-          "62f4ec9d-d3f2-48a8-b8ff-97d800fa038a",
-          "8321b149-c21a-432c-8cd0-ccbbcad7dc9f",
-          "b739c7ad-4cc6-4c7c-9c9d-422c8b03a9a8"
+          "a395835d-0d02-4f36-b493-2cc15f920ebf",
+          "5fb5db95-1687-4144-9016-1faf8a663db4",
+          "d8a448ad-8ca6-4a44-9314-5361c064a0a7",
+          "12a451ad-4ec8-49ae-9a31-6b85721bdb74"
         ],
         "seqColumnIds": [
-          "d227f0a0-5633-43ed-aaaf-3b28e14cfd86",
-          "62f4ec9d-d3f2-48a8-b8ff-97d800fa038a",
-          "8321b149-c21a-432c-8cd0-ccbbcad7dc9f",
-          "b739c7ad-4cc6-4c7c-9c9d-422c8b03a9a8"
+          "a395835d-0d02-4f36-b493-2cc15f920ebf",
+          "5fb5db95-1687-4144-9016-1faf8a663db4",
+          "d8a448ad-8ca6-4a44-9314-5361c064a0a7",
+          "12a451ad-4ec8-49ae-9a31-6b85721bdb74"
         ],
         "ui": {
           "x": 100,
@@ -553,25 +561,25 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "add36d92-c5c7-47a3-8165-ca770cc582e6": {
-        "id": "add36d92-c5c7-47a3-8165-ca770cc582e6",
+      "3a511f97-bbd3-40d8-81b5-7cfa6f204aaa": {
+        "id": "3a511f97-bbd3-40d8-81b5-7cfa6f204aaa",
         "name": "MIN_NOTICE",
         "comment": "공지사항",
         "columnIds": [
-          "f474ba18-4dc3-4e2f-a32b-8b831e026e58",
-          "8b8e5a6a-06c9-42ac-852e-1c96b3fd310d",
-          "45d4aaad-2510-4ec0-8e71-7b54f7239656",
-          "a8ace3b7-3fe4-4a97-bc8d-d35f1a19dd52"
+          "52246e2c-58db-4f48-8ec8-d9be282fab4b",
+          "38222ab0-3b58-4372-b0dc-713162784ff4",
+          "8d7462b9-4f0e-4ad6-b246-8ebdf2c2c240",
+          "3c4e1dd9-ee96-4474-8c79-7a7d6b196dbc"
         ],
         "seqColumnIds": [
-          "f474ba18-4dc3-4e2f-a32b-8b831e026e58",
-          "8b8e5a6a-06c9-42ac-852e-1c96b3fd310d",
-          "45d4aaad-2510-4ec0-8e71-7b54f7239656",
-          "a8ace3b7-3fe4-4a97-bc8d-d35f1a19dd52"
+          "52246e2c-58db-4f48-8ec8-d9be282fab4b",
+          "38222ab0-3b58-4372-b0dc-713162784ff4",
+          "8d7462b9-4f0e-4ad6-b246-8ebdf2c2c240",
+          "3c4e1dd9-ee96-4474-8c79-7a7d6b196dbc"
         ],
         "ui": {
           "x": 400,
@@ -582,31 +590,31 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "a7fb941e-af50-4ce2-bd05-7914b69ff8e3": {
-        "id": "a7fb941e-af50-4ce2-bd05-7914b69ff8e3",
+      "9ae387f6-a606-499f-904b-1d17c994966a": {
+        "id": "9ae387f6-a606-499f-904b-1d17c994966a",
         "name": "MIN_INQUIRY",
         "comment": "1:1 문의",
         "columnIds": [
-          "71d1a5e9-ce74-4ab7-8e18-60fe4e9b20f9",
-          "5be11302-c276-4780-b381-0e44b3a5befc",
-          "cce7c391-1c03-4056-a4cd-8c2bacc61f9e",
-          "eb4ffe5a-ba96-452c-9a39-c68720a2248f",
-          "02aa3524-a6b8-41a2-b1fb-07fed0828094",
-          "a24c71b7-8567-4da9-a9d2-7565971fe564",
-          "81893bdd-421a-4ddb-a0d5-9c14ed367d0f"
+          "ff27d547-d6c7-45f0-9899-a15d40d959f4",
+          "12fd9338-f25a-4d0d-98ca-6beeb383627a",
+          "b3bf3f91-843c-425f-8075-96c23dd7d81c",
+          "8571b87f-dc9e-433e-be71-981628f6076d",
+          "0f5030c9-2077-40b0-8a76-f810c19b51fc",
+          "22300245-5f4a-4d97-b605-1926abd68750",
+          "f2678237-9823-4345-bbfd-4f18b089c453"
         ],
         "seqColumnIds": [
-          "71d1a5e9-ce74-4ab7-8e18-60fe4e9b20f9",
-          "5be11302-c276-4780-b381-0e44b3a5befc",
-          "cce7c391-1c03-4056-a4cd-8c2bacc61f9e",
-          "eb4ffe5a-ba96-452c-9a39-c68720a2248f",
-          "02aa3524-a6b8-41a2-b1fb-07fed0828094",
-          "a24c71b7-8567-4da9-a9d2-7565971fe564",
-          "81893bdd-421a-4ddb-a0d5-9c14ed367d0f"
+          "ff27d547-d6c7-45f0-9899-a15d40d959f4",
+          "12fd9338-f25a-4d0d-98ca-6beeb383627a",
+          "b3bf3f91-843c-425f-8075-96c23dd7d81c",
+          "8571b87f-dc9e-433e-be71-981628f6076d",
+          "0f5030c9-2077-40b0-8a76-f810c19b51fc",
+          "22300245-5f4a-4d97-b605-1926abd68750",
+          "f2678237-9823-4345-bbfd-4f18b089c453"
         ],
         "ui": {
           "x": 700,
@@ -617,15 +625,15 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       }
     },
     "tableColumnEntities": {
-      "cd2f3a20-ff77-4430-b557-3fa0b3c74221": {
-        "id": "cd2f3a20-ff77-4430-b557-3fa0b3c74221",
-        "tableId": "8c6f34fe-3970-4691-b034-89b336985e4c",
+      "18c186cc-7230-498b-876f-03878422a6cf": {
+        "id": "18c186cc-7230-498b-876f-03878422a6cf",
+        "tableId": "3352e9a1-63f9-4710-8486-52055697e2aa",
         "name": "id",
         "comment": "고유 번호",
         "dataType": "VARCHAR(191)",
@@ -639,13 +647,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "475e7808-c6a7-4414-9c4c-4abd465fd395": {
-        "id": "475e7808-c6a7-4414-9c4c-4abd465fd395",
-        "tableId": "8c6f34fe-3970-4691-b034-89b336985e4c",
+      "0a478696-8a54-49fc-99b5-97234a504114": {
+        "id": "0a478696-8a54-49fc-99b5-97234a504114",
+        "tableId": "3352e9a1-63f9-4710-8486-52055697e2aa",
         "name": "email",
         "comment": "이메일",
         "dataType": "VARCHAR(191)",
@@ -659,13 +667,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "414e88ec-23a3-4856-905e-b178d9459d40": {
-        "id": "414e88ec-23a3-4856-905e-b178d9459d40",
-        "tableId": "8c6f34fe-3970-4691-b034-89b336985e4c",
+      "eca1ab59-bc1c-4923-9c43-60deb3f13776": {
+        "id": "eca1ab59-bc1c-4923-9c43-60deb3f13776",
+        "tableId": "3352e9a1-63f9-4710-8486-52055697e2aa",
         "name": "password",
         "comment": "비밀번호",
         "dataType": "VARCHAR(191)",
@@ -679,13 +687,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "82ba4272-4bba-456e-b129-3d050b206107": {
-        "id": "82ba4272-4bba-456e-b129-3d050b206107",
-        "tableId": "8c6f34fe-3970-4691-b034-89b336985e4c",
+      "4bb67714-d186-4e06-acc7-f906446b36a3": {
+        "id": "4bb67714-d186-4e06-acc7-f906446b36a3",
+        "tableId": "3352e9a1-63f9-4710-8486-52055697e2aa",
         "name": "name",
         "comment": "이름",
         "dataType": "VARCHAR(191)",
@@ -699,13 +707,93 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "6c743699-e0f2-401b-a67d-388cf4a3a2ef": {
-        "id": "6c743699-e0f2-401b-a67d-388cf4a3a2ef",
-        "tableId": "7c58d7c6-a8f1-4021-a7d5-2f9fdfc72c2c",
+      "7c0abd92-775c-404a-877a-ca4e3ee42d26": {
+        "id": "7c0abd92-775c-404a-877a-ca4e3ee42d26",
+        "tableId": "3352e9a1-63f9-4710-8486-52055697e2aa",
+        "name": "phone",
+        "comment": "연락처",
+        "dataType": "VARCHAR(191)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 120,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
+        }
+      },
+      "54667c16-7877-4735-9126-d4d18d5f06f2": {
+        "id": "54667c16-7877-4735-9126-d4d18d5f06f2",
+        "tableId": "3352e9a1-63f9-4710-8486-52055697e2aa",
+        "name": "zipcode",
+        "comment": "우편번호",
+        "dataType": "VARCHAR(191)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 120,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
+        }
+      },
+      "24c953f1-78c3-4e6b-8cd5-168798e90f72": {
+        "id": "24c953f1-78c3-4e6b-8cd5-168798e90f72",
+        "tableId": "3352e9a1-63f9-4710-8486-52055697e2aa",
+        "name": "address",
+        "comment": "기본 주소",
+        "dataType": "VARCHAR(191)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 120,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
+        }
+      },
+      "48202c3e-9591-4d2d-a2a2-8b725ea0d73b": {
+        "id": "48202c3e-9591-4d2d-a2a2-8b725ea0d73b",
+        "tableId": "3352e9a1-63f9-4710-8486-52055697e2aa",
+        "name": "detailAddress",
+        "comment": "상세 주소",
+        "dataType": "VARCHAR(191)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 120,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
+        }
+      },
+      "3fd4def1-c216-4ac8-bdf5-ccf6f7481c35": {
+        "id": "3fd4def1-c216-4ac8-bdf5-ccf6f7481c35",
+        "tableId": "63048ef5-a212-46fd-a576-63a16dc78200",
         "name": "id",
         "comment": "카테고리 번호",
         "dataType": "VARCHAR(191)",
@@ -719,13 +807,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "fdcd88e3-e3f2-485d-85b2-1293d97419db": {
-        "id": "fdcd88e3-e3f2-485d-85b2-1293d97419db",
-        "tableId": "7c58d7c6-a8f1-4021-a7d5-2f9fdfc72c2c",
+      "f09aca07-0a14-4f9b-91a5-71708f050a99": {
+        "id": "f09aca07-0a14-4f9b-91a5-71708f050a99",
+        "tableId": "63048ef5-a212-46fd-a576-63a16dc78200",
         "name": "name",
         "comment": "카테고리명",
         "dataType": "VARCHAR(191)",
@@ -739,13 +827,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "2de7b77e-ff0e-4592-8b07-1be95d36f2d4": {
-        "id": "2de7b77e-ff0e-4592-8b07-1be95d36f2d4",
-        "tableId": "7c58d7c6-a8f1-4021-a7d5-2f9fdfc72c2c",
+      "12a18794-b457-4c9e-8d2c-7ae3751f046c": {
+        "id": "12a18794-b457-4c9e-8d2c-7ae3751f046c",
+        "tableId": "63048ef5-a212-46fd-a576-63a16dc78200",
         "name": "parentId",
         "comment": "상위 카테고리 ID",
         "dataType": "VARCHAR(191)",
@@ -759,13 +847,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "6941b94b-6b37-4d97-976c-d1ece4d748b9": {
-        "id": "6941b94b-6b37-4d97-976c-d1ece4d748b9",
-        "tableId": "ea2894fe-a496-423a-a532-95ef5ba176a3",
+      "65620204-b9bd-43c8-93be-c0ee8e298d47": {
+        "id": "65620204-b9bd-43c8-93be-c0ee8e298d47",
+        "tableId": "2700c220-a99d-4f6b-bf31-510301f963a5",
         "name": "id",
         "comment": "상품 고유 번호",
         "dataType": "VARCHAR(191)",
@@ -779,13 +867,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "91a3a327-93e5-4aaf-b189-72c0d4657ee9": {
-        "id": "91a3a327-93e5-4aaf-b189-72c0d4657ee9",
-        "tableId": "ea2894fe-a496-423a-a532-95ef5ba176a3",
+      "733f8452-42ca-4b01-b24a-9cdaf51a5e86": {
+        "id": "733f8452-42ca-4b01-b24a-9cdaf51a5e86",
+        "tableId": "2700c220-a99d-4f6b-bf31-510301f963a5",
         "name": "categoryId",
         "comment": "카테고리 ID",
         "dataType": "VARCHAR(191)",
@@ -799,13 +887,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "bdd81b27-59db-4abe-aa7b-9ce3356dbf39": {
-        "id": "bdd81b27-59db-4abe-aa7b-9ce3356dbf39",
-        "tableId": "ea2894fe-a496-423a-a532-95ef5ba176a3",
+      "79826d29-ae4c-4cf7-8260-d1c30d6447ae": {
+        "id": "79826d29-ae4c-4cf7-8260-d1c30d6447ae",
+        "tableId": "2700c220-a99d-4f6b-bf31-510301f963a5",
         "name": "name",
         "comment": "상품명",
         "dataType": "VARCHAR(191)",
@@ -819,13 +907,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "780253d9-ced7-4e5c-8d6e-1fb5941fa7a7": {
-        "id": "780253d9-ced7-4e5c-8d6e-1fb5941fa7a7",
-        "tableId": "ea2894fe-a496-423a-a532-95ef5ba176a3",
+      "4d9db0e1-a2f4-4011-8fa6-bd972c2e3d4c": {
+        "id": "4d9db0e1-a2f4-4011-8fa6-bd972c2e3d4c",
+        "tableId": "2700c220-a99d-4f6b-bf31-510301f963a5",
         "name": "description",
         "comment": "상품 상세 설명",
         "dataType": "TEXT",
@@ -839,13 +927,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "ffbbc941-32e5-4950-8a7e-9ac79ecb8f3d": {
-        "id": "ffbbc941-32e5-4950-8a7e-9ac79ecb8f3d",
-        "tableId": "ea2894fe-a496-423a-a532-95ef5ba176a3",
+      "b0ce9c5f-ccf3-4597-9bdc-10daadc32d2b": {
+        "id": "b0ce9c5f-ccf3-4597-9bdc-10daadc32d2b",
+        "tableId": "2700c220-a99d-4f6b-bf31-510301f963a5",
         "name": "price",
         "comment": "판매 가격",
         "dataType": "INTEGER",
@@ -859,13 +947,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "ccd52f45-9b2a-4921-b678-1b0afad19228": {
-        "id": "ccd52f45-9b2a-4921-b678-1b0afad19228",
-        "tableId": "ea2894fe-a496-423a-a532-95ef5ba176a3",
+      "b12e8d3d-885c-48ca-a694-b3c2a75d8368": {
+        "id": "b12e8d3d-885c-48ca-a694-b3c2a75d8368",
+        "tableId": "2700c220-a99d-4f6b-bf31-510301f963a5",
         "name": "stock",
         "comment": "재고 수량",
         "dataType": "INTEGER",
@@ -879,13 +967,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "da3fbec9-5dcf-4dc3-b28e-144f6c294c7d": {
-        "id": "da3fbec9-5dcf-4dc3-b28e-144f6c294c7d",
-        "tableId": "ea2894fe-a496-423a-a532-95ef5ba176a3",
+      "4960fe37-74e3-4338-ac4c-a7956d0c6c66": {
+        "id": "4960fe37-74e3-4338-ac4c-a7956d0c6c66",
+        "tableId": "2700c220-a99d-4f6b-bf31-510301f963a5",
         "name": "viewCount",
         "comment": "조회수",
         "dataType": "INTEGER",
@@ -899,13 +987,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "73a9a441-5335-49aa-8a5a-b54d69e5b7b8": {
-        "id": "73a9a441-5335-49aa-8a5a-b54d69e5b7b8",
-        "tableId": "1cd4ba4c-0042-45b9-b53a-0e7e5dca489b",
+      "26b025f2-10ce-41e0-81aa-acd9adff4ff1": {
+        "id": "26b025f2-10ce-41e0-81aa-acd9adff4ff1",
+        "tableId": "405a4315-2cf4-4ffa-ade0-a925f39ded60",
         "name": "id",
         "comment": "이미지 번호",
         "dataType": "VARCHAR(191)",
@@ -919,13 +1007,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "bebafa38-48f2-462d-8a84-0e30776dd261": {
-        "id": "bebafa38-48f2-462d-8a84-0e30776dd261",
-        "tableId": "1cd4ba4c-0042-45b9-b53a-0e7e5dca489b",
+      "8631c7cc-e7a3-4f58-964d-9c1154178cb3": {
+        "id": "8631c7cc-e7a3-4f58-964d-9c1154178cb3",
+        "tableId": "405a4315-2cf4-4ffa-ade0-a925f39ded60",
         "name": "productId",
         "comment": "상품 ID",
         "dataType": "VARCHAR(191)",
@@ -939,13 +1027,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "3b3ae41d-3a63-4d76-a4f5-5308ec5dfb20": {
-        "id": "3b3ae41d-3a63-4d76-a4f5-5308ec5dfb20",
-        "tableId": "1cd4ba4c-0042-45b9-b53a-0e7e5dca489b",
+      "738e7e15-6210-45ea-a58f-130337a56e65": {
+        "id": "738e7e15-6210-45ea-a58f-130337a56e65",
+        "tableId": "405a4315-2cf4-4ffa-ade0-a925f39ded60",
         "name": "url",
         "comment": "이미지 경로",
         "dataType": "VARCHAR(191)",
@@ -959,13 +1047,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "fcd4e2ef-6e4e-4f65-b5f6-4e0ae3c813a5": {
-        "id": "fcd4e2ef-6e4e-4f65-b5f6-4e0ae3c813a5",
-        "tableId": "1cd4ba4c-0042-45b9-b53a-0e7e5dca489b",
+      "c50b0358-6358-45c5-982b-9d74ff375c01": {
+        "id": "c50b0358-6358-45c5-982b-9d74ff375c01",
+        "tableId": "405a4315-2cf4-4ffa-ade0-a925f39ded60",
         "name": "isMain",
         "comment": "대표 이미지 여부",
         "dataType": "BOOLEAN",
@@ -979,13 +1067,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "75f03bdf-c646-4d82-999f-a0869533516f": {
-        "id": "75f03bdf-c646-4d82-999f-a0869533516f",
-        "tableId": "e3a13a8a-df83-455c-8e30-2ee784b69ff5",
+      "02b440fa-df29-4485-9476-ddaf56764a1a": {
+        "id": "02b440fa-df29-4485-9476-ddaf56764a1a",
+        "tableId": "bbd68df6-c11c-4b26-bd48-f5c8c7a8d3b6",
         "name": "id",
         "comment": "옵션 번호",
         "dataType": "VARCHAR(191)",
@@ -999,13 +1087,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "c4a0a8bf-add4-4a67-8132-b39c92d17bdf": {
-        "id": "c4a0a8bf-add4-4a67-8132-b39c92d17bdf",
-        "tableId": "e3a13a8a-df83-455c-8e30-2ee784b69ff5",
+      "f0d27deb-0e42-4e67-bbba-5ab66e6e998f": {
+        "id": "f0d27deb-0e42-4e67-bbba-5ab66e6e998f",
+        "tableId": "bbd68df6-c11c-4b26-bd48-f5c8c7a8d3b6",
         "name": "productId",
         "comment": "상품 ID",
         "dataType": "VARCHAR(191)",
@@ -1019,13 +1107,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "469fbab9-bbf2-43b9-882e-9ea4feb5c904": {
-        "id": "469fbab9-bbf2-43b9-882e-9ea4feb5c904",
-        "tableId": "e3a13a8a-df83-455c-8e30-2ee784b69ff5",
+      "79437af5-79f5-4e70-a21b-b22d1b1795be": {
+        "id": "79437af5-79f5-4e70-a21b-b22d1b1795be",
+        "tableId": "bbd68df6-c11c-4b26-bd48-f5c8c7a8d3b6",
         "name": "name",
         "comment": "옵션명 (예: 사이즈)",
         "dataType": "VARCHAR(191)",
@@ -1039,13 +1127,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "b01c307d-b98b-456a-b55a-6d083ba128cf": {
-        "id": "b01c307d-b98b-456a-b55a-6d083ba128cf",
-        "tableId": "e3a13a8a-df83-455c-8e30-2ee784b69ff5",
+      "e72e6f23-9e8f-46c8-9c25-cafc9f3dfa76": {
+        "id": "e72e6f23-9e8f-46c8-9c25-cafc9f3dfa76",
+        "tableId": "bbd68df6-c11c-4b26-bd48-f5c8c7a8d3b6",
         "name": "value",
         "comment": "옵션값 (예: XL)",
         "dataType": "VARCHAR(191)",
@@ -1059,13 +1147,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "07e35200-f8a6-4239-a167-e81f817258c1": {
-        "id": "07e35200-f8a6-4239-a167-e81f817258c1",
-        "tableId": "e3a13a8a-df83-455c-8e30-2ee784b69ff5",
+      "2dfe513c-437b-45ff-9ed9-64cb1c9715eb": {
+        "id": "2dfe513c-437b-45ff-9ed9-64cb1c9715eb",
+        "tableId": "bbd68df6-c11c-4b26-bd48-f5c8c7a8d3b6",
         "name": "addPrice",
         "comment": "추가 금액",
         "dataType": "INTEGER",
@@ -1079,13 +1167,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "7eba33b4-be8d-4b96-9b48-b18c0d7120da": {
-        "id": "7eba33b4-be8d-4b96-9b48-b18c0d7120da",
-        "tableId": "e3a13a8a-df83-455c-8e30-2ee784b69ff5",
+      "d835d79f-b74d-466d-970d-328ef41131bd": {
+        "id": "d835d79f-b74d-466d-970d-328ef41131bd",
+        "tableId": "bbd68df6-c11c-4b26-bd48-f5c8c7a8d3b6",
         "name": "stock",
         "comment": "옵션별 재고",
         "dataType": "INTEGER",
@@ -1099,13 +1187,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104383,
-          "createAt": 1782869104383
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "df419bcb-ec82-4d0d-a6a8-7952c154fca7": {
-        "id": "df419bcb-ec82-4d0d-a6a8-7952c154fca7",
-        "tableId": "7db5c8be-5a26-48b3-89f4-30634ce42e69",
+      "8761e8bd-85f4-4dae-a196-10a4e90728f4": {
+        "id": "8761e8bd-85f4-4dae-a196-10a4e90728f4",
+        "tableId": "c86e653a-18ac-4b32-971c-a25837f30dcc",
         "name": "id",
         "comment": "리뷰 번호",
         "dataType": "VARCHAR(191)",
@@ -1119,13 +1207,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "f60705b2-2c3d-48d9-af1b-9295b58390bc": {
-        "id": "f60705b2-2c3d-48d9-af1b-9295b58390bc",
-        "tableId": "7db5c8be-5a26-48b3-89f4-30634ce42e69",
+      "a00a09f5-fa5d-46f2-bcf6-49dd8457e5ae": {
+        "id": "a00a09f5-fa5d-46f2-bcf6-49dd8457e5ae",
+        "tableId": "c86e653a-18ac-4b32-971c-a25837f30dcc",
         "name": "productId",
         "comment": "상품 ID",
         "dataType": "VARCHAR(191)",
@@ -1139,13 +1227,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "1f258d7b-16cf-44d1-b94c-9cd761692b77": {
-        "id": "1f258d7b-16cf-44d1-b94c-9cd761692b77",
-        "tableId": "7db5c8be-5a26-48b3-89f4-30634ce42e69",
+      "52e84a06-9004-4677-be06-0940047196fc": {
+        "id": "52e84a06-9004-4677-be06-0940047196fc",
+        "tableId": "c86e653a-18ac-4b32-971c-a25837f30dcc",
         "name": "userId",
         "comment": "작성자 유저 ID",
         "dataType": "VARCHAR(191)",
@@ -1159,13 +1247,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "7033550e-011a-4475-9357-a897c4f90eca": {
-        "id": "7033550e-011a-4475-9357-a897c4f90eca",
-        "tableId": "7db5c8be-5a26-48b3-89f4-30634ce42e69",
+      "b8162bea-3120-4f3e-a264-4e5b638c44e0": {
+        "id": "b8162bea-3120-4f3e-a264-4e5b638c44e0",
+        "tableId": "c86e653a-18ac-4b32-971c-a25837f30dcc",
         "name": "rating",
         "comment": "별점 (1~5)",
         "dataType": "INTEGER",
@@ -1179,13 +1267,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "e00dcc25-4a0e-4ead-a4bd-9b64e34ce39d": {
-        "id": "e00dcc25-4a0e-4ead-a4bd-9b64e34ce39d",
-        "tableId": "7db5c8be-5a26-48b3-89f4-30634ce42e69",
+      "bde87f81-701d-4046-b838-2698651333d1": {
+        "id": "bde87f81-701d-4046-b838-2698651333d1",
+        "tableId": "c86e653a-18ac-4b32-971c-a25837f30dcc",
         "name": "content",
         "comment": "리뷰 내용",
         "dataType": "TEXT",
@@ -1199,13 +1287,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "4163dba5-9bbe-4286-b495-731299b8c6f3": {
-        "id": "4163dba5-9bbe-4286-b495-731299b8c6f3",
-        "tableId": "aaabab82-9277-48dc-8db2-2407c2d74fb6",
+      "f80d2513-21bc-4331-aff6-726efa59fca0": {
+        "id": "f80d2513-21bc-4331-aff6-726efa59fca0",
+        "tableId": "fb34886a-dcc0-45fe-aa5b-198f6eacd294",
         "name": "id",
         "comment": "찜 목록 번호",
         "dataType": "VARCHAR(191)",
@@ -1219,13 +1307,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "262b73bd-5112-46a8-a7b8-6af9da955cbc": {
-        "id": "262b73bd-5112-46a8-a7b8-6af9da955cbc",
-        "tableId": "aaabab82-9277-48dc-8db2-2407c2d74fb6",
+      "7043197c-34e6-4d67-8ff3-b136475aa6de": {
+        "id": "7043197c-34e6-4d67-8ff3-b136475aa6de",
+        "tableId": "fb34886a-dcc0-45fe-aa5b-198f6eacd294",
         "name": "userId",
         "comment": "유저 ID",
         "dataType": "VARCHAR(191)",
@@ -1239,13 +1327,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "61edc362-8177-4140-8c1e-f843b4fc9f64": {
-        "id": "61edc362-8177-4140-8c1e-f843b4fc9f64",
-        "tableId": "1348bf32-10f1-4d23-be99-344eb9891a86",
+      "94445e0a-c398-4202-beb6-7d0b2bf8988c": {
+        "id": "94445e0a-c398-4202-beb6-7d0b2bf8988c",
+        "tableId": "0cfa84c5-4eca-46be-a0b6-1eadb7010428",
         "name": "id",
         "comment": "찜 항목 번호",
         "dataType": "VARCHAR(191)",
@@ -1259,13 +1347,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "ac63adea-d0b9-4cfa-9b7d-08ccb62d5019": {
-        "id": "ac63adea-d0b9-4cfa-9b7d-08ccb62d5019",
-        "tableId": "1348bf32-10f1-4d23-be99-344eb9891a86",
+      "5883433d-3c8b-4bd0-8759-ee991b3ea206": {
+        "id": "5883433d-3c8b-4bd0-8759-ee991b3ea206",
+        "tableId": "0cfa84c5-4eca-46be-a0b6-1eadb7010428",
         "name": "wishlistId",
         "comment": "찜 목록 ID",
         "dataType": "VARCHAR(191)",
@@ -1279,13 +1367,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "4b387351-eaf4-48fe-b9c5-ef1f72d420b3": {
-        "id": "4b387351-eaf4-48fe-b9c5-ef1f72d420b3",
-        "tableId": "1348bf32-10f1-4d23-be99-344eb9891a86",
+      "16a25c8e-cca7-4b84-b4e9-bb077229fc17": {
+        "id": "16a25c8e-cca7-4b84-b4e9-bb077229fc17",
+        "tableId": "0cfa84c5-4eca-46be-a0b6-1eadb7010428",
         "name": "productId",
         "comment": "상품 ID",
         "dataType": "VARCHAR(191)",
@@ -1299,13 +1387,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "35825339-f387-4d25-9534-bfeda6af960e": {
-        "id": "35825339-f387-4d25-9534-bfeda6af960e",
-        "tableId": "0a4b3722-80e7-440e-99b0-302026bf4a73",
+      "2b2e9053-59fa-45be-8593-885555cb61c1": {
+        "id": "2b2e9053-59fa-45be-8593-885555cb61c1",
+        "tableId": "29fb0f58-2d17-48b9-9259-f30cc5d89c76",
         "name": "id",
         "comment": "장바구니 번호",
         "dataType": "VARCHAR(191)",
@@ -1319,13 +1407,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "db5c937e-855c-42eb-9152-ee1ff9d72454": {
-        "id": "db5c937e-855c-42eb-9152-ee1ff9d72454",
-        "tableId": "0a4b3722-80e7-440e-99b0-302026bf4a73",
+      "3c1be0c1-4e3c-4f79-a161-65670282fe32": {
+        "id": "3c1be0c1-4e3c-4f79-a161-65670282fe32",
+        "tableId": "29fb0f58-2d17-48b9-9259-f30cc5d89c76",
         "name": "userId",
         "comment": "소유 유저 ID",
         "dataType": "VARCHAR(191)",
@@ -1339,13 +1427,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "25e3528a-da31-4449-87cf-4a20992a727d": {
-        "id": "25e3528a-da31-4449-87cf-4a20992a727d",
-        "tableId": "bde9948e-26e6-4890-a9b1-c498f57bb693",
+      "0d941a6c-f580-45c1-895b-5256763fc7c9": {
+        "id": "0d941a6c-f580-45c1-895b-5256763fc7c9",
+        "tableId": "61b8208f-f2a4-48d6-8065-7edfb933c1d3",
         "name": "id",
         "comment": "항목 번호",
         "dataType": "VARCHAR(191)",
@@ -1359,13 +1447,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "49fd2bea-9241-46cf-a238-7ee480d6e349": {
-        "id": "49fd2bea-9241-46cf-a238-7ee480d6e349",
-        "tableId": "bde9948e-26e6-4890-a9b1-c498f57bb693",
+      "52472900-1c70-498f-873f-fbb59028fdb3": {
+        "id": "52472900-1c70-498f-873f-fbb59028fdb3",
+        "tableId": "61b8208f-f2a4-48d6-8065-7edfb933c1d3",
         "name": "cartId",
         "comment": "장바구니 ID",
         "dataType": "VARCHAR(191)",
@@ -1379,13 +1467,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "f25b0f05-52e0-470f-b886-534706e606cd": {
-        "id": "f25b0f05-52e0-470f-b886-534706e606cd",
-        "tableId": "bde9948e-26e6-4890-a9b1-c498f57bb693",
+      "fce0a2ae-0527-4ccb-a9bc-21a625c6070a": {
+        "id": "fce0a2ae-0527-4ccb-a9bc-21a625c6070a",
+        "tableId": "61b8208f-f2a4-48d6-8065-7edfb933c1d3",
         "name": "productId",
         "comment": "상품 ID",
         "dataType": "VARCHAR(191)",
@@ -1399,13 +1487,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "b5ad2478-71c2-4371-b7f6-6f2c22c9df33": {
-        "id": "b5ad2478-71c2-4371-b7f6-6f2c22c9df33",
-        "tableId": "bde9948e-26e6-4890-a9b1-c498f57bb693",
+      "0df7b365-58bf-4897-99f0-95245357d497": {
+        "id": "0df7b365-58bf-4897-99f0-95245357d497",
+        "tableId": "61b8208f-f2a4-48d6-8065-7edfb933c1d3",
         "name": "optionId",
         "comment": "선택한 옵션 ID",
         "dataType": "VARCHAR(191)",
@@ -1419,13 +1507,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "46ab807e-89fa-463d-a7a6-d3c925a6ad22": {
-        "id": "46ab807e-89fa-463d-a7a6-d3c925a6ad22",
-        "tableId": "bde9948e-26e6-4890-a9b1-c498f57bb693",
+      "13f008a0-e048-4acf-9306-482364dc097b": {
+        "id": "13f008a0-e048-4acf-9306-482364dc097b",
+        "tableId": "61b8208f-f2a4-48d6-8065-7edfb933c1d3",
         "name": "quantity",
         "comment": "담은 수량",
         "dataType": "INTEGER",
@@ -1439,13 +1527,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265339,
+          "createAt": 1782874265339
         }
       },
-      "4a75b2d7-4bd1-4468-9be4-a40eb11cc084": {
-        "id": "4a75b2d7-4bd1-4468-9be4-a40eb11cc084",
-        "tableId": "374635d4-80c9-4951-93b0-6a3f9f3e2580",
+      "36f694be-79aa-41fe-9760-e71d998ee1dc": {
+        "id": "36f694be-79aa-41fe-9760-e71d998ee1dc",
+        "tableId": "bc7232f2-edcf-4537-95ec-b922eecd3eed",
         "name": "id",
         "comment": "주문 번호",
         "dataType": "VARCHAR(191)",
@@ -1459,13 +1547,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "aae18cf8-ee02-4066-9ad6-e312e611a734": {
-        "id": "aae18cf8-ee02-4066-9ad6-e312e611a734",
-        "tableId": "374635d4-80c9-4951-93b0-6a3f9f3e2580",
+      "53442985-3fd4-41aa-bd38-b57b4b6f18ad": {
+        "id": "53442985-3fd4-41aa-bd38-b57b4b6f18ad",
+        "tableId": "bc7232f2-edcf-4537-95ec-b922eecd3eed",
         "name": "userId",
         "comment": "주문자 유저 ID",
         "dataType": "VARCHAR(191)",
@@ -1479,13 +1567,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "57051929-0376-4904-9a0c-137c4f33e830": {
-        "id": "57051929-0376-4904-9a0c-137c4f33e830",
-        "tableId": "374635d4-80c9-4951-93b0-6a3f9f3e2580",
+      "e4d8f5ef-ae4a-4061-bb58-ab1cef0db8cd": {
+        "id": "e4d8f5ef-ae4a-4061-bb58-ab1cef0db8cd",
+        "tableId": "bc7232f2-edcf-4537-95ec-b922eecd3eed",
         "name": "totalAmount",
         "comment": "총 결제 금액",
         "dataType": "INTEGER",
@@ -1499,13 +1587,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "a23555d4-33a8-4b13-9ee1-b25a42c7e20e": {
-        "id": "a23555d4-33a8-4b13-9ee1-b25a42c7e20e",
-        "tableId": "374635d4-80c9-4951-93b0-6a3f9f3e2580",
+      "db5f61b5-7601-4bd8-a50b-ddf764de0608": {
+        "id": "db5f61b5-7601-4bd8-a50b-ddf764de0608",
+        "tableId": "bc7232f2-edcf-4537-95ec-b922eecd3eed",
         "name": "status",
         "comment": "주문 상태",
         "dataType": "VARCHAR(50)",
@@ -1519,13 +1607,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "b268f6eb-ac46-4c5e-aa74-171b6e1188a9": {
-        "id": "b268f6eb-ac46-4c5e-aa74-171b6e1188a9",
-        "tableId": "43d29105-4dda-46d0-816b-49fd9ade22e0",
+      "3330eef5-5f34-4784-8546-2c924465fe5a": {
+        "id": "3330eef5-5f34-4784-8546-2c924465fe5a",
+        "tableId": "c869e11b-023a-4b41-9138-b8570d4a90aa",
         "name": "id",
         "comment": "상세 번호",
         "dataType": "VARCHAR(191)",
@@ -1539,13 +1627,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "030fe21b-7128-421c-a3da-fe6d749a38eb": {
-        "id": "030fe21b-7128-421c-a3da-fe6d749a38eb",
-        "tableId": "43d29105-4dda-46d0-816b-49fd9ade22e0",
+      "943d31cc-9082-4cb2-839d-87ed47bd1507": {
+        "id": "943d31cc-9082-4cb2-839d-87ed47bd1507",
+        "tableId": "c869e11b-023a-4b41-9138-b8570d4a90aa",
         "name": "orderId",
         "comment": "주문 ID",
         "dataType": "VARCHAR(191)",
@@ -1559,13 +1647,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "dc804836-1156-475a-9ebd-7744afff1376": {
-        "id": "dc804836-1156-475a-9ebd-7744afff1376",
-        "tableId": "43d29105-4dda-46d0-816b-49fd9ade22e0",
+      "6b493793-53a0-4e4b-a32f-ca5aafd31894": {
+        "id": "6b493793-53a0-4e4b-a32f-ca5aafd31894",
+        "tableId": "c869e11b-023a-4b41-9138-b8570d4a90aa",
         "name": "productId",
         "comment": "상품 ID",
         "dataType": "VARCHAR(191)",
@@ -1579,13 +1667,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "4e12db4d-ac22-4271-8032-2e3da19382bf": {
-        "id": "4e12db4d-ac22-4271-8032-2e3da19382bf",
-        "tableId": "43d29105-4dda-46d0-816b-49fd9ade22e0",
+      "334e5510-7e41-4466-b1c6-b0db42a56a91": {
+        "id": "334e5510-7e41-4466-b1c6-b0db42a56a91",
+        "tableId": "c869e11b-023a-4b41-9138-b8570d4a90aa",
         "name": "optionId",
         "comment": "선택한 옵션 ID",
         "dataType": "VARCHAR(191)",
@@ -1599,13 +1687,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "e29e2bca-901c-41c2-b6ac-7fd974d0249e": {
-        "id": "e29e2bca-901c-41c2-b6ac-7fd974d0249e",
-        "tableId": "43d29105-4dda-46d0-816b-49fd9ade22e0",
+      "80f164bb-9da6-4061-9305-8405a6c49eb3": {
+        "id": "80f164bb-9da6-4061-9305-8405a6c49eb3",
+        "tableId": "c869e11b-023a-4b41-9138-b8570d4a90aa",
         "name": "quantity",
         "comment": "수량",
         "dataType": "INTEGER",
@@ -1619,13 +1707,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "29b7e901-7586-4bdb-9298-9d57820ffce4": {
-        "id": "29b7e901-7586-4bdb-9298-9d57820ffce4",
-        "tableId": "43d29105-4dda-46d0-816b-49fd9ade22e0",
+      "d6c7bbd3-4d00-4333-948c-1b482648d186": {
+        "id": "d6c7bbd3-4d00-4333-948c-1b482648d186",
+        "tableId": "c869e11b-023a-4b41-9138-b8570d4a90aa",
         "name": "price",
         "comment": "구매 당시 금액",
         "dataType": "INTEGER",
@@ -1639,13 +1727,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "8ce7ed7c-da9e-47f9-b17c-e69ee15f6f3f": {
-        "id": "8ce7ed7c-da9e-47f9-b17c-e69ee15f6f3f",
-        "tableId": "d16fb211-4055-428d-a749-8294b73b4e79",
+      "45db64ad-9f52-46ad-8df3-33e6a9214a08": {
+        "id": "45db64ad-9f52-46ad-8df3-33e6a9214a08",
+        "tableId": "cba47e61-d0c3-46dd-8a63-01d32a50c9c2",
         "name": "id",
         "comment": "결제 번호",
         "dataType": "VARCHAR(191)",
@@ -1659,13 +1747,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "4dbd883f-fed6-4529-b946-4f4f0db783e0": {
-        "id": "4dbd883f-fed6-4529-b946-4f4f0db783e0",
-        "tableId": "d16fb211-4055-428d-a749-8294b73b4e79",
+      "db0928f0-b7a7-4657-bc1a-5fc0a1b7431f": {
+        "id": "db0928f0-b7a7-4657-bc1a-5fc0a1b7431f",
+        "tableId": "cba47e61-d0c3-46dd-8a63-01d32a50c9c2",
         "name": "orderId",
         "comment": "주문 ID",
         "dataType": "VARCHAR(191)",
@@ -1679,13 +1767,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "f3fa532b-855c-45f9-95a8-6138ccdb50f8": {
-        "id": "f3fa532b-855c-45f9-95a8-6138ccdb50f8",
-        "tableId": "d16fb211-4055-428d-a749-8294b73b4e79",
+      "9f6321b6-e4d3-42e0-ad5e-3dd4743c387f": {
+        "id": "9f6321b6-e4d3-42e0-ad5e-3dd4743c387f",
+        "tableId": "cba47e61-d0c3-46dd-8a63-01d32a50c9c2",
         "name": "method",
         "comment": "결제 수단",
         "dataType": "VARCHAR(50)",
@@ -1699,13 +1787,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "22b1a493-9e02-44a5-8478-6a5d350b566a": {
-        "id": "22b1a493-9e02-44a5-8478-6a5d350b566a",
-        "tableId": "d16fb211-4055-428d-a749-8294b73b4e79",
+      "485e6516-8c2a-4b7a-ae06-6bfc1b912e2c": {
+        "id": "485e6516-8c2a-4b7a-ae06-6bfc1b912e2c",
+        "tableId": "cba47e61-d0c3-46dd-8a63-01d32a50c9c2",
         "name": "amount",
         "comment": "승인 금액",
         "dataType": "INTEGER",
@@ -1719,13 +1807,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "3cdb0f18-bdc1-4d11-9fcb-7fdf06383699": {
-        "id": "3cdb0f18-bdc1-4d11-9fcb-7fdf06383699",
-        "tableId": "d16fb211-4055-428d-a749-8294b73b4e79",
+      "df600648-e5e8-40fc-84ff-a1f28c5eeabe": {
+        "id": "df600648-e5e8-40fc-84ff-a1f28c5eeabe",
+        "tableId": "cba47e61-d0c3-46dd-8a63-01d32a50c9c2",
         "name": "transactionId",
         "comment": "PG사 거래번호",
         "dataType": "VARCHAR(191)",
@@ -1739,13 +1827,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "5a3bc9da-6242-425c-8805-834b394f9bc6": {
-        "id": "5a3bc9da-6242-425c-8805-834b394f9bc6",
-        "tableId": "d16fb211-4055-428d-a749-8294b73b4e79",
+      "64b92c2a-d143-45c4-bc35-7ebd51a00a54": {
+        "id": "64b92c2a-d143-45c4-bc35-7ebd51a00a54",
+        "tableId": "cba47e61-d0c3-46dd-8a63-01d32a50c9c2",
         "name": "status",
         "comment": "결제 상태",
         "dataType": "VARCHAR(50)",
@@ -1759,13 +1847,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "f3054816-ee01-450c-872a-7c0761f878ac": {
-        "id": "f3054816-ee01-450c-872a-7c0761f878ac",
-        "tableId": "6ab08d1e-fd4b-4e3e-a690-1fc99279fc34",
+      "0bbc6abf-b9b2-4bb4-adec-663fcca01291": {
+        "id": "0bbc6abf-b9b2-4bb4-adec-663fcca01291",
+        "tableId": "0020ed0e-fd43-453c-a631-83754d2653b2",
         "name": "id",
         "comment": "배송 번호",
         "dataType": "VARCHAR(191)",
@@ -1779,13 +1867,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "8e4bf00b-c509-434a-be64-4db8a51744a1": {
-        "id": "8e4bf00b-c509-434a-be64-4db8a51744a1",
-        "tableId": "6ab08d1e-fd4b-4e3e-a690-1fc99279fc34",
+      "ea0f94fd-43ce-4c01-8219-bbe40c36d759": {
+        "id": "ea0f94fd-43ce-4c01-8219-bbe40c36d759",
+        "tableId": "0020ed0e-fd43-453c-a631-83754d2653b2",
         "name": "orderId",
         "comment": "주문 ID",
         "dataType": "VARCHAR(191)",
@@ -1799,13 +1887,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "f4851bd3-1f53-4846-9d8d-177e92f631b9": {
-        "id": "f4851bd3-1f53-4846-9d8d-177e92f631b9",
-        "tableId": "6ab08d1e-fd4b-4e3e-a690-1fc99279fc34",
+      "fc912c34-ffe7-4ad8-84fd-803cbdb262d0": {
+        "id": "fc912c34-ffe7-4ad8-84fd-803cbdb262d0",
+        "tableId": "0020ed0e-fd43-453c-a631-83754d2653b2",
         "name": "recipient",
         "comment": "수령인 이름",
         "dataType": "VARCHAR(191)",
@@ -1819,13 +1907,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "f12c214c-02bb-427f-8be0-fa5f1032ee07": {
-        "id": "f12c214c-02bb-427f-8be0-fa5f1032ee07",
-        "tableId": "6ab08d1e-fd4b-4e3e-a690-1fc99279fc34",
+      "b8f24d89-2387-4b46-a11d-f59f733e6c5d": {
+        "id": "b8f24d89-2387-4b46-a11d-f59f733e6c5d",
+        "tableId": "0020ed0e-fd43-453c-a631-83754d2653b2",
         "name": "address",
         "comment": "배송지 주소",
         "dataType": "TEXT",
@@ -1839,13 +1927,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "31832a6e-fd08-4daf-8f23-69d351c1d02e": {
-        "id": "31832a6e-fd08-4daf-8f23-69d351c1d02e",
-        "tableId": "6ab08d1e-fd4b-4e3e-a690-1fc99279fc34",
+      "9ea8da1e-7c4e-4cef-b71a-27deae5e8b92": {
+        "id": "9ea8da1e-7c4e-4cef-b71a-27deae5e8b92",
+        "tableId": "0020ed0e-fd43-453c-a631-83754d2653b2",
         "name": "trackingNo",
         "comment": "운송장 번호",
         "dataType": "VARCHAR(191)",
@@ -1859,13 +1947,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "c53b1e8a-f1ee-41d5-8250-00af7f4ac45f": {
-        "id": "c53b1e8a-f1ee-41d5-8250-00af7f4ac45f",
-        "tableId": "6ab08d1e-fd4b-4e3e-a690-1fc99279fc34",
+      "8fdf2cc4-9855-4e30-a0a5-1be44368fd8c": {
+        "id": "8fdf2cc4-9855-4e30-a0a5-1be44368fd8c",
+        "tableId": "0020ed0e-fd43-453c-a631-83754d2653b2",
         "name": "status",
         "comment": "배송 상태",
         "dataType": "VARCHAR(50)",
@@ -1879,13 +1967,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "54f2dc27-585a-49e2-b438-933205f59fc0": {
-        "id": "54f2dc27-585a-49e2-b438-933205f59fc0",
-        "tableId": "4ccae532-2e58-417e-b9f0-7d17cf45ff56",
+      "01fba20e-4507-4bc8-9f8b-4f3370deabfb": {
+        "id": "01fba20e-4507-4bc8-9f8b-4f3370deabfb",
+        "tableId": "886c29e7-9999-49a4-a07b-eb4b97448858",
         "name": "id",
         "comment": "쿠폰 번호",
         "dataType": "VARCHAR(191)",
@@ -1899,13 +1987,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "1d3f5fe2-3ace-4285-8c65-92b49f727238": {
-        "id": "1d3f5fe2-3ace-4285-8c65-92b49f727238",
-        "tableId": "4ccae532-2e58-417e-b9f0-7d17cf45ff56",
+      "777cc589-8627-4450-b9d9-670a6a0d40ab": {
+        "id": "777cc589-8627-4450-b9d9-670a6a0d40ab",
+        "tableId": "886c29e7-9999-49a4-a07b-eb4b97448858",
         "name": "name",
         "comment": "쿠폰명",
         "dataType": "VARCHAR(191)",
@@ -1919,13 +2007,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "ea74255f-874b-4227-8534-52215da06d0e": {
-        "id": "ea74255f-874b-4227-8534-52215da06d0e",
-        "tableId": "4ccae532-2e58-417e-b9f0-7d17cf45ff56",
+      "e9d5d468-083e-4989-97d9-2670e2e354a4": {
+        "id": "e9d5d468-083e-4989-97d9-2670e2e354a4",
+        "tableId": "886c29e7-9999-49a4-a07b-eb4b97448858",
         "name": "discountRate",
         "comment": "할인율(%)",
         "dataType": "INTEGER",
@@ -1939,13 +2027,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "abcb5f7c-a24a-4d37-9b90-6a03ee52a4de": {
-        "id": "abcb5f7c-a24a-4d37-9b90-6a03ee52a4de",
-        "tableId": "4ccae532-2e58-417e-b9f0-7d17cf45ff56",
+      "1604bbfd-9579-45e8-9e87-95285ea7a1fc": {
+        "id": "1604bbfd-9579-45e8-9e87-95285ea7a1fc",
+        "tableId": "886c29e7-9999-49a4-a07b-eb4b97448858",
         "name": "discountAmt",
         "comment": "정액 할인금액",
         "dataType": "INTEGER",
@@ -1959,13 +2047,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "8191515b-1c78-4de8-908b-435ffe39e5a2": {
-        "id": "8191515b-1c78-4de8-908b-435ffe39e5a2",
-        "tableId": "4ccae532-2e58-417e-b9f0-7d17cf45ff56",
+      "827437ca-b2fa-40dd-bf61-9464ee104f52": {
+        "id": "827437ca-b2fa-40dd-bf61-9464ee104f52",
+        "tableId": "886c29e7-9999-49a4-a07b-eb4b97448858",
         "name": "minOrderAmt",
         "comment": "최소 사용금액",
         "dataType": "INTEGER",
@@ -1979,13 +2067,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "d227f0a0-5633-43ed-aaaf-3b28e14cfd86": {
-        "id": "d227f0a0-5633-43ed-aaaf-3b28e14cfd86",
-        "tableId": "ec1e1f42-e2e0-4869-9c83-7495f121fdf2",
+      "a395835d-0d02-4f36-b493-2cc15f920ebf": {
+        "id": "a395835d-0d02-4f36-b493-2cc15f920ebf",
+        "tableId": "962b1ab3-c5be-4ee6-9957-66b832cb0352",
         "name": "id",
         "comment": "발급 번호",
         "dataType": "VARCHAR(191)",
@@ -1999,13 +2087,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "62f4ec9d-d3f2-48a8-b8ff-97d800fa038a": {
-        "id": "62f4ec9d-d3f2-48a8-b8ff-97d800fa038a",
-        "tableId": "ec1e1f42-e2e0-4869-9c83-7495f121fdf2",
+      "5fb5db95-1687-4144-9016-1faf8a663db4": {
+        "id": "5fb5db95-1687-4144-9016-1faf8a663db4",
+        "tableId": "962b1ab3-c5be-4ee6-9957-66b832cb0352",
         "name": "userId",
         "comment": "소유 유저 ID",
         "dataType": "VARCHAR(191)",
@@ -2019,13 +2107,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "8321b149-c21a-432c-8cd0-ccbbcad7dc9f": {
-        "id": "8321b149-c21a-432c-8cd0-ccbbcad7dc9f",
-        "tableId": "ec1e1f42-e2e0-4869-9c83-7495f121fdf2",
+      "d8a448ad-8ca6-4a44-9314-5361c064a0a7": {
+        "id": "d8a448ad-8ca6-4a44-9314-5361c064a0a7",
+        "tableId": "962b1ab3-c5be-4ee6-9957-66b832cb0352",
         "name": "couponId",
         "comment": "쿠폰 ID",
         "dataType": "VARCHAR(191)",
@@ -2039,13 +2127,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "b739c7ad-4cc6-4c7c-9c9d-422c8b03a9a8": {
-        "id": "b739c7ad-4cc6-4c7c-9c9d-422c8b03a9a8",
-        "tableId": "ec1e1f42-e2e0-4869-9c83-7495f121fdf2",
+      "12a451ad-4ec8-49ae-9a31-6b85721bdb74": {
+        "id": "12a451ad-4ec8-49ae-9a31-6b85721bdb74",
+        "tableId": "962b1ab3-c5be-4ee6-9957-66b832cb0352",
         "name": "isUsed",
         "comment": "사용 여부",
         "dataType": "BOOLEAN",
@@ -2059,13 +2147,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "f474ba18-4dc3-4e2f-a32b-8b831e026e58": {
-        "id": "f474ba18-4dc3-4e2f-a32b-8b831e026e58",
-        "tableId": "add36d92-c5c7-47a3-8165-ca770cc582e6",
+      "52246e2c-58db-4f48-8ec8-d9be282fab4b": {
+        "id": "52246e2c-58db-4f48-8ec8-d9be282fab4b",
+        "tableId": "3a511f97-bbd3-40d8-81b5-7cfa6f204aaa",
         "name": "id",
         "comment": "공지사항 고유 번호",
         "dataType": "VARCHAR(191)",
@@ -2079,13 +2167,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "8b8e5a6a-06c9-42ac-852e-1c96b3fd310d": {
-        "id": "8b8e5a6a-06c9-42ac-852e-1c96b3fd310d",
-        "tableId": "add36d92-c5c7-47a3-8165-ca770cc582e6",
+      "38222ab0-3b58-4372-b0dc-713162784ff4": {
+        "id": "38222ab0-3b58-4372-b0dc-713162784ff4",
+        "tableId": "3a511f97-bbd3-40d8-81b5-7cfa6f204aaa",
         "name": "title",
         "comment": "제목",
         "dataType": "VARCHAR(191)",
@@ -2099,13 +2187,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "45d4aaad-2510-4ec0-8e71-7b54f7239656": {
-        "id": "45d4aaad-2510-4ec0-8e71-7b54f7239656",
-        "tableId": "add36d92-c5c7-47a3-8165-ca770cc582e6",
+      "8d7462b9-4f0e-4ad6-b246-8ebdf2c2c240": {
+        "id": "8d7462b9-4f0e-4ad6-b246-8ebdf2c2c240",
+        "tableId": "3a511f97-bbd3-40d8-81b5-7cfa6f204aaa",
         "name": "content",
         "comment": "내용",
         "dataType": "TEXT",
@@ -2119,13 +2207,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "a8ace3b7-3fe4-4a97-bc8d-d35f1a19dd52": {
-        "id": "a8ace3b7-3fe4-4a97-bc8d-d35f1a19dd52",
-        "tableId": "add36d92-c5c7-47a3-8165-ca770cc582e6",
+      "3c4e1dd9-ee96-4474-8c79-7a7d6b196dbc": {
+        "id": "3c4e1dd9-ee96-4474-8c79-7a7d6b196dbc",
+        "tableId": "3a511f97-bbd3-40d8-81b5-7cfa6f204aaa",
         "name": "viewCount",
         "comment": "조회수",
         "dataType": "INTEGER",
@@ -2139,13 +2227,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "71d1a5e9-ce74-4ab7-8e18-60fe4e9b20f9": {
-        "id": "71d1a5e9-ce74-4ab7-8e18-60fe4e9b20f9",
-        "tableId": "a7fb941e-af50-4ce2-bd05-7914b69ff8e3",
+      "ff27d547-d6c7-45f0-9899-a15d40d959f4": {
+        "id": "ff27d547-d6c7-45f0-9899-a15d40d959f4",
+        "tableId": "9ae387f6-a606-499f-904b-1d17c994966a",
         "name": "id",
         "comment": "문의 고유 번호",
         "dataType": "VARCHAR(191)",
@@ -2159,13 +2247,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "5be11302-c276-4780-b381-0e44b3a5befc": {
-        "id": "5be11302-c276-4780-b381-0e44b3a5befc",
-        "tableId": "a7fb941e-af50-4ce2-bd05-7914b69ff8e3",
+      "12fd9338-f25a-4d0d-98ca-6beeb383627a": {
+        "id": "12fd9338-f25a-4d0d-98ca-6beeb383627a",
+        "tableId": "9ae387f6-a606-499f-904b-1d17c994966a",
         "name": "userId",
         "comment": "작성자 유저 ID",
         "dataType": "VARCHAR(191)",
@@ -2179,13 +2267,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "cce7c391-1c03-4056-a4cd-8c2bacc61f9e": {
-        "id": "cce7c391-1c03-4056-a4cd-8c2bacc61f9e",
-        "tableId": "a7fb941e-af50-4ce2-bd05-7914b69ff8e3",
+      "b3bf3f91-843c-425f-8075-96c23dd7d81c": {
+        "id": "b3bf3f91-843c-425f-8075-96c23dd7d81c",
+        "tableId": "9ae387f6-a606-499f-904b-1d17c994966a",
         "name": "type",
         "comment": "문의 유형",
         "dataType": "VARCHAR(191)",
@@ -2199,13 +2287,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "eb4ffe5a-ba96-452c-9a39-c68720a2248f": {
-        "id": "eb4ffe5a-ba96-452c-9a39-c68720a2248f",
-        "tableId": "a7fb941e-af50-4ce2-bd05-7914b69ff8e3",
+      "8571b87f-dc9e-433e-be71-981628f6076d": {
+        "id": "8571b87f-dc9e-433e-be71-981628f6076d",
+        "tableId": "9ae387f6-a606-499f-904b-1d17c994966a",
         "name": "title",
         "comment": "문의 제목",
         "dataType": "VARCHAR(191)",
@@ -2219,13 +2307,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "02aa3524-a6b8-41a2-b1fb-07fed0828094": {
-        "id": "02aa3524-a6b8-41a2-b1fb-07fed0828094",
-        "tableId": "a7fb941e-af50-4ce2-bd05-7914b69ff8e3",
+      "0f5030c9-2077-40b0-8a76-f810c19b51fc": {
+        "id": "0f5030c9-2077-40b0-8a76-f810c19b51fc",
+        "tableId": "9ae387f6-a606-499f-904b-1d17c994966a",
         "name": "content",
         "comment": "문의 내용",
         "dataType": "TEXT",
@@ -2239,13 +2327,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "a24c71b7-8567-4da9-a9d2-7565971fe564": {
-        "id": "a24c71b7-8567-4da9-a9d2-7565971fe564",
-        "tableId": "a7fb941e-af50-4ce2-bd05-7914b69ff8e3",
+      "22300245-5f4a-4d97-b605-1926abd68750": {
+        "id": "22300245-5f4a-4d97-b605-1926abd68750",
+        "tableId": "9ae387f6-a606-499f-904b-1d17c994966a",
         "name": "status",
         "comment": "처리 상태",
         "dataType": "VARCHAR(50)",
@@ -2259,13 +2347,13 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "81893bdd-421a-4ddb-a0d5-9c14ed367d0f": {
-        "id": "81893bdd-421a-4ddb-a0d5-9c14ed367d0f",
-        "tableId": "a7fb941e-af50-4ce2-bd05-7914b69ff8e3",
+      "f2678237-9823-4345-bbfd-4f18b089c453": {
+        "id": "f2678237-9823-4345-bbfd-4f18b089c453",
+        "tableId": "9ae387f6-a606-499f-904b-1d17c994966a",
         "name": "answer",
         "comment": "관리자 답변",
         "dataType": "TEXT",
@@ -2279,570 +2367,570 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       }
     },
     "relationshipEntities": {
-      "fda40de1-7dc8-41f9-afa8-93e927d7a6a6": {
-        "id": "fda40de1-7dc8-41f9-afa8-93e927d7a6a6",
+      "15a48a9d-38de-42e1-9258-b41adf0a1382": {
+        "id": "15a48a9d-38de-42e1-9258-b41adf0a1382",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "8c6f34fe-3970-4691-b034-89b336985e4c",
+          "tableId": "3352e9a1-63f9-4710-8486-52055697e2aa",
           "columnIds": [
-            "cd2f3a20-ff77-4430-b557-3fa0b3c74221"
+            "18c186cc-7230-498b-876f-03878422a6cf"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "a7fb941e-af50-4ce2-bd05-7914b69ff8e3",
+          "tableId": "9ae387f6-a606-499f-904b-1d17c994966a",
           "columnIds": [
-            "5be11302-c276-4780-b381-0e44b3a5befc"
+            "12fd9338-f25a-4d0d-98ca-6beeb383627a"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "c136ef6b-dfa7-4652-8956-1efda28fac34": {
-        "id": "c136ef6b-dfa7-4652-8956-1efda28fac34",
+      "455a1df6-738a-4909-bfdf-db8a2f22fd0d": {
+        "id": "455a1df6-738a-4909-bfdf-db8a2f22fd0d",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "8c6f34fe-3970-4691-b034-89b336985e4c",
+          "tableId": "3352e9a1-63f9-4710-8486-52055697e2aa",
           "columnIds": [
-            "cd2f3a20-ff77-4430-b557-3fa0b3c74221"
+            "18c186cc-7230-498b-876f-03878422a6cf"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "0a4b3722-80e7-440e-99b0-302026bf4a73",
+          "tableId": "29fb0f58-2d17-48b9-9259-f30cc5d89c76",
           "columnIds": [
-            "db5c937e-855c-42eb-9152-ee1ff9d72454"
+            "3c1be0c1-4e3c-4f79-a161-65670282fe32"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "13f44846-a356-40b5-9bf2-4a9d3f291b45": {
-        "id": "13f44846-a356-40b5-9bf2-4a9d3f291b45",
+      "905bd46b-20f0-46d4-adec-c737406da7db": {
+        "id": "905bd46b-20f0-46d4-adec-c737406da7db",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "8c6f34fe-3970-4691-b034-89b336985e4c",
+          "tableId": "3352e9a1-63f9-4710-8486-52055697e2aa",
           "columnIds": [
-            "cd2f3a20-ff77-4430-b557-3fa0b3c74221"
+            "18c186cc-7230-498b-876f-03878422a6cf"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "374635d4-80c9-4951-93b0-6a3f9f3e2580",
+          "tableId": "bc7232f2-edcf-4537-95ec-b922eecd3eed",
           "columnIds": [
-            "aae18cf8-ee02-4066-9ad6-e312e611a734"
+            "53442985-3fd4-41aa-bd38-b57b4b6f18ad"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "32ceb94c-ed5c-484d-997f-e565c38c1400": {
-        "id": "32ceb94c-ed5c-484d-997f-e565c38c1400",
+      "f623e1f4-0575-4042-82bd-adce90467b69": {
+        "id": "f623e1f4-0575-4042-82bd-adce90467b69",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "8c6f34fe-3970-4691-b034-89b336985e4c",
+          "tableId": "3352e9a1-63f9-4710-8486-52055697e2aa",
           "columnIds": [
-            "cd2f3a20-ff77-4430-b557-3fa0b3c74221"
+            "18c186cc-7230-498b-876f-03878422a6cf"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "aaabab82-9277-48dc-8db2-2407c2d74fb6",
+          "tableId": "fb34886a-dcc0-45fe-aa5b-198f6eacd294",
           "columnIds": [
-            "262b73bd-5112-46a8-a7b8-6af9da955cbc"
+            "7043197c-34e6-4d67-8ff3-b136475aa6de"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "96cd80a3-c5ad-43de-aaa6-e50545ff91a0": {
-        "id": "96cd80a3-c5ad-43de-aaa6-e50545ff91a0",
+      "7d2db5d4-a6ea-41d3-b103-5a3723127e0d": {
+        "id": "7d2db5d4-a6ea-41d3-b103-5a3723127e0d",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "8c6f34fe-3970-4691-b034-89b336985e4c",
+          "tableId": "3352e9a1-63f9-4710-8486-52055697e2aa",
           "columnIds": [
-            "cd2f3a20-ff77-4430-b557-3fa0b3c74221"
+            "18c186cc-7230-498b-876f-03878422a6cf"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "ec1e1f42-e2e0-4869-9c83-7495f121fdf2",
+          "tableId": "962b1ab3-c5be-4ee6-9957-66b832cb0352",
           "columnIds": [
-            "62f4ec9d-d3f2-48a8-b8ff-97d800fa038a"
+            "5fb5db95-1687-4144-9016-1faf8a663db4"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "50635faa-5c82-48a3-9da6-85784b38e33f": {
-        "id": "50635faa-5c82-48a3-9da6-85784b38e33f",
+      "275b98c0-3513-42c1-b33c-27e861d67041": {
+        "id": "275b98c0-3513-42c1-b33c-27e861d67041",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "7c58d7c6-a8f1-4021-a7d5-2f9fdfc72c2c",
+          "tableId": "63048ef5-a212-46fd-a576-63a16dc78200",
           "columnIds": [
-            "6c743699-e0f2-401b-a67d-388cf4a3a2ef"
+            "3fd4def1-c216-4ac8-bdf5-ccf6f7481c35"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "ea2894fe-a496-423a-a532-95ef5ba176a3",
+          "tableId": "2700c220-a99d-4f6b-bf31-510301f963a5",
           "columnIds": [
-            "91a3a327-93e5-4aaf-b189-72c0d4657ee9"
+            "733f8452-42ca-4b01-b24a-9cdaf51a5e86"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "c69b1a8f-e519-4b24-b179-9f77800ee8a4": {
-        "id": "c69b1a8f-e519-4b24-b179-9f77800ee8a4",
+      "c458dfbc-e416-4e23-934d-1dd0eeae8e5e": {
+        "id": "c458dfbc-e416-4e23-934d-1dd0eeae8e5e",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "ea2894fe-a496-423a-a532-95ef5ba176a3",
+          "tableId": "2700c220-a99d-4f6b-bf31-510301f963a5",
           "columnIds": [
-            "6941b94b-6b37-4d97-976c-d1ece4d748b9"
+            "65620204-b9bd-43c8-93be-c0ee8e298d47"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "1cd4ba4c-0042-45b9-b53a-0e7e5dca489b",
+          "tableId": "405a4315-2cf4-4ffa-ade0-a925f39ded60",
           "columnIds": [
-            "bebafa38-48f2-462d-8a84-0e30776dd261"
+            "8631c7cc-e7a3-4f58-964d-9c1154178cb3"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "541208f7-efbc-425d-8809-d0e8589e2a00": {
-        "id": "541208f7-efbc-425d-8809-d0e8589e2a00",
+      "a24e4cb2-7c84-4b84-bd6f-41ebdb80fd12": {
+        "id": "a24e4cb2-7c84-4b84-bd6f-41ebdb80fd12",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "ea2894fe-a496-423a-a532-95ef5ba176a3",
+          "tableId": "2700c220-a99d-4f6b-bf31-510301f963a5",
           "columnIds": [
-            "6941b94b-6b37-4d97-976c-d1ece4d748b9"
+            "65620204-b9bd-43c8-93be-c0ee8e298d47"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "e3a13a8a-df83-455c-8e30-2ee784b69ff5",
+          "tableId": "bbd68df6-c11c-4b26-bd48-f5c8c7a8d3b6",
           "columnIds": [
-            "c4a0a8bf-add4-4a67-8132-b39c92d17bdf"
+            "f0d27deb-0e42-4e67-bbba-5ab66e6e998f"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "4a011340-b8f7-4ac5-b314-2f8fb9a09455": {
-        "id": "4a011340-b8f7-4ac5-b314-2f8fb9a09455",
+      "0a0451c3-bc65-48bb-8ec6-4ed764b69866": {
+        "id": "0a0451c3-bc65-48bb-8ec6-4ed764b69866",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "ea2894fe-a496-423a-a532-95ef5ba176a3",
+          "tableId": "2700c220-a99d-4f6b-bf31-510301f963a5",
           "columnIds": [
-            "6941b94b-6b37-4d97-976c-d1ece4d748b9"
+            "65620204-b9bd-43c8-93be-c0ee8e298d47"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "7db5c8be-5a26-48b3-89f4-30634ce42e69",
+          "tableId": "c86e653a-18ac-4b32-971c-a25837f30dcc",
           "columnIds": [
-            "f60705b2-2c3d-48d9-af1b-9295b58390bc"
+            "a00a09f5-fa5d-46f2-bcf6-49dd8457e5ae"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "a3fb3e7b-e174-4bcc-a1bd-1a2916becf2f": {
-        "id": "a3fb3e7b-e174-4bcc-a1bd-1a2916becf2f",
+      "bd7df6bc-306e-4382-ac4b-f126b14d8173": {
+        "id": "bd7df6bc-306e-4382-ac4b-f126b14d8173",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "ea2894fe-a496-423a-a532-95ef5ba176a3",
+          "tableId": "2700c220-a99d-4f6b-bf31-510301f963a5",
           "columnIds": [
-            "6941b94b-6b37-4d97-976c-d1ece4d748b9"
+            "65620204-b9bd-43c8-93be-c0ee8e298d47"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "bde9948e-26e6-4890-a9b1-c498f57bb693",
+          "tableId": "61b8208f-f2a4-48d6-8065-7edfb933c1d3",
           "columnIds": [
-            "f25b0f05-52e0-470f-b886-534706e606cd"
+            "fce0a2ae-0527-4ccb-a9bc-21a625c6070a"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "54f9bb9e-5849-4737-9d62-0c9fba5d8c00": {
-        "id": "54f9bb9e-5849-4737-9d62-0c9fba5d8c00",
+      "86ef4c3c-5f81-4072-80c0-c5c9786c7aea": {
+        "id": "86ef4c3c-5f81-4072-80c0-c5c9786c7aea",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "ea2894fe-a496-423a-a532-95ef5ba176a3",
+          "tableId": "2700c220-a99d-4f6b-bf31-510301f963a5",
           "columnIds": [
-            "6941b94b-6b37-4d97-976c-d1ece4d748b9"
+            "65620204-b9bd-43c8-93be-c0ee8e298d47"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "43d29105-4dda-46d0-816b-49fd9ade22e0",
+          "tableId": "c869e11b-023a-4b41-9138-b8570d4a90aa",
           "columnIds": [
-            "dc804836-1156-475a-9ebd-7744afff1376"
+            "6b493793-53a0-4e4b-a32f-ca5aafd31894"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "78942865-df77-4d0f-8f15-e3966e65200e": {
-        "id": "78942865-df77-4d0f-8f15-e3966e65200e",
+      "9f60d096-1015-4972-aabc-3f920f953778": {
+        "id": "9f60d096-1015-4972-aabc-3f920f953778",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "ea2894fe-a496-423a-a532-95ef5ba176a3",
+          "tableId": "2700c220-a99d-4f6b-bf31-510301f963a5",
           "columnIds": [
-            "6941b94b-6b37-4d97-976c-d1ece4d748b9"
+            "65620204-b9bd-43c8-93be-c0ee8e298d47"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "1348bf32-10f1-4d23-be99-344eb9891a86",
+          "tableId": "0cfa84c5-4eca-46be-a0b6-1eadb7010428",
           "columnIds": [
-            "4b387351-eaf4-48fe-b9c5-ef1f72d420b3"
+            "16a25c8e-cca7-4b84-b4e9-bb077229fc17"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "ccc584b9-9a2b-4a92-818b-9c812bb72293": {
-        "id": "ccc584b9-9a2b-4a92-818b-9c812bb72293",
+      "aaff0466-ede5-4e49-9fd6-4dec4778db64": {
+        "id": "aaff0466-ede5-4e49-9fd6-4dec4778db64",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "e3a13a8a-df83-455c-8e30-2ee784b69ff5",
+          "tableId": "bbd68df6-c11c-4b26-bd48-f5c8c7a8d3b6",
           "columnIds": [
-            "75f03bdf-c646-4d82-999f-a0869533516f"
+            "02b440fa-df29-4485-9476-ddaf56764a1a"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "bde9948e-26e6-4890-a9b1-c498f57bb693",
+          "tableId": "61b8208f-f2a4-48d6-8065-7edfb933c1d3",
           "columnIds": [
-            "b5ad2478-71c2-4371-b7f6-6f2c22c9df33"
+            "0df7b365-58bf-4897-99f0-95245357d497"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "2fbe7a33-7d3a-47c0-b218-aa6cb8ab82bd": {
-        "id": "2fbe7a33-7d3a-47c0-b218-aa6cb8ab82bd",
+      "9dd92481-b075-42ef-9283-5ee89c64a524": {
+        "id": "9dd92481-b075-42ef-9283-5ee89c64a524",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "e3a13a8a-df83-455c-8e30-2ee784b69ff5",
+          "tableId": "bbd68df6-c11c-4b26-bd48-f5c8c7a8d3b6",
           "columnIds": [
-            "75f03bdf-c646-4d82-999f-a0869533516f"
+            "02b440fa-df29-4485-9476-ddaf56764a1a"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "43d29105-4dda-46d0-816b-49fd9ade22e0",
+          "tableId": "c869e11b-023a-4b41-9138-b8570d4a90aa",
           "columnIds": [
-            "4e12db4d-ac22-4271-8032-2e3da19382bf"
+            "334e5510-7e41-4466-b1c6-b0db42a56a91"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "bdaa33ab-2d21-4e11-8b03-0a3a01c4fbba": {
-        "id": "bdaa33ab-2d21-4e11-8b03-0a3a01c4fbba",
+      "abe629e2-6df1-405a-99d5-44efdcce0d09": {
+        "id": "abe629e2-6df1-405a-99d5-44efdcce0d09",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "0a4b3722-80e7-440e-99b0-302026bf4a73",
+          "tableId": "29fb0f58-2d17-48b9-9259-f30cc5d89c76",
           "columnIds": [
-            "35825339-f387-4d25-9534-bfeda6af960e"
+            "2b2e9053-59fa-45be-8593-885555cb61c1"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "bde9948e-26e6-4890-a9b1-c498f57bb693",
+          "tableId": "61b8208f-f2a4-48d6-8065-7edfb933c1d3",
           "columnIds": [
-            "49fd2bea-9241-46cf-a238-7ee480d6e349"
+            "52472900-1c70-498f-873f-fbb59028fdb3"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "b73dbbbe-3b0b-4cf7-a912-30f7dbf52138": {
-        "id": "b73dbbbe-3b0b-4cf7-a912-30f7dbf52138",
+      "ba145286-2185-4fdb-8b01-56d25024c29a": {
+        "id": "ba145286-2185-4fdb-8b01-56d25024c29a",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "374635d4-80c9-4951-93b0-6a3f9f3e2580",
+          "tableId": "bc7232f2-edcf-4537-95ec-b922eecd3eed",
           "columnIds": [
-            "4a75b2d7-4bd1-4468-9be4-a40eb11cc084"
+            "36f694be-79aa-41fe-9760-e71d998ee1dc"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "43d29105-4dda-46d0-816b-49fd9ade22e0",
+          "tableId": "c869e11b-023a-4b41-9138-b8570d4a90aa",
           "columnIds": [
-            "030fe21b-7128-421c-a3da-fe6d749a38eb"
+            "943d31cc-9082-4cb2-839d-87ed47bd1507"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "7d3d3195-a16a-49f6-b3d7-7bea4e2961da": {
-        "id": "7d3d3195-a16a-49f6-b3d7-7bea4e2961da",
+      "ef59d8db-a2e1-4289-b089-d6ca94c51ad7": {
+        "id": "ef59d8db-a2e1-4289-b089-d6ca94c51ad7",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "374635d4-80c9-4951-93b0-6a3f9f3e2580",
+          "tableId": "bc7232f2-edcf-4537-95ec-b922eecd3eed",
           "columnIds": [
-            "4a75b2d7-4bd1-4468-9be4-a40eb11cc084"
+            "36f694be-79aa-41fe-9760-e71d998ee1dc"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "d16fb211-4055-428d-a749-8294b73b4e79",
+          "tableId": "cba47e61-d0c3-46dd-8a63-01d32a50c9c2",
           "columnIds": [
-            "4dbd883f-fed6-4529-b946-4f4f0db783e0"
+            "db0928f0-b7a7-4657-bc1a-5fc0a1b7431f"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "9ee14003-2d1a-4071-8c06-9955fec6efab": {
-        "id": "9ee14003-2d1a-4071-8c06-9955fec6efab",
+      "d3a6dc59-7d96-4a1e-83b6-3dc277bb959d": {
+        "id": "d3a6dc59-7d96-4a1e-83b6-3dc277bb959d",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "374635d4-80c9-4951-93b0-6a3f9f3e2580",
+          "tableId": "bc7232f2-edcf-4537-95ec-b922eecd3eed",
           "columnIds": [
-            "4a75b2d7-4bd1-4468-9be4-a40eb11cc084"
+            "36f694be-79aa-41fe-9760-e71d998ee1dc"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "6ab08d1e-fd4b-4e3e-a690-1fc99279fc34",
+          "tableId": "0020ed0e-fd43-453c-a631-83754d2653b2",
           "columnIds": [
-            "8e4bf00b-c509-434a-be64-4db8a51744a1"
+            "ea0f94fd-43ce-4c01-8219-bbe40c36d759"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "8a2f3076-2a92-406e-bc7e-fd5de394277d": {
-        "id": "8a2f3076-2a92-406e-bc7e-fd5de394277d",
+      "fe1a2ae2-6cc3-4624-995d-b933e3726c43": {
+        "id": "fe1a2ae2-6cc3-4624-995d-b933e3726c43",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "aaabab82-9277-48dc-8db2-2407c2d74fb6",
+          "tableId": "fb34886a-dcc0-45fe-aa5b-198f6eacd294",
           "columnIds": [
-            "4163dba5-9bbe-4286-b495-731299b8c6f3"
+            "f80d2513-21bc-4331-aff6-726efa59fca0"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "1348bf32-10f1-4d23-be99-344eb9891a86",
+          "tableId": "0cfa84c5-4eca-46be-a0b6-1eadb7010428",
           "columnIds": [
-            "ac63adea-d0b9-4cfa-9b7d-08ccb62d5019"
+            "5883433d-3c8b-4bd0-8759-ee991b3ea206"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       },
-      "e84a098e-1715-40fe-9923-5cfa5362fc9a": {
-        "id": "e84a098e-1715-40fe-9923-5cfa5362fc9a",
+      "88dccaaa-598b-4eb8-94c2-b1340f6b0688": {
+        "id": "88dccaaa-598b-4eb8-94c2-b1340f6b0688",
         "identification": false,
         "relationshipType": 4,
         "startRelationshipType": 1,
         "start": {
-          "tableId": "4ccae532-2e58-417e-b9f0-7d17cf45ff56",
+          "tableId": "886c29e7-9999-49a4-a07b-eb4b97448858",
           "columnIds": [
-            "54f2dc27-585a-49e2-b438-933205f59fc0"
+            "01fba20e-4507-4bc8-9f8b-4f3370deabfb"
           ],
           "x": 0,
           "y": 0,
           "direction": 1
         },
         "end": {
-          "tableId": "ec1e1f42-e2e0-4869-9c83-7495f121fdf2",
+          "tableId": "962b1ab3-c5be-4ee6-9957-66b832cb0352",
           "columnIds": [
-            "8321b149-c21a-432c-8cd0-ccbbcad7dc9f"
+            "d8a448ad-8ca6-4a44-9314-5361c064a0a7"
           ],
           "x": 0,
           "y": 0,
           "direction": 2
         },
         "meta": {
-          "updateAt": 1782869104384,
-          "createAt": 1782869104384
+          "updateAt": 1782874265340,
+          "createAt": 1782874265340
         }
       }
     },
