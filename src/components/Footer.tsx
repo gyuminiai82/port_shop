@@ -53,7 +53,6 @@ export default function Footer() {
           <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.75rem" }}>
             <li><Link href="/privacy" style={{ color: "var(--text-primary)", fontWeight: 600, textDecoration: "none" }}>개인정보처리방침</Link></li>
             <li><Link href="/terms" style={{ color: "var(--text-secondary)", textDecoration: "none" }}>이용약관</Link></li>
-            <li><Link href="#" style={{ color: "var(--text-secondary)", textDecoration: "none" }}>전자금융거래약관</Link></li>
           </ul>
         </div>
 
