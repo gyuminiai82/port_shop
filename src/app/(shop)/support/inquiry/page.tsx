@@ -20,7 +20,7 @@ export default async function InquiryPage() {
     redirect(`https://auth.minstudio.app/login?redirect=http://localhost:3001/support/inquiry`);
   }
 
-  const inquiries = await prisma.mIN_INQUIRY.findMany({
+  const inquiries = await prisma.mIN_SHOP_INQUIRY.findMany({
     where: { userId: user.id },
     orderBy: { createdAt: 'desc' }
   });

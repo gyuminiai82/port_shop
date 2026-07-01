@@ -1,7 +1,7 @@
 import { prisma } from "@/lib/prisma";
 
 export default async function NoticePage() {
-  const notices = await prisma.mIN_NOTICE.findMany({
+  const notices = await prisma.mIN_SHOP_NOTICE.findMany({
     orderBy: { createdAt: 'desc' }
   });
 

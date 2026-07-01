@@ -2,9 +2,9 @@ import { prisma } from "@/lib/prisma";
 
 export default async function AdminDashboardPage() {
   const [productCount, userCount, orderCount] = await Promise.all([
-    prisma.mIN_PRODUCT.count(),
+    prisma.mIN_SHOP_PRODUCT.count(),
     prisma.mIN_SHOP_USER.count(),
-    prisma.mIN_ORDER.count()
+    prisma.mIN_SHOP_ORDER.count()
   ]);
 
   return (

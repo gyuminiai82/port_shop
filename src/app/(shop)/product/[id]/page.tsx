@@ -7,7 +7,7 @@ import ProductActions from "@/components/ProductActions";
 export default async function ProductDetailPage(props: { params: Promise<{ id: string }> }) {
   const { id } = await props.params;
 
-  const product = await prisma.mIN_PRODUCT.findUnique({
+  const product = await prisma.mIN_SHOP_PRODUCT.findUnique({
     where: { id },
     include: {
       category: true,
@@ -39,7 +39,7 @@ export default async function ProductDetailPage(props: { params: Promise<{ id: s
   }));
 
   // Update view count
-  await prisma.mIN_PRODUCT.update({
+  await prisma.mIN_SHOP_PRODUCT.update({
     where: { id },
     data: { viewCount: { increment: 1 } }
   });

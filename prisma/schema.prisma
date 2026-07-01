@@ -22,19 +22,19 @@ model MIN_SHOP_USER {
   updatedAt     DateTime @updatedAt
 }
 
-model MIN_CATEGORY {
+model MIN_SHOP_CATEGORY {
   id        String   @id @default(uuid())
   name      String
   parentId  String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  parent   MIN_CATEGORY?  @relation("CategoryHierarchy", fields: [parentId], references: [id])
-  children MIN_CATEGORY[] @relation("CategoryHierarchy")
-  products MIN_PRODUCT[]
+  parent   MIN_SHOP_CATEGORY?  @relation("CategoryHierarchy", fields: [parentId], references: [id])
+  children MIN_SHOP_CATEGORY[] @relation("CategoryHierarchy")
+  products MIN_SHOP_PRODUCT[]
 }
 
-model MIN_PRODUCT {
+model MIN_SHOP_PRODUCT {
   id          String   @id @default(uuid())
   categoryId  String?
   name        String
@@ -45,26 +45,26 @@ model MIN_PRODUCT {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  category   MIN_CATEGORY?        @relation(fields: [categoryId], references: [id])
-  images     MIN_PRODUCT_IMAGE[]
-  options    MIN_PRODUCT_OPTION[]
-  reviews    MIN_REVIEW[]
-  cartItems  MIN_CART_ITEM[]
-  orderItems MIN_ORDER_ITEM[]
-  wishlists  MIN_WISHLIST_ITEM[]
+  category   MIN_SHOP_CATEGORY?        @relation(fields: [categoryId], references: [id])
+  images     MIN_SHOP_PRODUCT_IMAGE[]
+  options    MIN_SHOP_PRODUCT_OPTION[]
+  reviews    MIN_SHOP_REVIEW[]
+  cartItems  MIN_SHOP_CART_ITEM[]
+  orderItems MIN_SHOP_ORDER_ITEM[]
+  wishlists  MIN_SHOP_WISHLIST_ITEM[]
 }
 
-model MIN_PRODUCT_IMAGE {
+model MIN_SHOP_PRODUCT_IMAGE {
   id        String   @id @default(uuid())
   productId String
   url       String
   isMain    Boolean  @default(false)
   createdAt DateTime @default(now())
 
-  product MIN_PRODUCT @relation(fields: [productId], references: [id], onDelete: Cascade)
+  product MIN_SHOP_PRODUCT @relation(fields: [productId], references: [id], onDelete: Cascade)
 }
 
-model MIN_PRODUCT_OPTION {
+model MIN_SHOP_PRODUCT_OPTION {
   id        String   @id @default(uuid())
   productId String
   name      String // 예: "색상", "사이즈"
@@ -73,12 +73,12 @@ model MIN_PRODUCT_OPTION {
   stock     Int      @default(0) // 옵션별 재고
   createdAt DateTime @default(now())
 
-  product    MIN_PRODUCT      @relation(fields: [productId], references: [id], onDelete: Cascade)
-  cartItems  MIN_CART_ITEM[]
-  orderItems MIN_ORDER_ITEM[]
+  product    MIN_SHOP_PRODUCT      @relation(fields: [productId], references: [id], onDelete: Cascade)
+  cartItems  MIN_SHOP_CART_ITEM[]
+  orderItems MIN_SHOP_ORDER_ITEM[]
 }
 
-model MIN_REVIEW {
+model MIN_SHOP_REVIEW {
   id        String   @id @default(uuid())
   productId String
   userId    String
@@ -87,39 +87,39 @@ model MIN_REVIEW {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  product MIN_PRODUCT @relation(fields: [productId], references: [id], onDelete: Cascade)
+  product MIN_SHOP_PRODUCT @relation(fields: [productId], references: [id], onDelete: Cascade)
 }
 
-model MIN_WISHLIST {
+model MIN_SHOP_WISHLIST {
   id        String   @id @default(uuid())
   userId    String   @unique
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  items MIN_WISHLIST_ITEM[]
+  items MIN_SHOP_WISHLIST_ITEM[]
 }
 
-model MIN_WISHLIST_ITEM {
+model MIN_SHOP_WISHLIST_ITEM {
   id         String   @id @default(uuid())
   wishlistId String
   productId  String
   createdAt  DateTime @default(now())
 
-  wishlist MIN_WISHLIST @relation(fields: [wishlistId], references: [id], onDelete: Cascade)
-  product  MIN_PRODUCT  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  wishlist MIN_SHOP_WISHLIST @relation(fields: [wishlistId], references: [id], onDelete: Cascade)
+  product  MIN_SHOP_PRODUCT  @relation(fields: [productId], references: [id], onDelete: Cascade)
 
   @@unique([wishlistId, productId])
 }
 
-model MIN_CART {
+model MIN_SHOP_CART {
   id        String          @id @default(uuid())
   userId    String          @unique
   createdAt DateTime        @default(now())
   updatedAt DateTime        @updatedAt
-  items     MIN_CART_ITEM[]
+  items     MIN_SHOP_CART_ITEM[]
 }
 
-model MIN_CART_ITEM {
+model MIN_SHOP_CART_ITEM {
   id        String   @id @default(uuid())
   cartId    String
   productId String
@@ -128,14 +128,14 @@ model MIN_CART_ITEM {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  cart    MIN_CART            @relation(fields: [cartId], references: [id], onDelete: Cascade)
-  product MIN_PRODUCT         @relation(fields: [productId], references: [id], onDelete: Cascade)
-  option  MIN_PRODUCT_OPTION? @relation(fields: [optionId], references: [id])
+  cart    MIN_SHOP_CART            @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  product MIN_SHOP_PRODUCT         @relation(fields: [productId], references: [id], onDelete: Cascade)
+  option  MIN_SHOP_PRODUCT_OPTION? @relation(fields: [optionId], references: [id])
 
   @@unique([cartId, productId, optionId])
 }
 
-model MIN_ORDER {
+model MIN_SHOP_ORDER {
   id          String   @id @default(uuid())
   userId      String
   totalAmount Int
@@ -143,12 +143,12 @@ model MIN_ORDER {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  items    MIN_ORDER_ITEM[]
-  payment  MIN_PAYMENT?
-  delivery MIN_DELIVERY?
+  items    MIN_SHOP_ORDER_ITEM[]
+  payment  MIN_SHOP_PAYMENT?
+  delivery MIN_SHOP_DELIVERY?
 }
 
-model MIN_ORDER_ITEM {
+model MIN_SHOP_ORDER_ITEM {
   id        String   @id @default(uuid())
   orderId   String
   productId String
@@ -158,12 +158,12 @@ model MIN_ORDER_ITEM {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  order   MIN_ORDER           @relation(fields: [orderId], references: [id], onDelete: Cascade)
-  product MIN_PRODUCT         @relation(fields: [productId], references: [id])
-  option  MIN_PRODUCT_OPTION? @relation(fields: [optionId], references: [id])
+  order   MIN_SHOP_ORDER           @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product MIN_SHOP_PRODUCT         @relation(fields: [productId], references: [id])
+  option  MIN_SHOP_PRODUCT_OPTION? @relation(fields: [optionId], references: [id])
 }
 
-model MIN_PAYMENT {
+model MIN_SHOP_PAYMENT {
   id            String    @id @default(uuid())
   orderId       String    @unique
   method        String // CARD, TOSS, VIRTUAL_ACCOUNT 등
@@ -173,10 +173,10 @@ model MIN_PAYMENT {
   paidAt        DateTime?
   createdAt     DateTime  @default(now())
 
-  order MIN_ORDER @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  order MIN_SHOP_ORDER @relation(fields: [orderId], references: [id], onDelete: Cascade)
 }
 
-model MIN_DELIVERY {
+model MIN_SHOP_DELIVERY {
   id          String    @id @default(uuid())
   orderId     String    @unique
   recipient   String
@@ -188,10 +188,10 @@ model MIN_DELIVERY {
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 
-  order MIN_ORDER @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  order MIN_SHOP_ORDER @relation(fields: [orderId], references: [id], onDelete: Cascade)
 }
 
-model MIN_COUPON {
+model MIN_SHOP_COUPON {
   id           String   @id @default(uuid())
   name         String
   discountRate Int      @default(0) // 퍼센트 할인
@@ -200,10 +200,10 @@ model MIN_COUPON {
   expiresAt    DateTime
   createdAt    DateTime @default(now())
 
-  userCoupons MIN_USER_COUPON[]
+  userCoupons MIN_SHOP_USER_COUPON[]
 }
 
-model MIN_USER_COUPON {
+model MIN_SHOP_USER_COUPON {
   id        String    @id @default(uuid())
   userId    String
   couponId  String
@@ -211,7 +211,7 @@ model MIN_USER_COUPON {
   usedAt    DateTime?
   createdAt DateTime  @default(now())
 
-  coupon MIN_COUPON @relation(fields: [couponId], references: [id])
+  coupon MIN_SHOP_COUPON @relation(fields: [couponId], references: [id])
 }
 
 model MIN_SHOP_ADMIN {
@@ -224,7 +224,7 @@ model MIN_SHOP_ADMIN {
   updatedAt DateTime @updatedAt /// 계정 수정일시
 }
 
-model MIN_NOTICE {
+model MIN_SHOP_NOTICE {
   id        String   @id @default(uuid()) /// 공지사항 고유 번호
   title     String   /// 제목
   content   String   @db.Text /// 내용
@@ -233,7 +233,7 @@ model MIN_NOTICE {
   updatedAt DateTime @updatedAt /// 수정일시
 }
 
-model MIN_INQUIRY {
+model MIN_SHOP_INQUIRY {
   id        String   @id @default(uuid()) /// 1:1 문의 고유 번호
   userId    String   /// 작성자(유저) ID
   type      String   /// 문의 유형 (예: 배송, 교환/반품, 기타)

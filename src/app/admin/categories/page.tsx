@@ -1,7 +1,7 @@
 import { prisma } from "@/lib/prisma";
 
 export default async function AdminCategoriesPage() {
-  const categories = await prisma.mIN_CATEGORY.findMany({
+  const categories = await prisma.mIN_SHOP_CATEGORY.findMany({
     include: {
       _count: {
         select: { products: true }

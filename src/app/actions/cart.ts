@@ -21,17 +21,17 @@ export async function addToCart(productId: string, optionId: string | null, quan
       return { success: false, error: "로그인이 필요합니다." };
     }
 
-    let cart = await prisma.mIN_CART.findUnique({
+    let cart = await prisma.mIN_SHOP_CART.findUnique({
       where: { userId: user.id }
     });
 
     if (!cart) {
-      cart = await prisma.mIN_CART.create({
+      cart = await prisma.mIN_SHOP_CART.create({
         data: { userId: user.id }
       });
     }
 
-    const existingItem = await prisma.mIN_CART_ITEM.findFirst({
+    const existingItem = await prisma.mIN_SHOP_CART_ITEM.findFirst({
       where: {
         cartId: cart.id,
         productId: productId,
@@ -40,12 +40,12 @@ export async function addToCart(productId: string, optionId: string | null, quan
     });
 
     if (existingItem) {
-      await prisma.mIN_CART_ITEM.update({
+      await prisma.mIN_SHOP_CART_ITEM.update({
         where: { id: existingItem.id },
         data: { quantity: existingItem.quantity + quantity }
       });
     } else {
-      await prisma.mIN_CART_ITEM.create({
+      await prisma.mIN_SHOP_CART_ITEM.create({
         data: {
           cartId: cart.id,
           productId,
@@ -72,7 +72,7 @@ export async function updateCartItemQuantity(itemId: string, quantity: number) {
       return removeFromCart(itemId);
     }
 
-    await prisma.mIN_CART_ITEM.update({
+    await prisma.mIN_SHOP_CART_ITEM.update({
       where: { id: itemId },
       data: { quantity }
     });
@@ -90,7 +90,7 @@ export async function removeFromCart(itemId: string) {
     const user = await getUser();
     if (!user) return { success: false, error: "로그인이 필요합니다." };
 
-    await prisma.mIN_CART_ITEM.delete({
+    await prisma.mIN_SHOP_CART_ITEM.delete({
       where: { id: itemId }
     });
 

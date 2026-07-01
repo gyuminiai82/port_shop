@@ -6,20 +6,20 @@ async function main() {
   console.log('Start seeding...')
 
   // Clear existing data
-  await prisma.mIN_PRODUCT_IMAGE.deleteMany()
-  await prisma.mIN_PRODUCT_OPTION.deleteMany()
-  await prisma.mIN_REVIEW.deleteMany()
-  await prisma.mIN_PRODUCT.deleteMany()
-  await prisma.mIN_CATEGORY.deleteMany()
-  await prisma.mIN_COUPON.deleteMany()
+  await prisma.mIN_SHOP_PRODUCT_IMAGE.deleteMany()
+  await prisma.mIN_SHOP_PRODUCT_OPTION.deleteMany()
+  await prisma.mIN_SHOP_REVIEW.deleteMany()
+  await prisma.mIN_SHOP_PRODUCT.deleteMany()
+  await prisma.mIN_SHOP_CATEGORY.deleteMany()
+  await prisma.mIN_SHOP_COUPON.deleteMany()
   await prisma.mIN_SHOP_USER.deleteMany()
 
   // Create Categories
-  const catLaptop = await prisma.mIN_CATEGORY.create({ data: { name: '노트북' } })
-  const catTablet = await prisma.mIN_CATEGORY.create({ data: { name: '태블릿' } })
-  const catAudio = await prisma.mIN_CATEGORY.create({ data: { name: '오디오/음향' } })
-  const catSmartwatch = await prisma.mIN_CATEGORY.create({ data: { name: '스마트워치' } })
-  const catAccessories = await prisma.mIN_CATEGORY.create({ data: { name: '주변기기' } })
+  const catLaptop = await prisma.mIN_SHOP_CATEGORY.create({ data: { name: '노트북' } })
+  const catTablet = await prisma.mIN_SHOP_CATEGORY.create({ data: { name: '태블릿' } })
+  const catAudio = await prisma.mIN_SHOP_CATEGORY.create({ data: { name: '오디오/음향' } })
+  const catSmartwatch = await prisma.mIN_SHOP_CATEGORY.create({ data: { name: '스마트워치' } })
+  const catAccessories = await prisma.mIN_SHOP_CATEGORY.create({ data: { name: '주변기기' } })
 
   // Dummy Images by Category (Unsplash)
   const laptopImages = [
@@ -111,7 +111,7 @@ async function main() {
   for (let i = 0; i < productsData.length; i++) {
     const pData = productsData[i];
     
-    const product = await prisma.mIN_PRODUCT.create({
+    const product = await prisma.mIN_SHOP_PRODUCT.create({
       data: {
         categoryId: pData.catId,
         name: pData.name,
@@ -138,7 +138,7 @@ async function main() {
     const reviewCount = Math.floor(Math.random() * 3) + 1;
     for (let r = 0; r < reviewCount; r++) {
       const user = dummyUsers[Math.floor(Math.random() * dummyUsers.length)];
-      await prisma.mIN_REVIEW.create({
+      await prisma.mIN_SHOP_REVIEW.create({
         data: {
           productId: product.id,
           userId: user.id,
@@ -150,7 +150,7 @@ async function main() {
   }
 
   // Create Coupon
-  await prisma.mIN_COUPON.create({
+  await prisma.mIN_SHOP_COUPON.create({
     data: {
       name: 'IT 기기 기획전 특별 10% 쿠폰',
       discountRate: 10,

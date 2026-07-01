@@ -29,7 +29,7 @@ export async function createInquiry(formData: FormData) {
       return { success: false, error: "모든 필드를 입력해주세요." };
     }
 
-    await prisma.mIN_INQUIRY.create({
+    await prisma.mIN_SHOP_INQUIRY.create({
       data: {
         userId: user.id,
         type,

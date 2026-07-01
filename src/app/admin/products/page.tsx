@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default async function AdminProductsPage() {
-  const products = await prisma.mIN_PRODUCT.findMany({
+  const products = await prisma.mIN_SHOP_PRODUCT.findMany({
     include: {
       category: true,
       images: {

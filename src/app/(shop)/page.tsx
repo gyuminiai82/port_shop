@@ -26,7 +26,7 @@ export default async function Home(props: {
   const categoryFilter = typeof searchParams.category === 'string' ? searchParams.category : undefined;
 
   // Fetch all categories for filter tabs
-  const categories = await prisma.mIN_CATEGORY.findMany({
+  const categories = await prisma.mIN_SHOP_CATEGORY.findMany({
     where: { parentId: null } // Top level categories
   });
 
@@ -34,7 +34,7 @@ export default async function Home(props: {
   const currentCategory = categoryFilter || defaultCategory;
 
   // Fetch products with their main image and category name
-  const products = await prisma.mIN_PRODUCT.findMany({
+  const products = await prisma.mIN_SHOP_PRODUCT.findMany({
     where: currentCategory ? {
       category: {
         name: currentCategory
