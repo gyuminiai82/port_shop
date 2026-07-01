@@ -3,6 +3,7 @@ import { redis } from "@/lib/redis";
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 import Image from "next/image";
+import QuickCartButton from "@/components/QuickCartButton";
 
 async function getUser() {
   const cookieStore = await cookies();
@@ -41,6 +42,7 @@ export default async function Home(props: {
     } : undefined,
     include: {
       category: true,
+      options: true,
       images: {
         where: { isMain: true },
         take: 1
@@ -158,20 +160,14 @@ export default async function Home(props: {
                   )}
                 </div>
                 <div className="product-info">
-                  <div className="product-category">{product.category.name}</div>
+                  <div className="product-category">{product.category?.name}</div>
                   <h3>{product.name}</h3>
                   <div className="product-price">
                     ₩{product.price.toLocaleString()}
                   </div>
                   <div className="product-action">
                     <button className="btn btn-secondary" style={{ flex: 1 }}>자세히 보기</button>
-                    <button className="btn-icon" aria-label="장바구니 담기">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
-                        <path d="M3 6h18" />
-                        <path d="M16 10a4 4 0 0 1-8 0" />
-                      </svg>
-                    </button>
+                    <QuickCartButton product={{ id: product.id, options: product.options }} />
                   </div>
                 </div>
               </Link>
