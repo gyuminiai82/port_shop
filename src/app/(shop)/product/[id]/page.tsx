@@ -202,6 +202,10 @@ export default async function ProductDetailPage(props: { params: Promise<{ id: s
         @media (max-width: 900px) {
           .product-detail-grid {
             grid-template-columns: 1fr !important;
+            gap: 3rem !important;
+          }
+          .product-images {
+            position: static !important;
           }
         }
       `}</style>
