@@ -2650,10 +2650,12 @@ export namespace Prisma {
 
   export type MIN_SHOP_USERCountOutputType = {
     pointLogs: number
+    inquiries: number
   }
 
   export type MIN_SHOP_USERCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     pointLogs?: boolean | MIN_SHOP_USERCountOutputTypeCountPointLogsArgs
+    inquiries?: boolean | MIN_SHOP_USERCountOutputTypeCountInquiriesArgs
   }
 
   // Custom InputTypes
@@ -2672,6 +2674,13 @@ export namespace Prisma {
    */
   export type MIN_SHOP_USERCountOutputTypeCountPointLogsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: MIN_SHOP_POINT_LOGWhereInput
+  }
+
+  /**
+   * MIN_SHOP_USERCountOutputType without action
+   */
+  export type MIN_SHOP_USERCountOutputTypeCountInquiriesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: MIN_SHOP_INQUIRYWhereInput
   }
 
 
@@ -3249,6 +3258,7 @@ export namespace Prisma {
     createdAt?: boolean
     updatedAt?: boolean
     pointLogs?: boolean | MIN_SHOP_USER$pointLogsArgs<ExtArgs>
+    inquiries?: boolean | MIN_SHOP_USER$inquiriesArgs<ExtArgs>
     _count?: boolean | MIN_SHOP_USERCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["mIN_SHOP_USER"]>
 
@@ -3284,6 +3294,7 @@ export namespace Prisma {
 
   export type MIN_SHOP_USERInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     pointLogs?: boolean | MIN_SHOP_USER$pointLogsArgs<ExtArgs>
+    inquiries?: boolean | MIN_SHOP_USER$inquiriesArgs<ExtArgs>
     _count?: boolean | MIN_SHOP_USERCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type MIN_SHOP_USERIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -3292,6 +3303,7 @@ export namespace Prisma {
     name: "MIN_SHOP_USER"
     objects: {
       pointLogs: Prisma.$MIN_SHOP_POINT_LOGPayload<ExtArgs>[]
+      inquiries: Prisma.$MIN_SHOP_INQUIRYPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -3683,6 +3695,7 @@ export namespace Prisma {
   export interface Prisma__MIN_SHOP_USERClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     pointLogs<T extends MIN_SHOP_USER$pointLogsArgs<ExtArgs> = {}>(args?: Subset<T, MIN_SHOP_USER$pointLogsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MIN_SHOP_POINT_LOGPayload<ExtArgs>, T, "findMany"> | Null>
+    inquiries<T extends MIN_SHOP_USER$inquiriesArgs<ExtArgs> = {}>(args?: Subset<T, MIN_SHOP_USER$inquiriesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MIN_SHOP_INQUIRYPayload<ExtArgs>, T, "findMany"> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -4055,6 +4068,26 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: MIN_SHOP_POINT_LOGScalarFieldEnum | MIN_SHOP_POINT_LOGScalarFieldEnum[]
+  }
+
+  /**
+   * MIN_SHOP_USER.inquiries
+   */
+  export type MIN_SHOP_USER$inquiriesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MIN_SHOP_INQUIRY
+     */
+    select?: MIN_SHOP_INQUIRYSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_INQUIRYInclude<ExtArgs> | null
+    where?: MIN_SHOP_INQUIRYWhereInput
+    orderBy?: MIN_SHOP_INQUIRYOrderByWithRelationInput | MIN_SHOP_INQUIRYOrderByWithRelationInput[]
+    cursor?: MIN_SHOP_INQUIRYWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: MIN_SHOP_INQUIRYScalarFieldEnum | MIN_SHOP_INQUIRYScalarFieldEnum[]
   }
 
   /**
@@ -22252,6 +22285,7 @@ export namespace Prisma {
     answer?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    user?: boolean | MIN_SHOP_USERDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["mIN_SHOP_INQUIRY"]>
 
   export type MIN_SHOP_INQUIRYSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -22264,6 +22298,7 @@ export namespace Prisma {
     answer?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    user?: boolean | MIN_SHOP_USERDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["mIN_SHOP_INQUIRY"]>
 
   export type MIN_SHOP_INQUIRYSelectScalar = {
@@ -22278,10 +22313,18 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
+  export type MIN_SHOP_INQUIRYInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | MIN_SHOP_USERDefaultArgs<ExtArgs>
+  }
+  export type MIN_SHOP_INQUIRYIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | MIN_SHOP_USERDefaultArgs<ExtArgs>
+  }
 
   export type $MIN_SHOP_INQUIRYPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "MIN_SHOP_INQUIRY"
-    objects: {}
+    objects: {
+      user: Prisma.$MIN_SHOP_USERPayload<ExtArgs>
+    }
     scalars: $Extensions.GetPayloadResult<{
       /**
        * 1:1 문의 고유 번호
@@ -22683,6 +22726,7 @@ export namespace Prisma {
    */
   export interface Prisma__MIN_SHOP_INQUIRYClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends MIN_SHOP_USERDefaultArgs<ExtArgs> = {}>(args?: Subset<T, MIN_SHOP_USERDefaultArgs<ExtArgs>>): Prisma__MIN_SHOP_USERClient<$Result.GetResult<Prisma.$MIN_SHOP_USERPayload<ExtArgs>, T, "findUniqueOrThrow"> | Null, Null, ExtArgs>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -22734,6 +22778,10 @@ export namespace Prisma {
      */
     select?: MIN_SHOP_INQUIRYSelect<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_INQUIRYInclude<ExtArgs> | null
+    /**
      * Filter, which MIN_SHOP_INQUIRY to fetch.
      */
     where: MIN_SHOP_INQUIRYWhereUniqueInput
@@ -22748,6 +22796,10 @@ export namespace Prisma {
      */
     select?: MIN_SHOP_INQUIRYSelect<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_INQUIRYInclude<ExtArgs> | null
+    /**
      * Filter, which MIN_SHOP_INQUIRY to fetch.
      */
     where: MIN_SHOP_INQUIRYWhereUniqueInput
@@ -22761,6 +22813,10 @@ export namespace Prisma {
      * Select specific fields to fetch from the MIN_SHOP_INQUIRY
      */
     select?: MIN_SHOP_INQUIRYSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_INQUIRYInclude<ExtArgs> | null
     /**
      * Filter, which MIN_SHOP_INQUIRY to fetch.
      */
@@ -22806,6 +22862,10 @@ export namespace Prisma {
      */
     select?: MIN_SHOP_INQUIRYSelect<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_INQUIRYInclude<ExtArgs> | null
+    /**
      * Filter, which MIN_SHOP_INQUIRY to fetch.
      */
     where?: MIN_SHOP_INQUIRYWhereInput
@@ -22850,6 +22910,10 @@ export namespace Prisma {
      */
     select?: MIN_SHOP_INQUIRYSelect<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_INQUIRYInclude<ExtArgs> | null
+    /**
      * Filter, which MIN_SHOP_INQUIRIES to fetch.
      */
     where?: MIN_SHOP_INQUIRYWhereInput
@@ -22889,6 +22953,10 @@ export namespace Prisma {
      */
     select?: MIN_SHOP_INQUIRYSelect<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_INQUIRYInclude<ExtArgs> | null
+    /**
      * The data needed to create a MIN_SHOP_INQUIRY.
      */
     data: XOR<MIN_SHOP_INQUIRYCreateInput, MIN_SHOP_INQUIRYUncheckedCreateInput>
@@ -22918,6 +22986,10 @@ export namespace Prisma {
      */
     data: MIN_SHOP_INQUIRYCreateManyInput | MIN_SHOP_INQUIRYCreateManyInput[]
     skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_INQUIRYIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -22928,6 +23000,10 @@ export namespace Prisma {
      * Select specific fields to fetch from the MIN_SHOP_INQUIRY
      */
     select?: MIN_SHOP_INQUIRYSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_INQUIRYInclude<ExtArgs> | null
     /**
      * The data needed to update a MIN_SHOP_INQUIRY.
      */
@@ -22961,6 +23037,10 @@ export namespace Prisma {
      */
     select?: MIN_SHOP_INQUIRYSelect<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_INQUIRYInclude<ExtArgs> | null
+    /**
      * The filter to search for the MIN_SHOP_INQUIRY to update in case it exists.
      */
     where: MIN_SHOP_INQUIRYWhereUniqueInput
@@ -22982,6 +23062,10 @@ export namespace Prisma {
      * Select specific fields to fetch from the MIN_SHOP_INQUIRY
      */
     select?: MIN_SHOP_INQUIRYSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_INQUIRYInclude<ExtArgs> | null
     /**
      * Filter which MIN_SHOP_INQUIRY to delete.
      */
@@ -23006,6 +23090,10 @@ export namespace Prisma {
      * Select specific fields to fetch from the MIN_SHOP_INQUIRY
      */
     select?: MIN_SHOP_INQUIRYSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_INQUIRYInclude<ExtArgs> | null
   }
 
 
@@ -25311,6 +25399,7 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"MIN_SHOP_USER"> | Date | string
     updatedAt?: DateTimeFilter<"MIN_SHOP_USER"> | Date | string
     pointLogs?: MIN_SHOP_POINT_LOGListRelationFilter
+    inquiries?: MIN_SHOP_INQUIRYListRelationFilter
   }
 
   export type MIN_SHOP_USEROrderByWithRelationInput = {
@@ -25327,6 +25416,7 @@ export namespace Prisma {
     createdAt?: SortOrder
     updatedAt?: SortOrder
     pointLogs?: MIN_SHOP_POINT_LOGOrderByRelationAggregateInput
+    inquiries?: MIN_SHOP_INQUIRYOrderByRelationAggregateInput
   }
 
   export type MIN_SHOP_USERWhereUniqueInput = Prisma.AtLeast<{
@@ -25346,6 +25436,7 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"MIN_SHOP_USER"> | Date | string
     updatedAt?: DateTimeFilter<"MIN_SHOP_USER"> | Date | string
     pointLogs?: MIN_SHOP_POINT_LOGListRelationFilter
+    inquiries?: MIN_SHOP_INQUIRYListRelationFilter
   }, "id" | "email">
 
   export type MIN_SHOP_USEROrderByWithAggregationInput = {
@@ -26617,6 +26708,7 @@ export namespace Prisma {
     answer?: StringNullableFilter<"MIN_SHOP_INQUIRY"> | string | null
     createdAt?: DateTimeFilter<"MIN_SHOP_INQUIRY"> | Date | string
     updatedAt?: DateTimeFilter<"MIN_SHOP_INQUIRY"> | Date | string
+    user?: XOR<MIN_SHOP_USERRelationFilter, MIN_SHOP_USERWhereInput>
   }
 
   export type MIN_SHOP_INQUIRYOrderByWithRelationInput = {
@@ -26629,6 +26721,7 @@ export namespace Prisma {
     answer?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    user?: MIN_SHOP_USEROrderByWithRelationInput
   }
 
   export type MIN_SHOP_INQUIRYWhereUniqueInput = Prisma.AtLeast<{
@@ -26644,6 +26737,7 @@ export namespace Prisma {
     answer?: StringNullableFilter<"MIN_SHOP_INQUIRY"> | string | null
     createdAt?: DateTimeFilter<"MIN_SHOP_INQUIRY"> | Date | string
     updatedAt?: DateTimeFilter<"MIN_SHOP_INQUIRY"> | Date | string
+    user?: XOR<MIN_SHOP_USERRelationFilter, MIN_SHOP_USERWhereInput>
   }, "id">
 
   export type MIN_SHOP_INQUIRYOrderByWithAggregationInput = {
@@ -26804,6 +26898,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     pointLogs?: MIN_SHOP_POINT_LOGCreateNestedManyWithoutUserInput
+    inquiries?: MIN_SHOP_INQUIRYCreateNestedManyWithoutUserInput
   }
 
   export type MIN_SHOP_USERUncheckedCreateInput = {
@@ -26820,6 +26915,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     pointLogs?: MIN_SHOP_POINT_LOGUncheckedCreateNestedManyWithoutUserInput
+    inquiries?: MIN_SHOP_INQUIRYUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type MIN_SHOP_USERUpdateInput = {
@@ -26836,6 +26932,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     pointLogs?: MIN_SHOP_POINT_LOGUpdateManyWithoutUserNestedInput
+    inquiries?: MIN_SHOP_INQUIRYUpdateManyWithoutUserNestedInput
   }
 
   export type MIN_SHOP_USERUncheckedUpdateInput = {
@@ -26852,6 +26949,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     pointLogs?: MIN_SHOP_POINT_LOGUncheckedUpdateManyWithoutUserNestedInput
+    inquiries?: MIN_SHOP_INQUIRYUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type MIN_SHOP_USERCreateManyInput = {
@@ -28184,7 +28282,6 @@ export namespace Prisma {
 
   export type MIN_SHOP_INQUIRYCreateInput = {
     id?: string
-    userId: string
     type: string
     title: string
     content: string
@@ -28192,6 +28289,7 @@ export namespace Prisma {
     answer?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
+    user: MIN_SHOP_USERCreateNestedOneWithoutInquiriesInput
   }
 
   export type MIN_SHOP_INQUIRYUncheckedCreateInput = {
@@ -28208,7 +28306,6 @@ export namespace Prisma {
 
   export type MIN_SHOP_INQUIRYUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    userId?: StringFieldUpdateOperationsInput | string
     type?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
@@ -28216,6 +28313,7 @@ export namespace Prisma {
     answer?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: MIN_SHOP_USERUpdateOneRequiredWithoutInquiriesNestedInput
   }
 
   export type MIN_SHOP_INQUIRYUncheckedUpdateInput = {
@@ -28244,7 +28342,6 @@ export namespace Prisma {
 
   export type MIN_SHOP_INQUIRYUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    userId?: StringFieldUpdateOperationsInput | string
     type?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
@@ -28442,12 +28539,22 @@ export namespace Prisma {
     none?: MIN_SHOP_POINT_LOGWhereInput
   }
 
+  export type MIN_SHOP_INQUIRYListRelationFilter = {
+    every?: MIN_SHOP_INQUIRYWhereInput
+    some?: MIN_SHOP_INQUIRYWhereInput
+    none?: MIN_SHOP_INQUIRYWhereInput
+  }
+
   export type SortOrderInput = {
     sort: SortOrder
     nulls?: NullsOrder
   }
 
   export type MIN_SHOP_POINT_LOGOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type MIN_SHOP_INQUIRYOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -29393,6 +29500,11 @@ export namespace Prisma {
     viewCount?: SortOrder
   }
 
+  export type MIN_SHOP_USERRelationFilter = {
+    is?: MIN_SHOP_USERWhereInput
+    isNot?: MIN_SHOP_USERWhereInput
+  }
+
   export type MIN_SHOP_INQUIRYCountOrderByAggregateInput = {
     id?: SortOrder
     userId?: SortOrder
@@ -29427,11 +29539,6 @@ export namespace Prisma {
     answer?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-  }
-
-  export type MIN_SHOP_USERRelationFilter = {
-    is?: MIN_SHOP_USERWhereInput
-    isNot?: MIN_SHOP_USERWhereInput
   }
 
   export type MIN_SHOP_POINT_LOGCountOrderByAggregateInput = {
@@ -29500,11 +29607,25 @@ export namespace Prisma {
     connect?: MIN_SHOP_POINT_LOGWhereUniqueInput | MIN_SHOP_POINT_LOGWhereUniqueInput[]
   }
 
+  export type MIN_SHOP_INQUIRYCreateNestedManyWithoutUserInput = {
+    create?: XOR<MIN_SHOP_INQUIRYCreateWithoutUserInput, MIN_SHOP_INQUIRYUncheckedCreateWithoutUserInput> | MIN_SHOP_INQUIRYCreateWithoutUserInput[] | MIN_SHOP_INQUIRYUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: MIN_SHOP_INQUIRYCreateOrConnectWithoutUserInput | MIN_SHOP_INQUIRYCreateOrConnectWithoutUserInput[]
+    createMany?: MIN_SHOP_INQUIRYCreateManyUserInputEnvelope
+    connect?: MIN_SHOP_INQUIRYWhereUniqueInput | MIN_SHOP_INQUIRYWhereUniqueInput[]
+  }
+
   export type MIN_SHOP_POINT_LOGUncheckedCreateNestedManyWithoutUserInput = {
     create?: XOR<MIN_SHOP_POINT_LOGCreateWithoutUserInput, MIN_SHOP_POINT_LOGUncheckedCreateWithoutUserInput> | MIN_SHOP_POINT_LOGCreateWithoutUserInput[] | MIN_SHOP_POINT_LOGUncheckedCreateWithoutUserInput[]
     connectOrCreate?: MIN_SHOP_POINT_LOGCreateOrConnectWithoutUserInput | MIN_SHOP_POINT_LOGCreateOrConnectWithoutUserInput[]
     createMany?: MIN_SHOP_POINT_LOGCreateManyUserInputEnvelope
     connect?: MIN_SHOP_POINT_LOGWhereUniqueInput | MIN_SHOP_POINT_LOGWhereUniqueInput[]
+  }
+
+  export type MIN_SHOP_INQUIRYUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<MIN_SHOP_INQUIRYCreateWithoutUserInput, MIN_SHOP_INQUIRYUncheckedCreateWithoutUserInput> | MIN_SHOP_INQUIRYCreateWithoutUserInput[] | MIN_SHOP_INQUIRYUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: MIN_SHOP_INQUIRYCreateOrConnectWithoutUserInput | MIN_SHOP_INQUIRYCreateOrConnectWithoutUserInput[]
+    createMany?: MIN_SHOP_INQUIRYCreateManyUserInputEnvelope
+    connect?: MIN_SHOP_INQUIRYWhereUniqueInput | MIN_SHOP_INQUIRYWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -29541,6 +29662,20 @@ export namespace Prisma {
     deleteMany?: MIN_SHOP_POINT_LOGScalarWhereInput | MIN_SHOP_POINT_LOGScalarWhereInput[]
   }
 
+  export type MIN_SHOP_INQUIRYUpdateManyWithoutUserNestedInput = {
+    create?: XOR<MIN_SHOP_INQUIRYCreateWithoutUserInput, MIN_SHOP_INQUIRYUncheckedCreateWithoutUserInput> | MIN_SHOP_INQUIRYCreateWithoutUserInput[] | MIN_SHOP_INQUIRYUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: MIN_SHOP_INQUIRYCreateOrConnectWithoutUserInput | MIN_SHOP_INQUIRYCreateOrConnectWithoutUserInput[]
+    upsert?: MIN_SHOP_INQUIRYUpsertWithWhereUniqueWithoutUserInput | MIN_SHOP_INQUIRYUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: MIN_SHOP_INQUIRYCreateManyUserInputEnvelope
+    set?: MIN_SHOP_INQUIRYWhereUniqueInput | MIN_SHOP_INQUIRYWhereUniqueInput[]
+    disconnect?: MIN_SHOP_INQUIRYWhereUniqueInput | MIN_SHOP_INQUIRYWhereUniqueInput[]
+    delete?: MIN_SHOP_INQUIRYWhereUniqueInput | MIN_SHOP_INQUIRYWhereUniqueInput[]
+    connect?: MIN_SHOP_INQUIRYWhereUniqueInput | MIN_SHOP_INQUIRYWhereUniqueInput[]
+    update?: MIN_SHOP_INQUIRYUpdateWithWhereUniqueWithoutUserInput | MIN_SHOP_INQUIRYUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: MIN_SHOP_INQUIRYUpdateManyWithWhereWithoutUserInput | MIN_SHOP_INQUIRYUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: MIN_SHOP_INQUIRYScalarWhereInput | MIN_SHOP_INQUIRYScalarWhereInput[]
+  }
+
   export type MIN_SHOP_POINT_LOGUncheckedUpdateManyWithoutUserNestedInput = {
     create?: XOR<MIN_SHOP_POINT_LOGCreateWithoutUserInput, MIN_SHOP_POINT_LOGUncheckedCreateWithoutUserInput> | MIN_SHOP_POINT_LOGCreateWithoutUserInput[] | MIN_SHOP_POINT_LOGUncheckedCreateWithoutUserInput[]
     connectOrCreate?: MIN_SHOP_POINT_LOGCreateOrConnectWithoutUserInput | MIN_SHOP_POINT_LOGCreateOrConnectWithoutUserInput[]
@@ -29553,6 +29688,20 @@ export namespace Prisma {
     update?: MIN_SHOP_POINT_LOGUpdateWithWhereUniqueWithoutUserInput | MIN_SHOP_POINT_LOGUpdateWithWhereUniqueWithoutUserInput[]
     updateMany?: MIN_SHOP_POINT_LOGUpdateManyWithWhereWithoutUserInput | MIN_SHOP_POINT_LOGUpdateManyWithWhereWithoutUserInput[]
     deleteMany?: MIN_SHOP_POINT_LOGScalarWhereInput | MIN_SHOP_POINT_LOGScalarWhereInput[]
+  }
+
+  export type MIN_SHOP_INQUIRYUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<MIN_SHOP_INQUIRYCreateWithoutUserInput, MIN_SHOP_INQUIRYUncheckedCreateWithoutUserInput> | MIN_SHOP_INQUIRYCreateWithoutUserInput[] | MIN_SHOP_INQUIRYUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: MIN_SHOP_INQUIRYCreateOrConnectWithoutUserInput | MIN_SHOP_INQUIRYCreateOrConnectWithoutUserInput[]
+    upsert?: MIN_SHOP_INQUIRYUpsertWithWhereUniqueWithoutUserInput | MIN_SHOP_INQUIRYUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: MIN_SHOP_INQUIRYCreateManyUserInputEnvelope
+    set?: MIN_SHOP_INQUIRYWhereUniqueInput | MIN_SHOP_INQUIRYWhereUniqueInput[]
+    disconnect?: MIN_SHOP_INQUIRYWhereUniqueInput | MIN_SHOP_INQUIRYWhereUniqueInput[]
+    delete?: MIN_SHOP_INQUIRYWhereUniqueInput | MIN_SHOP_INQUIRYWhereUniqueInput[]
+    connect?: MIN_SHOP_INQUIRYWhereUniqueInput | MIN_SHOP_INQUIRYWhereUniqueInput[]
+    update?: MIN_SHOP_INQUIRYUpdateWithWhereUniqueWithoutUserInput | MIN_SHOP_INQUIRYUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: MIN_SHOP_INQUIRYUpdateManyWithWhereWithoutUserInput | MIN_SHOP_INQUIRYUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: MIN_SHOP_INQUIRYScalarWhereInput | MIN_SHOP_INQUIRYScalarWhereInput[]
   }
 
   export type MIN_SHOP_CATEGORYCreateNestedOneWithoutChildrenInput = {
@@ -30523,6 +30672,20 @@ export namespace Prisma {
     update?: XOR<XOR<MIN_SHOP_ROLEUpdateToOneWithWhereWithoutAdminsInput, MIN_SHOP_ROLEUpdateWithoutAdminsInput>, MIN_SHOP_ROLEUncheckedUpdateWithoutAdminsInput>
   }
 
+  export type MIN_SHOP_USERCreateNestedOneWithoutInquiriesInput = {
+    create?: XOR<MIN_SHOP_USERCreateWithoutInquiriesInput, MIN_SHOP_USERUncheckedCreateWithoutInquiriesInput>
+    connectOrCreate?: MIN_SHOP_USERCreateOrConnectWithoutInquiriesInput
+    connect?: MIN_SHOP_USERWhereUniqueInput
+  }
+
+  export type MIN_SHOP_USERUpdateOneRequiredWithoutInquiriesNestedInput = {
+    create?: XOR<MIN_SHOP_USERCreateWithoutInquiriesInput, MIN_SHOP_USERUncheckedCreateWithoutInquiriesInput>
+    connectOrCreate?: MIN_SHOP_USERCreateOrConnectWithoutInquiriesInput
+    upsert?: MIN_SHOP_USERUpsertWithoutInquiriesInput
+    connect?: MIN_SHOP_USERWhereUniqueInput
+    update?: XOR<XOR<MIN_SHOP_USERUpdateToOneWithWhereWithoutInquiriesInput, MIN_SHOP_USERUpdateWithoutInquiriesInput>, MIN_SHOP_USERUncheckedUpdateWithoutInquiriesInput>
+  }
+
   export type MIN_SHOP_USERCreateNestedOneWithoutPointLogsInput = {
     create?: XOR<MIN_SHOP_USERCreateWithoutPointLogsInput, MIN_SHOP_USERUncheckedCreateWithoutPointLogsInput>
     connectOrCreate?: MIN_SHOP_USERCreateOrConnectWithoutPointLogsInput
@@ -30735,6 +30898,38 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type MIN_SHOP_INQUIRYCreateWithoutUserInput = {
+    id?: string
+    type: string
+    title: string
+    content: string
+    status?: string
+    answer?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type MIN_SHOP_INQUIRYUncheckedCreateWithoutUserInput = {
+    id?: string
+    type: string
+    title: string
+    content: string
+    status?: string
+    answer?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type MIN_SHOP_INQUIRYCreateOrConnectWithoutUserInput = {
+    where: MIN_SHOP_INQUIRYWhereUniqueInput
+    create: XOR<MIN_SHOP_INQUIRYCreateWithoutUserInput, MIN_SHOP_INQUIRYUncheckedCreateWithoutUserInput>
+  }
+
+  export type MIN_SHOP_INQUIRYCreateManyUserInputEnvelope = {
+    data: MIN_SHOP_INQUIRYCreateManyUserInput | MIN_SHOP_INQUIRYCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
   export type MIN_SHOP_POINT_LOGUpsertWithWhereUniqueWithoutUserInput = {
     where: MIN_SHOP_POINT_LOGWhereUniqueInput
     update: XOR<MIN_SHOP_POINT_LOGUpdateWithoutUserInput, MIN_SHOP_POINT_LOGUncheckedUpdateWithoutUserInput>
@@ -30760,6 +30955,37 @@ export namespace Prisma {
     amount?: IntFilter<"MIN_SHOP_POINT_LOG"> | number
     reason?: StringFilter<"MIN_SHOP_POINT_LOG"> | string
     createdAt?: DateTimeFilter<"MIN_SHOP_POINT_LOG"> | Date | string
+  }
+
+  export type MIN_SHOP_INQUIRYUpsertWithWhereUniqueWithoutUserInput = {
+    where: MIN_SHOP_INQUIRYWhereUniqueInput
+    update: XOR<MIN_SHOP_INQUIRYUpdateWithoutUserInput, MIN_SHOP_INQUIRYUncheckedUpdateWithoutUserInput>
+    create: XOR<MIN_SHOP_INQUIRYCreateWithoutUserInput, MIN_SHOP_INQUIRYUncheckedCreateWithoutUserInput>
+  }
+
+  export type MIN_SHOP_INQUIRYUpdateWithWhereUniqueWithoutUserInput = {
+    where: MIN_SHOP_INQUIRYWhereUniqueInput
+    data: XOR<MIN_SHOP_INQUIRYUpdateWithoutUserInput, MIN_SHOP_INQUIRYUncheckedUpdateWithoutUserInput>
+  }
+
+  export type MIN_SHOP_INQUIRYUpdateManyWithWhereWithoutUserInput = {
+    where: MIN_SHOP_INQUIRYScalarWhereInput
+    data: XOR<MIN_SHOP_INQUIRYUpdateManyMutationInput, MIN_SHOP_INQUIRYUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type MIN_SHOP_INQUIRYScalarWhereInput = {
+    AND?: MIN_SHOP_INQUIRYScalarWhereInput | MIN_SHOP_INQUIRYScalarWhereInput[]
+    OR?: MIN_SHOP_INQUIRYScalarWhereInput[]
+    NOT?: MIN_SHOP_INQUIRYScalarWhereInput | MIN_SHOP_INQUIRYScalarWhereInput[]
+    id?: StringFilter<"MIN_SHOP_INQUIRY"> | string
+    userId?: StringFilter<"MIN_SHOP_INQUIRY"> | string
+    type?: StringFilter<"MIN_SHOP_INQUIRY"> | string
+    title?: StringFilter<"MIN_SHOP_INQUIRY"> | string
+    content?: StringFilter<"MIN_SHOP_INQUIRY"> | string
+    status?: StringFilter<"MIN_SHOP_INQUIRY"> | string
+    answer?: StringNullableFilter<"MIN_SHOP_INQUIRY"> | string | null
+    createdAt?: DateTimeFilter<"MIN_SHOP_INQUIRY"> | Date | string
+    updatedAt?: DateTimeFilter<"MIN_SHOP_INQUIRY"> | Date | string
   }
 
   export type MIN_SHOP_CATEGORYCreateWithoutChildrenInput = {
@@ -32827,6 +33053,86 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type MIN_SHOP_USERCreateWithoutInquiriesInput = {
+    id?: string
+    email: string
+    name?: string | null
+    phone?: string | null
+    zipcode?: string | null
+    address?: string | null
+    detailAddress?: string | null
+    tier?: string
+    points?: number
+    totalSpent?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    pointLogs?: MIN_SHOP_POINT_LOGCreateNestedManyWithoutUserInput
+  }
+
+  export type MIN_SHOP_USERUncheckedCreateWithoutInquiriesInput = {
+    id?: string
+    email: string
+    name?: string | null
+    phone?: string | null
+    zipcode?: string | null
+    address?: string | null
+    detailAddress?: string | null
+    tier?: string
+    points?: number
+    totalSpent?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    pointLogs?: MIN_SHOP_POINT_LOGUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type MIN_SHOP_USERCreateOrConnectWithoutInquiriesInput = {
+    where: MIN_SHOP_USERWhereUniqueInput
+    create: XOR<MIN_SHOP_USERCreateWithoutInquiriesInput, MIN_SHOP_USERUncheckedCreateWithoutInquiriesInput>
+  }
+
+  export type MIN_SHOP_USERUpsertWithoutInquiriesInput = {
+    update: XOR<MIN_SHOP_USERUpdateWithoutInquiriesInput, MIN_SHOP_USERUncheckedUpdateWithoutInquiriesInput>
+    create: XOR<MIN_SHOP_USERCreateWithoutInquiriesInput, MIN_SHOP_USERUncheckedCreateWithoutInquiriesInput>
+    where?: MIN_SHOP_USERWhereInput
+  }
+
+  export type MIN_SHOP_USERUpdateToOneWithWhereWithoutInquiriesInput = {
+    where?: MIN_SHOP_USERWhereInput
+    data: XOR<MIN_SHOP_USERUpdateWithoutInquiriesInput, MIN_SHOP_USERUncheckedUpdateWithoutInquiriesInput>
+  }
+
+  export type MIN_SHOP_USERUpdateWithoutInquiriesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    zipcode?: NullableStringFieldUpdateOperationsInput | string | null
+    address?: NullableStringFieldUpdateOperationsInput | string | null
+    detailAddress?: NullableStringFieldUpdateOperationsInput | string | null
+    tier?: StringFieldUpdateOperationsInput | string
+    points?: IntFieldUpdateOperationsInput | number
+    totalSpent?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    pointLogs?: MIN_SHOP_POINT_LOGUpdateManyWithoutUserNestedInput
+  }
+
+  export type MIN_SHOP_USERUncheckedUpdateWithoutInquiriesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    zipcode?: NullableStringFieldUpdateOperationsInput | string | null
+    address?: NullableStringFieldUpdateOperationsInput | string | null
+    detailAddress?: NullableStringFieldUpdateOperationsInput | string | null
+    tier?: StringFieldUpdateOperationsInput | string
+    points?: IntFieldUpdateOperationsInput | number
+    totalSpent?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    pointLogs?: MIN_SHOP_POINT_LOGUncheckedUpdateManyWithoutUserNestedInput
+  }
+
   export type MIN_SHOP_USERCreateWithoutPointLogsInput = {
     id?: string
     email: string
@@ -32840,6 +33146,7 @@ export namespace Prisma {
     totalSpent?: number
     createdAt?: Date | string
     updatedAt?: Date | string
+    inquiries?: MIN_SHOP_INQUIRYCreateNestedManyWithoutUserInput
   }
 
   export type MIN_SHOP_USERUncheckedCreateWithoutPointLogsInput = {
@@ -32855,6 +33162,7 @@ export namespace Prisma {
     totalSpent?: number
     createdAt?: Date | string
     updatedAt?: Date | string
+    inquiries?: MIN_SHOP_INQUIRYUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type MIN_SHOP_USERCreateOrConnectWithoutPointLogsInput = {
@@ -32886,6 +33194,7 @@ export namespace Prisma {
     totalSpent?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    inquiries?: MIN_SHOP_INQUIRYUpdateManyWithoutUserNestedInput
   }
 
   export type MIN_SHOP_USERUncheckedUpdateWithoutPointLogsInput = {
@@ -32901,6 +33210,7 @@ export namespace Prisma {
     totalSpent?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    inquiries?: MIN_SHOP_INQUIRYUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type MIN_SHOP_POINT_LOGCreateManyUserInput = {
@@ -32908,6 +33218,17 @@ export namespace Prisma {
     amount: number
     reason: string
     createdAt?: Date | string
+  }
+
+  export type MIN_SHOP_INQUIRYCreateManyUserInput = {
+    id?: string
+    type: string
+    title: string
+    content: string
+    status?: string
+    answer?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type MIN_SHOP_POINT_LOGUpdateWithoutUserInput = {
@@ -32929,6 +33250,39 @@ export namespace Prisma {
     amount?: IntFieldUpdateOperationsInput | number
     reason?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MIN_SHOP_INQUIRYUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    answer?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MIN_SHOP_INQUIRYUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    answer?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MIN_SHOP_INQUIRYUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    content?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    answer?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type MIN_SHOP_CATEGORYCreateManyParentInput = {

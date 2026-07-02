@@ -27,6 +27,7 @@ model MIN_SHOP_USER {
   updatedAt     DateTime @updatedAt
 
   pointLogs MIN_SHOP_POINT_LOG[]
+  inquiries MIN_SHOP_INQUIRY[]
 }
 
 model MIN_SHOP_CATEGORY {
@@ -268,6 +269,8 @@ model MIN_SHOP_INQUIRY {
   answer    String?  @db.Text /// 관리자 답변
   createdAt DateTime @default(now()) /// 작성일시
   updatedAt DateTime @updatedAt /// 수정일시
+
+  user MIN_SHOP_USER @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model MIN_SHOP_POINT_LOG {

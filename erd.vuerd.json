@@ -70,7 +70,8 @@
       "2a8e699d-373e-4644-9f1c-e12adfab32c4",
       "63fdea08-1110-456f-a7e8-58e336007069",
       "8c734f53-80de-4e17-990c-1a83a2eb17e2",
-      "5d23a61e-0fca-49de-bb8f-b633af538918"
+      "5d23a61e-0fca-49de-bb8f-b633af538918",
+      "6b9a29df-2cbf-4cc9-b699-e96467f1ca9d"
     ],
     "indexIds": [],
     "memoIds": []
@@ -2931,6 +2932,34 @@
         "meta": {
           "updateAt": 1782953823309,
           "createAt": 1782953823309
+        }
+      },
+      "6b9a29df-2cbf-4cc9-b699-e96467f1ca9d": {
+        "id": "6b9a29df-2cbf-4cc9-b699-e96467f1ca9d",
+        "identification": false,
+        "relationshipType": "ZeroOneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "edb01685-791d-42e4-a85f-2791da2785d8",
+          "columnIds": [
+            "6dcc992b-58ce-49bf-8135-d273b6fc3322"
+          ],
+          "x": 200,
+          "y": 100,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "84826497-d9b1-4d38-91d9-79a2c5237f63",
+          "columnIds": [
+            "1ceffd5a-bc8a-4d34-b80a-d3d7142a24db"
+          ],
+          "x": 700,
+          "y": 1000,
+          "direction": "top"
+        },
+        "meta": {
+          "updateAt": 1782980389591,
+          "createAt": 1782980389591
         }
       }
     },
