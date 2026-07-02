@@ -3,17 +3,24 @@ import UserListClient from "./UserListClient";
 
 export const dynamic = "force-dynamic";
 
-export default async function AdminUsersPage({ searchParams }: { searchParams: Promise<{ page?: string }> }) {
-  const { page } = await searchParams;
+export default async function AdminUsersPage({ searchParams }: { searchParams: Promise<{ page?: string, q?: string }> }) {
+  const { page, q } = await searchParams;
   const currentPage = Number(page) || 1;
   const take = 10;
   const skip = (currentPage - 1) * take;
 
-  const whereCondition = {
+  const whereCondition: any = {
     NOT: {
       email: { endsWith: '@minstudio.app' }
     }
   };
+
+  if (q && q.trim() !== "") {
+    whereCondition.OR = [
+      { name: { contains: q } },
+      { email: { contains: q } }
+    ];
+  }
 
   const [users, totalCount] = await Promise.all([
     prisma.mIN_SHOP_USER.findMany({
@@ -36,7 +43,7 @@ export default async function AdminUsersPage({ searchParams }: { searchParams: P
         </div>
       </header>
 
-      <UserListClient users={users} currentPage={currentPage} totalPages={totalPages} />
+      <UserListClient users={users} currentPage={currentPage} totalPages={totalPages} searchQuery={q || ""} />
     </div>
   );
 }

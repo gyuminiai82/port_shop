@@ -51,7 +51,7 @@ export default function ProductListClient({
               <th style={{ width: "20%", padding: "1.5rem 1rem", fontWeight: 600 }}>카테고리</th>
               <th style={{ width: "15%", padding: "1.5rem 1rem", fontWeight: 600 }}>가격</th>
               <th style={{ width: "15%", padding: "1.5rem 1rem", fontWeight: 600 }}>재고</th>
-              <th style={{ width: "10%", padding: "1.5rem 1rem", fontWeight: 600 }}>관리</th>
+              <th style={{ width: "10%", padding: "1.5rem 1rem", fontWeight: 600, textAlign: "right" }}>관리</th>
             </tr>
           </thead>
           <tbody>
@@ -96,8 +96,10 @@ export default function ProductListClient({
                         )}
                       </div>
                     </td>
-                    <td style={{ padding: "1rem" }}>
-                      <button style={{ padding: "0.5rem 1rem", background: "white", border: "1px solid #e2e8f0", borderRadius: "8px", fontWeight: 600, color: "#64748b", cursor: "pointer" }}>수정</button>
+                    <td style={{ padding: "1rem", textAlign: "right" }}>
+                      <Link href={`/admin/products/${product.id}/edit`}>
+                        <button style={{ padding: "0.5rem 1rem", background: "white", border: "1px solid #e2e8f0", borderRadius: "8px", fontWeight: 600, color: "#64748b", cursor: "pointer" }}>수정</button>
+                      </Link>
                     </td>
                   </tr>
                 );

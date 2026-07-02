@@ -105,16 +105,16 @@ export default function InquiryListClient({ inquiries, currentPage, totalPages, 
         </div>
 
         <div style={{ overflowX: "auto" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "900px", textAlign: "left", tableLayout: "fixed" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "1100px", textAlign: "left", tableLayout: "auto" }}>
             <thead>
               <tr style={{ borderBottom: "2px solid #f1f5f9", color: "#64748b" }}>
-                <th style={{ width: "10%", padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>상태</th>
-                <th style={{ width: "10%", padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>문의 유형</th>
+                <th style={{ padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>상태</th>
+                <th style={{ padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>문의 유형</th>
                 <th style={{ width: "35%", padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>제목</th>
-                <th style={{ width: "10%", padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>이름</th>
-                <th style={{ width: "15%", padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>이메일</th>
-                <th style={{ width: "10%", padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>작성일</th>
-                <th style={{ width: "10%", padding: "1rem", fontWeight: 600, textAlign: "right", whiteSpace: "nowrap" }}>관리</th>
+                <th style={{ padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>이름</th>
+                <th style={{ padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>이메일</th>
+                <th style={{ padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>작성일</th>
+                <th style={{ padding: "1rem", fontWeight: 600, textAlign: "right", whiteSpace: "nowrap" }}>관리</th>
               </tr>
             </thead>
             <tbody>
@@ -150,12 +150,20 @@ export default function InquiryListClient({ inquiries, currentPage, totalPages, 
                       {new Date(inquiry.createdAt).toLocaleDateString()}
                     </td>
                     <td style={{ padding: "1rem", textAlign: "right", whiteSpace: "nowrap" }}>
-                      <button 
-                        onClick={() => openModal(inquiry)}
-                        style={{ padding: "0.5rem 1rem", background: "white", border: "1px solid var(--glass-border)", borderRadius: "8px", cursor: "pointer", fontWeight: 600, color: "var(--text-primary)" }}
-                      >
-                        상세 / 답변
-                      </button>
+                      <div style={{ display: "flex", gap: "0.5rem", justifyContent: "flex-end" }}>
+                        <button 
+                          onClick={() => openModal(inquiry)}
+                          style={{ width: "60px", padding: "0.4rem 0", textAlign: "center", background: "white", border: "1px solid #d1d5db", borderRadius: "6px", cursor: "pointer", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}
+                        >
+                          상세
+                        </button>
+                        <button 
+                          onClick={() => openModal(inquiry)}
+                          style={{ width: "90px", padding: "0.4rem 0", textAlign: "center", background: "var(--accent-color)", border: "none", borderRadius: "6px", cursor: "pointer", fontWeight: 600, color: "white", fontSize: "0.875rem" }}
+                        >
+                          {inquiry.status === "ANSWERED" ? "답변 수정" : "답변"}
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))

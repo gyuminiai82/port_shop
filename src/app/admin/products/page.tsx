@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import ProductListClient from "./ProductListClient";
 import { requireAdmin } from "@/lib/requireAdmin";
+import Link from "next/link";
 
 export default async function AdminProductsPage({ searchParams }: { searchParams: Promise<{ page?: string, categoryId?: string }> }) {
   await requireAdmin("PRODUCTS");
@@ -42,9 +43,11 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
           <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "var(--text-primary)" }}>상품 관리</h1>
           <p style={{ color: "var(--text-secondary)", marginTop: "0.5rem" }}>쇼핑몰에 등록된 모든 상품을 조회하고 등록/수정할 수 있습니다.</p>
         </div>
-        <button style={{ padding: "0.75rem 1.5rem", background: "var(--accent-color)", color: "white", borderRadius: "12px", fontWeight: 600, border: "none", cursor: "pointer" }}>
-          + 새 상품 등록
-        </button>
+        <Link href="/admin/products/new">
+          <button style={{ padding: "0.75rem 1.5rem", background: "var(--accent-color)", color: "white", borderRadius: "12px", fontWeight: 600, border: "none", cursor: "pointer" }}>
+            + 새 상품 등록
+          </button>
+        </Link>
       </header>
 
       <ProductListClient 

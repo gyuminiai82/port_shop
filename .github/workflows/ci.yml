@@ -1,0 +1,61 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate Prisma Client
+        run: npx prisma generate
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Build Next.js app
+        run: npm run build
+        env:
+          # 데이터베이스 URL이 빌드 시점에 필요한 경우를 대비해 더미 변수 설정
+          # 실제 프로덕션 DB URL은 GitHub Secrets에 등록해야 합니다.
+          DATABASE_URL: "mysql://dummy:dummy@localhost:3306/dummy"
+
+  deploy:
+    needs: build-and-lint
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Deploy to Production Server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
+          script: |
+            # 서버 내의 프로젝트 폴더로 이동합니다. PROJECT_PATH도 Secret에 등록해주세요.
+            cd ${{ secrets.PROJECT_PATH }}
+            
+            # 최신 코드를 다운로드 받습니다.
+            git pull origin main
+            
+            # 도커 이미지를 새로 빌드하고 백그라운드에서 다시 띄웁니다.
+            # (Dockerfile 내에서 npm install 및 build가 자동으로 진행됩니다)
+            docker-compose up -d --build

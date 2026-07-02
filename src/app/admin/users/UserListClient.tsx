@@ -14,8 +14,16 @@ type User = {
   createdAt: Date;
 };
 
-export default function UserListClient({ users, currentPage, totalPages }: { users: User[], currentPage: number, totalPages: number }) {
+export default function UserListClient({ users, currentPage, totalPages, searchQuery = "" }: { users: User[], currentPage: number, totalPages: number, searchQuery?: string }) {
   const router = useRouter();
+
+  // 검색 상태
+  const [query, setQuery] = useState(searchQuery);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    router.push(`/admin/users?page=1${query.trim() ? `&q=${encodeURIComponent(query.trim())}` : ''}`);
+  };
 
   // 모달 제어 상태
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
@@ -70,6 +78,21 @@ export default function UserListClient({ users, currentPage, totalPages }: { use
 
   return (
     <div>
+      <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "1.5rem" }}>
+        <form onSubmit={handleSearch} style={{ display: "flex", gap: "0.5rem" }}>
+          <input 
+            type="text" 
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="이름 또는 이메일 검색"
+            style={{ padding: "0.5rem 1rem", borderRadius: "8px", border: "1px solid #e2e8f0", outline: "none", width: "250px" }}
+          />
+          <button type="submit" style={{ padding: "0.5rem 1rem", background: "var(--accent-color)", color: "white", borderRadius: "8px", border: "none", fontWeight: 600, cursor: "pointer" }}>
+            검색
+          </button>
+        </form>
+      </div>
+
       <div className="glass" style={{ background: "white", padding: "2rem", borderRadius: "24px", boxShadow: "0 10px 40px rgba(0,0,0,0.05)", overflowX: "auto" }}>
         <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", tableLayout: "fixed", minWidth: "1000px" }}>
           <thead>

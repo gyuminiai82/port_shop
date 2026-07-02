@@ -106,6 +106,9 @@ export default function OrderListClient({
     switch(status) {
       case "PAID": return <span style={{ padding: "0.25rem 0.5rem", borderRadius: "9999px", background: "#dcfce7", color: "#166534", fontSize: "0.75rem", fontWeight: 700 }}>결제완료</span>;
       case "PENDING": return <span style={{ padding: "0.25rem 0.5rem", borderRadius: "9999px", background: "#fef9c3", color: "#854d0e", fontSize: "0.75rem", fontWeight: 700 }}>대기중</span>;
+      case "SHIPPING":
+      case "SHIPPED": return <span style={{ padding: "0.25rem 0.5rem", borderRadius: "9999px", background: "#dbeafe", color: "#1e40af", fontSize: "0.75rem", fontWeight: 700 }}>배송중</span>;
+      case "DELIVERED": return <span style={{ padding: "0.25rem 0.5rem", borderRadius: "9999px", background: "#e0e7ff", color: "#3730a3", fontSize: "0.75rem", fontWeight: 700 }}>배송완료</span>;
       case "CANCELLED": return <span style={{ padding: "0.25rem 0.5rem", borderRadius: "9999px", background: "#fee2e2", color: "#991b1b", fontSize: "0.75rem", fontWeight: 700 }}>취소됨</span>;
       default: return <span>{status}</span>;
     }
@@ -144,15 +147,15 @@ export default function OrderListClient({
           </form>
         </div>
 
-        <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", tableLayout: "fixed", minWidth: "1000px" }}>
+        <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", tableLayout: "fixed", minWidth: "1200px" }}>
           <thead>
             <tr style={{ borderBottom: "2px solid #f1f5f9", color: "#64748b" }}>
-              <th style={{ width: "20%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>주문일시/주문번호</th>
-              <th style={{ width: "30%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>주문 상품</th>
-              <th style={{ width: "15%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>총 결제금액</th>
-              <th style={{ width: "10%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>결제 상태</th>
-              <th style={{ width: "15%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>배송 상태</th>
-              <th style={{ width: "10%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>관리</th>
+              <th style={{ width: "25%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem", whiteSpace: "nowrap" }}>주문일시/주문번호</th>
+              <th style={{ width: "25%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem", whiteSpace: "nowrap" }}>주문 상품</th>
+              <th style={{ width: "15%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem", whiteSpace: "nowrap" }}>총 결제금액</th>
+              <th style={{ width: "12%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem", whiteSpace: "nowrap" }}>결제 상태</th>
+              <th style={{ width: "13%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem", whiteSpace: "nowrap" }}>배송 상태</th>
+              <th style={{ width: "10%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem", whiteSpace: "nowrap", textAlign: "right" }}>관리</th>
             </tr>
           </thead>
           <tbody>
@@ -163,23 +166,23 @@ export default function OrderListClient({
 
               return (
                 <tr key={order.id} style={{ borderBottom: "1px solid #e5e7eb", transition: "background 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.background = "#f8fafc"} onMouseLeave={(e) => e.currentTarget.style.background = "transparent"}>
-                  <td style={{ padding: "1rem 1.5rem" }}>
-                    <div style={{ fontSize: "0.875rem", fontWeight: 500 }}>{new Date(order.createdAt).toLocaleDateString()} {new Date(order.createdAt).toLocaleTimeString()}</div>
-                    <div style={{ fontSize: "0.75rem", color: "#6b7280", marginTop: "0.25rem" }}>{order.id.split("_").pop()}</div>
+                  <td style={{ padding: "1rem 1.5rem", overflow: "hidden", textOverflow: "ellipsis" }}>
+                    <div style={{ fontSize: "0.875rem", fontWeight: 500, whiteSpace: "nowrap" }}>{new Date(order.createdAt).toLocaleDateString()} {new Date(order.createdAt).toLocaleTimeString()}</div>
+                    <div style={{ fontSize: "0.75rem", color: "#6b7280", marginTop: "0.25rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }} title={order.id}>{order.id.split("_").pop()}</div>
                   </td>
-                  <td style={{ padding: "1rem 1.5rem", fontSize: "0.875rem", fontWeight: 500 }}>
+                  <td style={{ padding: "1rem 1.5rem", fontSize: "0.875rem", fontWeight: 500, whiteSpace: "normal", wordBreak: "keep-all" }}>
                     {itemSummary}
                   </td>
-                  <td style={{ padding: "1rem 1.5rem", fontSize: "0.875rem", fontWeight: 600 }}>
+                  <td style={{ padding: "1rem 1.5rem", fontSize: "0.875rem", fontWeight: 600, whiteSpace: "nowrap" }}>
                     ₩{order.totalAmount.toLocaleString()}
                     {order.refundAmount > 0 && (
                       <span style={{ display: "block", color: "#ef4444", fontSize: "0.75rem", fontWeight: 400 }}>(-₩{order.refundAmount.toLocaleString()})</span>
                     )}
                   </td>
-                  <td style={{ padding: "1rem 1.5rem" }}>
+                  <td style={{ padding: "1rem 1.5rem", whiteSpace: "nowrap" }}>
                     {getStatusBadge(order.status)}
                   </td>
-                  <td style={{ padding: "1rem 1.5rem" }}>
+                  <td style={{ padding: "1rem 1.5rem", whiteSpace: "nowrap" }}>
                     <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
                       <div>{getDeliveryBadge(order.delivery?.status)}</div>
                       {order.delivery?.trackingNo && (
@@ -187,10 +190,10 @@ export default function OrderListClient({
                       )}
                     </div>
                   </td>
-                  <td style={{ padding: "1rem 1.5rem" }}>
+                  <td style={{ padding: "1rem 1.5rem", whiteSpace: "nowrap", textAlign: "right" }}>
                     <button 
                       onClick={() => openModal(order)}
-                      style={{ padding: "0.5rem 1rem", fontSize: "0.875rem", fontWeight: 500, borderRadius: "6px", border: "1px solid #d1d5db", background: "white", cursor: "pointer", color: "#374151" }}
+                      style={{ padding: "0.5rem 1rem", fontSize: "0.875rem", fontWeight: 500, borderRadius: "6px", border: "1px solid #d1d5db", background: "white", cursor: "pointer", color: "#374151", whiteSpace: "nowrap" }}
                     >
                       상태 변경
                     </button>
