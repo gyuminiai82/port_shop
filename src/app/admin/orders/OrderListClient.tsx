@@ -108,15 +108,15 @@ export default function OrderListClient({ orders }: { orders: Order[] }) {
   return (
     <div>
       <div className="glass" style={{ background: "white", borderRadius: "16px", overflow: "hidden", border: "1px solid var(--glass-border)", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.05)" }}>
-        <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left" }}>
+        <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", tableLayout: "fixed", minWidth: "1000px" }}>
           <thead>
             <tr style={{ background: "#f9fafb", borderBottom: "1px solid #e5e7eb" }}>
-              <th style={{ padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>주문일시/주문번호</th>
-              <th style={{ padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>주문 상품</th>
-              <th style={{ padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>총 결제금액</th>
-              <th style={{ padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>결제 상태</th>
-              <th style={{ padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>배송 상태</th>
-              <th style={{ padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>관리</th>
+              <th style={{ width: "20%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>주문일시/주문번호</th>
+              <th style={{ width: "30%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>주문 상품</th>
+              <th style={{ width: "15%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>총 결제금액</th>
+              <th style={{ width: "10%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>결제 상태</th>
+              <th style={{ width: "15%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>배송 상태</th>
+              <th style={{ width: "10%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>관리</th>
             </tr>
           </thead>
           <tbody>

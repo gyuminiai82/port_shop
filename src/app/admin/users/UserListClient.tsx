@@ -71,16 +71,16 @@ export default function UserListClient({ users, currentPage, totalPages }: { use
   return (
     <div>
       <div style={{ background: "white", borderRadius: "24px", padding: "1rem", boxShadow: "0 4px 20px rgba(0,0,0,0.03)", border: "1px solid #f1f5f9", overflowX: "auto" }}>
-        <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left" }}>
+        <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", tableLayout: "fixed", minWidth: "1000px" }}>
           <thead>
             <tr style={{ borderBottom: "2px solid #f1f5f9", color: "#64748b" }}>
-              <th style={{ padding: "1.5rem 1rem", fontWeight: 600 }}>이름/이메일</th>
-              <th style={{ padding: "1.5rem 1rem", fontWeight: 600 }}>연락처</th>
-              <th style={{ padding: "1.5rem 1rem", fontWeight: 600 }}>등급</th>
-              <th style={{ padding: "1.5rem 1rem", fontWeight: 600 }}>포인트</th>
-              <th style={{ padding: "1.5rem 1rem", fontWeight: 600 }}>총 결제금액</th>
-              <th style={{ padding: "1.5rem 1rem", fontWeight: 600 }}>가입일</th>
-              <th style={{ padding: "1.5rem 1rem", fontWeight: 600 }}>관리</th>
+              <th style={{ width: "25%", padding: "1.5rem 1rem", fontWeight: 600 }}>이름/이메일</th>
+              <th style={{ width: "15%", padding: "1.5rem 1rem", fontWeight: 600 }}>연락처</th>
+              <th style={{ width: "10%", padding: "1.5rem 1rem", fontWeight: 600 }}>등급</th>
+              <th style={{ width: "15%", padding: "1.5rem 1rem", fontWeight: 600 }}>포인트</th>
+              <th style={{ width: "15%", padding: "1.5rem 1rem", fontWeight: 600 }}>총 결제금액</th>
+              <th style={{ width: "10%", padding: "1.5rem 1rem", fontWeight: 600 }}>가입일</th>
+              <th style={{ width: "10%", padding: "1.5rem 1rem", fontWeight: 600 }}>관리</th>
             </tr>
           </thead>
           <tbody>

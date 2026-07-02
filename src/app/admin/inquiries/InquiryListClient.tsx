@@ -105,16 +105,16 @@ export default function InquiryListClient({ inquiries, currentPage, totalPages, 
         </div>
 
         <div style={{ overflowX: "auto" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "900px", textAlign: "left" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "900px", textAlign: "left", tableLayout: "fixed" }}>
             <thead>
               <tr style={{ borderBottom: "2px solid #f3f4f6", color: "var(--text-secondary)" }}>
-                <th style={{ padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>상태</th>
-                <th style={{ padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>문의 유형</th>
-                <th style={{ padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>제목</th>
-                <th style={{ padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>이름</th>
-                <th style={{ padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>이메일</th>
-                <th style={{ padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>작성일</th>
-                <th style={{ padding: "1rem", fontWeight: 600, textAlign: "right", whiteSpace: "nowrap" }}>관리</th>
+                <th style={{ width: "10%", padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>상태</th>
+                <th style={{ width: "10%", padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>문의 유형</th>
+                <th style={{ width: "35%", padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>제목</th>
+                <th style={{ width: "10%", padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>이름</th>
+                <th style={{ width: "15%", padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>이메일</th>
+                <th style={{ width: "10%", padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>작성일</th>
+                <th style={{ width: "10%", padding: "1rem", fontWeight: 600, textAlign: "right", whiteSpace: "nowrap" }}>관리</th>
               </tr>
             </thead>
             <tbody>

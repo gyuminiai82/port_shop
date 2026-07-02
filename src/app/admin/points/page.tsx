@@ -25,14 +25,14 @@ export default async function AdminPointsPage() {
       </header>
 
       <div className="glass" style={{ background: "white", padding: "1.5rem", borderRadius: "24px", boxShadow: "0 10px 40px rgba(0,0,0,0.05)", overflowX: "auto" }}>
-        <table style={{ width: "100%", borderCollapse: "collapse" }}>
+        <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed", minWidth: "800px" }}>
           <thead>
             <tr style={{ borderBottom: "2px solid var(--glass-border)", color: "var(--text-secondary)", textAlign: "left" }}>
-              <th style={{ padding: "1rem", fontWeight: 600 }}>일시</th>
-              <th style={{ padding: "1rem", fontWeight: 600 }}>고객명</th>
-              <th style={{ padding: "1rem", fontWeight: 600 }}>고객 계정</th>
-              <th style={{ padding: "1rem", fontWeight: 600 }}>변동액</th>
-              <th style={{ padding: "1rem", fontWeight: 600 }}>사유</th>
+              <th style={{ width: "20%", padding: "1rem", fontWeight: 600 }}>일시</th>
+              <th style={{ width: "20%", padding: "1rem", fontWeight: 600 }}>고객명</th>
+              <th style={{ width: "25%", padding: "1rem", fontWeight: 600 }}>고객 계정</th>
+              <th style={{ width: "15%", padding: "1rem", fontWeight: 600 }}>변동액</th>
+              <th style={{ width: "20%", padding: "1rem", fontWeight: 600 }}>사유</th>
             </tr>
           </thead>
           <tbody>

@@ -23,13 +23,13 @@ export default async function AdminCategoriesPage() {
       </header>
 
       <div className="glass" style={{ background: "white", padding: "1.5rem", borderRadius: "24px", boxShadow: "0 10px 40px rgba(0,0,0,0.05)", overflowX: "auto" }}>
-        <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left" }}>
+        <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", tableLayout: "fixed", minWidth: "600px" }}>
           <thead>
             <tr style={{ borderBottom: "2px solid #f1f5f9", color: "#64748b" }}>
-              <th style={{ padding: "1.5rem 1rem", fontWeight: 600 }}>ID</th>
-              <th style={{ padding: "1.5rem 1rem", fontWeight: 600 }}>카테고리명</th>
-              <th style={{ padding: "1.5rem 1rem", fontWeight: 600 }}>등록된 상품 수</th>
-              <th style={{ padding: "1.5rem 1rem", fontWeight: 600 }}>관리</th>
+              <th style={{ width: "20%", padding: "1.5rem 1rem", fontWeight: 600 }}>ID</th>
+              <th style={{ width: "40%", padding: "1.5rem 1rem", fontWeight: 600 }}>카테고리명</th>
+              <th style={{ width: "20%", padding: "1.5rem 1rem", fontWeight: 600 }}>등록된 상품 수</th>
+              <th style={{ width: "20%", padding: "1.5rem 1rem", fontWeight: 600 }}>관리</th>
             </tr>
           </thead>
           <tbody>

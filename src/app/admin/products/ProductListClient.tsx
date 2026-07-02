@@ -44,14 +44,14 @@ export default function ProductListClient({
       </div>
 
       <div style={{ overflowX: "auto" }}>
-        <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left" }}>
+        <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", tableLayout: "fixed", minWidth: "800px" }}>
           <thead>
             <tr style={{ borderBottom: "2px solid #f1f5f9", color: "#64748b" }}>
-              <th style={{ padding: "1.5rem 1rem", fontWeight: 600 }}>상품 정보</th>
-              <th style={{ padding: "1.5rem 1rem", fontWeight: 600 }}>카테고리</th>
-              <th style={{ padding: "1.5rem 1rem", fontWeight: 600 }}>가격</th>
-              <th style={{ padding: "1.5rem 1rem", fontWeight: 600 }}>재고</th>
-              <th style={{ padding: "1.5rem 1rem", fontWeight: 600 }}>관리</th>
+              <th style={{ width: "40%", padding: "1.5rem 1rem", fontWeight: 600 }}>상품 정보</th>
+              <th style={{ width: "20%", padding: "1.5rem 1rem", fontWeight: 600 }}>카테고리</th>
+              <th style={{ width: "15%", padding: "1.5rem 1rem", fontWeight: 600 }}>가격</th>
+              <th style={{ width: "15%", padding: "1.5rem 1rem", fontWeight: 600 }}>재고</th>
+              <th style={{ width: "10%", padding: "1.5rem 1rem", fontWeight: 600 }}>관리</th>
             </tr>
           </thead>
           <tbody>
