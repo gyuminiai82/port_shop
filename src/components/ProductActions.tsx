@@ -71,6 +71,34 @@ export default function ProductActions({ product }: ProductActionsProps) {
     });
   };
 
+  const handleBuyNow = () => {
+    if (product.options.length > 0 && !selectedOptionId) {
+      setPopup({ message: "옵션을 먼저 선택해주세요." });
+      return;
+    }
+
+    startTransition(async () => {
+      const res = await addToCart(product.id, selectedOptionId || null, 1);
+      if (res.success) {
+        // 바로 결제 페이지로 이동
+        router.push("/checkout");
+      } else {
+        if (res.error === "로그인이 필요합니다.") {
+          setPopup({
+            message: "로그인이 필요합니다.\n로그인 페이지로 이동하시겠습니까?",
+            showCancel: true,
+            confirmText: "로그인 이동",
+            onConfirm: () => {
+              window.location.href = `https://auth.minstudio.app/login?redirect=${encodeURIComponent(window.location.href)}`;
+            }
+          });
+        } else {
+          setPopup({ message: res.error || "오류가 발생했습니다." });
+        }
+      }
+    });
+  };
+
   return (
     <>
       <div style={{ fontSize: "2.5rem", fontWeight: 800, color: "var(--text-primary)", marginBottom: "3rem" }}>
@@ -116,10 +144,11 @@ export default function ProductActions({ product }: ProductActionsProps) {
         </button>
         <button 
           className="btn btn-primary" 
-          style={{ flex: 1, padding: "1.25rem", fontSize: "1.125rem", borderRadius: "12px", fontWeight: 600 }}
-          onClick={() => setPopup({ message: "구매 로직 연동 대기중!" })}
+          disabled={isPending}
+          style={{ flex: 1, padding: "1.25rem", fontSize: "1.125rem", borderRadius: "12px", fontWeight: 600, background: isPending ? "#4b5563" : "var(--accent-color)", opacity: isPending ? 0.8 : 1, cursor: isPending ? "not-allowed" : "pointer", border: "none" }}
+          onClick={handleBuyNow}
         >
-          바로 구매하기
+          {isPending ? "처리중..." : "바로 구매하기"}
         </button>
       </div>
 

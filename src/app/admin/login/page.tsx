@@ -3,8 +3,8 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function AdminLoginPage() {
-  const [email, setEmail] = useState("admin@shop.com");
-  const [password, setPassword] = useState("password123");
+  const [email, setEmail] = useState("admin@example.com");
+  const [password, setPassword] = useState("password");
   const router = useRouter();
 
   const [isPending, setIsPending] = useState(false);
@@ -49,7 +49,7 @@ export default function AdminLoginPage() {
               type="email" 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="admin@shop.com"
+              placeholder="admin@example.com"
               required
               style={{ width: "100%", padding: "1rem", borderRadius: "12px", border: "1px solid var(--glass-border)", background: "#f8f9fc", outline: "none", fontSize: "1rem" }}
             />

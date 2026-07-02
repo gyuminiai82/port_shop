@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ProductActions from "@/components/ProductActions";
+import RecentlyViewedTracker from "@/components/RecentlyViewedTracker";
 
 export default async function ProductDetailPage(props: { params: Promise<{ id: string }> }) {
   const { id } = await props.params;
@@ -117,6 +118,7 @@ export default async function ProductDetailPage(props: { params: Promise<{ id: s
             <div className="product-category" style={{ fontSize: "1rem", marginBottom: "1.5rem", color: "var(--accent-color)", fontWeight: 700, letterSpacing: "0.1em" }}>
               {product.category?.name || "기타"}
             </div>
+            <RecentlyViewedTracker product={{ id: product.id, name: product.name, image: product.images[0]?.url || '' }} />
             <h1 style={{ fontSize: "3.5rem", fontWeight: 800, marginBottom: "1.5rem", lineHeight: 1.1, letterSpacing: "-0.04em" }}>{product.name}</h1>
             
             <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginBottom: "2rem" }}>

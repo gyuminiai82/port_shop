@@ -139,9 +139,9 @@ export default function CartClient({ items }: { items: CartItem[] }) {
           <span>₩{calculateTotal().toLocaleString()}</span>
         </div>
         
-        <button className="btn btn-primary" style={{ width: "100%", padding: "1.25rem", borderRadius: "12px", fontSize: "1.125rem", fontWeight: 600 }}>
+        <Link href="/checkout" className="btn btn-primary" style={{ display: "block", textAlign: "center", textDecoration: "none", width: "100%", padding: "1.25rem", borderRadius: "12px", fontSize: "1.125rem", fontWeight: 600, boxSizing: "border-box" }}>
           결제하기
-        </button>
+        </Link>
       </div>
 
       <style jsx global>{`

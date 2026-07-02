@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import RecentlyViewedSidebar from "@/components/RecentlyViewedSidebar";
 
 export default function ShopLayout({
   children,
@@ -10,6 +11,7 @@ export default function ShopLayout({
     <>
       <Header />
       {children}
+      <RecentlyViewedSidebar />
       <Footer />
     </>
   );
