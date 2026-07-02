@@ -16,12 +16,15 @@ export default async function AdminPointsPage() {
   });
 
   return (
-    <div style={{ padding: "2rem", width: "100%", maxWidth: "1200px" }}>
-      <h1 style={{ fontSize: "2rem", fontWeight: 800, marginBottom: "2rem", color: "var(--text-primary)" }}>
-        💰 포인트 지급/차감 내역
-      </h1>
+    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1rem" }}>
+      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "2rem" }}>
+        <div>
+          <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "var(--text-primary)" }}>💰 포인트 지급/차감 내역</h1>
+          <p style={{ color: "var(--text-secondary)", marginTop: "0.5rem" }}>고객들의 포인트 변동 내역을 조회합니다.</p>
+        </div>
+      </header>
 
-      <div className="glass" style={{ borderRadius: "24px", padding: "2rem", overflow: "hidden" }}>
+      <div className="glass" style={{ background: "white", padding: "1.5rem", borderRadius: "24px", boxShadow: "0 10px 40px rgba(0,0,0,0.05)", overflowX: "auto" }}>
         <table style={{ width: "100%", borderCollapse: "collapse" }}>
           <thead>
             <tr style={{ borderBottom: "2px solid var(--glass-border)", color: "var(--text-secondary)", textAlign: "left" }}>

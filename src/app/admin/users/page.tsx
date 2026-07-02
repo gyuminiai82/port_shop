@@ -28,10 +28,13 @@ export default async function AdminUsersPage({ searchParams }: { searchParams: P
   const totalPages = Math.ceil(totalCount / take);
 
   return (
-    <div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "2rem" }}>
-        <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "#1f2937" }}>회원 관리</h1>
-      </div>
+    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1rem" }}>
+      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "2rem" }}>
+        <div>
+          <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "var(--text-primary)" }}>회원 관리</h1>
+          <p style={{ color: "var(--text-secondary)", marginTop: "0.5rem" }}>전체 회원의 목록을 조회하고 관리할 수 있습니다.</p>
+        </div>
+      </header>
 
       <UserListClient users={users} currentPage={currentPage} totalPages={totalPages} />
     </div>

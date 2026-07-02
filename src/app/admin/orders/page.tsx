@@ -24,11 +24,13 @@ export default async function AdminOrdersPage() {
   });
 
   return (
-    <div>
-      <div style={{ marginBottom: "2rem" }}>
-        <h1 style={{ fontSize: "2rem", fontWeight: 800, letterSpacing: "-0.04em", color: "var(--text-primary)" }}>주문 관리</h1>
-        <p style={{ color: "var(--text-secondary)", marginTop: "0.5rem" }}>전체 주문의 결제 및 배송 상태를 관리합니다.</p>
-      </div>
+    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1rem" }}>
+      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "2rem" }}>
+        <div>
+          <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "var(--text-primary)" }}>주문 관리</h1>
+          <p style={{ color: "var(--text-secondary)", marginTop: "0.5rem" }}>전체 주문의 결제 및 배송 상태를 관리합니다.</p>
+        </div>
+      </header>
 
       <OrderListClient orders={orders} />
     </div>

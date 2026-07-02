@@ -15,15 +15,18 @@ export default async function AdminProductsPage() {
   });
 
   return (
-    <div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "2rem" }}>
-        <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "#1f2937" }}>상품 관리</h1>
+    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1rem" }}>
+      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "2rem" }}>
+        <div>
+          <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "var(--text-primary)" }}>상품 관리</h1>
+          <p style={{ color: "var(--text-secondary)", marginTop: "0.5rem" }}>쇼핑몰에 등록된 모든 상품을 조회하고 등록/수정할 수 있습니다.</p>
+        </div>
         <button style={{ padding: "0.75rem 1.5rem", background: "var(--accent-color)", color: "white", borderRadius: "12px", fontWeight: 600, border: "none", cursor: "pointer" }}>
           + 새 상품 등록
         </button>
-      </div>
+      </header>
 
-      <div style={{ background: "white", borderRadius: "24px", padding: "1rem", boxShadow: "0 4px 20px rgba(0,0,0,0.03)", border: "1px solid #f1f5f9", overflowX: "auto" }}>
+      <div className="glass" style={{ background: "white", padding: "1.5rem", borderRadius: "24px", boxShadow: "0 10px 40px rgba(0,0,0,0.05)", overflowX: "auto" }}>
         <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left" }}>
           <thead>
             <tr style={{ borderBottom: "2px solid #f1f5f9", color: "#64748b" }}>
