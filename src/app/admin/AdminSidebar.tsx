@@ -30,7 +30,6 @@ export default function AdminSidebar() {
     { name: "포인트 내역", href: "/admin/points", permission: "POINTS" },
     { name: "문의 관리", href: "/admin/inquiries", permission: "INQUIRIES" },
     { name: "회원 관리", href: "/admin/users", permission: "USERS" },
-    { name: "역할 관리", href: "/admin/roles", permission: "MANAGERS", isSuperAdminOnly: true },
     { name: "운영진 관리", href: "/admin/managers", permission: "MANAGERS", isSuperAdminOnly: true }
   ];
 
