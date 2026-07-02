@@ -130,12 +130,12 @@ export default function ManagerListClient() {
                   </td>
                   <td style={{ padding: "1rem", color: "var(--text-secondary)", whiteSpace: "nowrap" }}>{manager.email}</td>
                   <td style={{ padding: "1rem", whiteSpace: "nowrap" }}>
-                    {manager.isSuperAdmin ? (
-                      <span style={{ fontSize: "0.875rem", color: "var(--text-secondary)", fontWeight: 700 }}>모든 권한</span>
-                    ) : manager.adminRole ? (
+                    {manager.adminRole ? (
                       <span style={{ fontSize: "0.875rem", background: "#f3f4f6", padding: "0.4rem 0.75rem", borderRadius: "8px", fontWeight: 600 }}>
                         {manager.adminRole.name}
                       </span>
+                    ) : manager.isSuperAdmin ? (
+                      <span style={{ fontSize: "0.875rem", color: "var(--text-secondary)", fontWeight: 700 }}>모든 권한</span>
                     ) : (
                       <span style={{ fontSize: "0.875rem", color: "#ef4444" }}>역할 없음</span>
                     )}
