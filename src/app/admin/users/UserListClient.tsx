@@ -14,7 +14,7 @@ type User = {
   createdAt: Date;
 };
 
-export default function UserListClient({ users }: { users: User[] }) {
+export default function UserListClient({ users, currentPage, totalPages }: { users: User[], currentPage: number, totalPages: number }) {
   const router = useRouter();
 
   // 모달 제어 상태
@@ -133,6 +133,48 @@ export default function UserListClient({ users }: { users: User[] }) {
           </tbody>
         </table>
       </div>
+
+      {/* 페이징 컨트롤 */}
+      {totalPages > 1 && (
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "0.5rem", marginTop: "2rem" }}>
+          <button 
+            onClick={() => router.push(`/admin/users?page=${Math.max(1, currentPage - 1)}`)}
+            disabled={currentPage === 1}
+            style={{ padding: "0.5rem 1rem", borderRadius: "8px", border: "1px solid #e2e8f0", background: "white", cursor: currentPage === 1 ? "not-allowed" : "pointer", opacity: currentPage === 1 ? 0.5 : 1 }}
+          >
+            이전
+          </button>
+          
+          <div style={{ display: "flex", gap: "0.25rem" }}>
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map(pageNum => (
+              <button
+                key={pageNum}
+                onClick={() => router.push(`/admin/users?page=${pageNum}`)}
+                style={{
+                  width: "2.5rem", height: "2.5rem",
+                  borderRadius: "8px",
+                  border: pageNum === currentPage ? "none" : "1px solid #e2e8f0",
+                  background: pageNum === currentPage ? "var(--accent-color)" : "white",
+                  color: pageNum === currentPage ? "white" : "#374151",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  display: "flex", alignItems: "center", justifyContent: "center"
+                }}
+              >
+                {pageNum}
+              </button>
+            ))}
+          </div>
+
+          <button 
+            onClick={() => router.push(`/admin/users?page=${Math.min(totalPages, currentPage + 1)}`)}
+            disabled={currentPage === totalPages}
+            style={{ padding: "0.5rem 1rem", borderRadius: "8px", border: "1px solid #e2e8f0", background: "white", cursor: currentPage === totalPages ? "not-allowed" : "pointer", opacity: currentPage === totalPages ? 0.5 : 1 }}
+          >
+            다음
+          </button>
+        </div>
+      )}
 
       {/* 유저 정보 수정 모달 */}
       {selectedUser && (
