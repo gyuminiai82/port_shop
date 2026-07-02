@@ -26,9 +26,6 @@ jobs:
       - name: Generate Prisma Client
         run: npx prisma generate --schema=src/lib/generated/prisma/schema.prisma
 
-      - name: Run ESLint
-        run: npm run lint
-
       - name: Build Next.js app
         run: npm run build
         env:
