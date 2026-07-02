@@ -20,7 +20,7 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
 
 # Generate Prisma Client (Required for build)
-RUN npx prisma generate
+RUN npx prisma generate --schema=src/lib/generated/prisma/schema.prisma
 
 RUN npm run build
 
