@@ -101,7 +101,9 @@ export default function ManagerFormModal({ isOpen, initialData, roles, onClose, 
               onChange={handleChange}
               required
               disabled={isEditMode}
-              style={{ width: "100%", padding: "0.75rem", borderRadius: "8px", border: "1px solid var(--glass-border)", background: isEditMode ? "#f3f4f6" : "white", outline: "none" }}
+              style={{ width: "100%", padding: "0.75rem", borderRadius: "8px", border: "1px solid #d1d5db", background: isEditMode ? "#f3f4f6" : "#fdfdfd", outline: "none" }}
+              onFocus={(e) => e.target.style.borderColor = "var(--accent-color)"}
+              onBlur={(e) => e.target.style.borderColor = "#d1d5db"}
             />
           </div>
           
@@ -113,7 +115,9 @@ export default function ManagerFormModal({ isOpen, initialData, roles, onClose, 
               value={formData.name}
               onChange={handleChange}
               required
-              style={{ width: "100%", padding: "0.75rem", borderRadius: "8px", border: "1px solid var(--glass-border)", outline: "none" }}
+              style={{ width: "100%", padding: "0.75rem", borderRadius: "8px", border: "1px solid #d1d5db", background: "#fdfdfd", outline: "none" }}
+              onFocus={(e) => e.target.style.borderColor = "var(--accent-color)"}
+              onBlur={(e) => e.target.style.borderColor = "#d1d5db"}
             />
           </div>
 
@@ -127,7 +131,9 @@ export default function ManagerFormModal({ isOpen, initialData, roles, onClose, 
               value={formData.password}
               onChange={handleChange}
               required={!isEditMode}
-              style={{ width: "100%", padding: "0.75rem", borderRadius: "8px", border: "1px solid var(--glass-border)", outline: "none" }}
+              style={{ width: "100%", padding: "0.75rem", borderRadius: "8px", border: "1px solid #d1d5db", background: "#fdfdfd", outline: "none" }}
+              onFocus={(e) => e.target.style.borderColor = "var(--accent-color)"}
+              onBlur={(e) => e.target.style.borderColor = "#d1d5db"}
             />
           </div>
 
@@ -137,7 +143,9 @@ export default function ManagerFormModal({ isOpen, initialData, roles, onClose, 
               name="roleId"
               value={formData.roleId || ""}
               onChange={handleChange}
-              style={{ width: "100%", padding: "0.75rem", borderRadius: "8px", border: "1px solid var(--glass-border)", outline: "none", background: "white" }}
+              style={{ width: "100%", padding: "0.75rem", borderRadius: "8px", border: "1px solid #d1d5db", outline: "none", background: "#fdfdfd" }}
+              onFocus={(e) => e.target.style.borderColor = "var(--accent-color)"}
+              onBlur={(e) => e.target.style.borderColor = "#d1d5db"}
             >
               <option value="">역할을 선택하세요</option>
               {roles.map(role => (
@@ -151,7 +159,7 @@ export default function ManagerFormModal({ isOpen, initialData, roles, onClose, 
               type="button"
               onClick={onClose}
               disabled={isSubmitting}
-              style={{ padding: "0.75rem 1.5rem", borderRadius: "8px", border: "1px solid var(--glass-border)", background: "#f3f4f6", fontWeight: 600, cursor: "pointer" }}
+              style={{ padding: "0.75rem 1.5rem", borderRadius: "8px", border: "1px solid #d1d5db", background: "#f3f4f6", fontWeight: 600, cursor: "pointer" }}
             >
               취소
             </button>

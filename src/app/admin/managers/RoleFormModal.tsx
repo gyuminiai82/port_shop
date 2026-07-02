@@ -114,7 +114,9 @@ export default function RoleFormModal({ isOpen, initialData, onClose, onSave }: 
               onChange={handleChange}
               required
               placeholder="예: 상품 관리자"
-              style={{ width: "100%", padding: "0.75rem", borderRadius: "8px", border: "1px solid var(--glass-border)", outline: "none" }}
+              style={{ width: "100%", padding: "0.75rem", borderRadius: "8px", border: "1px solid #d1d5db", background: "#fdfdfd", outline: "none" }}
+              onFocus={(e) => e.target.style.borderColor = "var(--accent-color)"}
+              onBlur={(e) => e.target.style.borderColor = "#d1d5db"}
             />
           </div>
 
@@ -140,7 +142,7 @@ export default function RoleFormModal({ isOpen, initialData, onClose, onSave }: 
               type="button"
               onClick={onClose}
               disabled={isSubmitting}
-              style={{ padding: "0.75rem 1.5rem", borderRadius: "8px", border: "1px solid var(--glass-border)", background: "#f3f4f6", fontWeight: 600, cursor: "pointer" }}
+              style={{ padding: "0.75rem 1.5rem", borderRadius: "8px", border: "1px solid #d1d5db", background: "#f3f4f6", fontWeight: 600, cursor: "pointer" }}
             >
               취소
             </button>
