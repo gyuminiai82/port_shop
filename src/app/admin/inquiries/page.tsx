@@ -4,16 +4,27 @@ import { prisma } from "@/lib/prisma";
 
 export const dynamic = "force-dynamic";
 
-export default async function AdminInquiriesPage({ searchParams }: { searchParams: Promise<{ page?: string }> }) {
+export default async function AdminInquiriesPage({ searchParams }: { searchParams: Promise<{ page?: string, q?: string }> }) {
   await requireAdmin("INQUIRIES");
 
-  const { page } = await searchParams;
+  const { page, q } = await searchParams;
   const currentPage = Number(page) || 1;
   const take = 10;
   const skip = (currentPage - 1) * take;
 
+  const whereCondition: any = {};
+  if (q && q.trim() !== "") {
+    whereCondition.OR = [
+      { title: { contains: q, mode: 'insensitive' } },
+      { content: { contains: q, mode: 'insensitive' } },
+      { user: { name: { contains: q, mode: 'insensitive' } } },
+      { user: { email: { contains: q, mode: 'insensitive' } } }
+    ];
+  }
+
   const [inquiries, totalCount] = await Promise.all([
     prisma.mIN_SHOP_INQUIRY.findMany({
+      where: whereCondition,
       orderBy: { createdAt: "desc" },
       skip,
       take,
@@ -26,7 +37,7 @@ export default async function AdminInquiriesPage({ searchParams }: { searchParam
         }
       }
     }),
-    prisma.mIN_SHOP_INQUIRY.count()
+    prisma.mIN_SHOP_INQUIRY.count({ where: whereCondition })
   ]);
 
   const totalPages = Math.ceil(totalCount / take);
@@ -44,6 +55,7 @@ export default async function AdminInquiriesPage({ searchParams }: { searchParam
         inquiries={inquiries} 
         currentPage={currentPage} 
         totalPages={totalPages} 
+        searchQuery={q || ""}
       />
     </div>
   );
