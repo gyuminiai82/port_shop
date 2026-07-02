@@ -9,7 +9,7 @@ export async function GET() {
       email: admin.email,
       name: admin.name,
       isSuperAdmin: admin.isSuperAdmin,
-      permissions: admin.permissions || []
+      permissions: admin.adminRole?.permissions || admin.permissions || []
     });
   } catch (error) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

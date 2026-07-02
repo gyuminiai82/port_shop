@@ -11,14 +11,14 @@ export async function PUT(request: Request, context: { params: Promise<{ id: str
 
     const { id } = await context.params;
     const body = await request.json();
-    const { name, password, permissions } = body;
+    const { name, password, roleId } = body;
 
     const target = await prisma.mIN_SHOP_ADMIN.findUnique({ where: { id } });
     if (!target) {
       return NextResponse.json({ error: "Manager not found" }, { status: 404 });
     }
 
-    const updateData: any = { name, permissions };
+    const updateData: any = { name, roleId: roleId || null };
     if (password && password.trim() !== "") {
       updateData.password = password;
     }
@@ -30,9 +30,9 @@ export async function PUT(request: Request, context: { params: Promise<{ id: str
         id: true,
         email: true,
         name: true,
-        role: true,
+        roleId: true,
+        adminRole: { select: { id: true, name: true, permissions: true } },
         isSuperAdmin: true,
-        permissions: true,
         createdAt: true,
       }
     });

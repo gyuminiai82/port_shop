@@ -225,16 +225,28 @@ model MIN_SHOP_USER_COUPON {
   coupon MIN_SHOP_COUPON @relation(fields: [couponId], references: [id])
 }
 
+model MIN_SHOP_ROLE {
+  id          String   @id @default(uuid()) /// 역할 고유 ID
+  name        String   @unique /// 역할명 (예: 상품 관리자)
+  permissions String[] /// 해당 역할에 부여된 메뉴 접근 권한 배열
+  createdAt   DateTime @default(now()) /// 생성일시
+  updatedAt   DateTime @updatedAt /// 수정일시
+
+  admins MIN_SHOP_ADMIN[]
+}
+
 model MIN_SHOP_ADMIN {
-  id           String   @id @default(uuid()) /// 관리자 고유 ID
-  email        String   @unique /// 관리자 이메일(로그인)
+  id           String         @id @default(uuid()) /// 관리자 고유 ID
+  email        String         @unique /// 관리자 이메일(로그인)
   password     String /// 비밀번호
   name         String /// 관리자 이름
-  role         String   @default("ADMIN") /// 권한
-  isSuperAdmin Boolean  @default(false) /// 최고 관리자 여부
-  permissions  String[] /// 부여된 메뉴 접근 권한 배열 (PostgreSQL 배열 타입)
-  createdAt    DateTime @default(now()) /// 계정 생성일시
-  updatedAt    DateTime @updatedAt /// 계정 수정일시
+  role         String         @default("ADMIN") /// 권한 (레거시)
+  roleId       String? /// 역할 ID
+  adminRole    MIN_SHOP_ROLE? @relation(fields: [roleId], references: [id], onDelete: SetNull)
+  isSuperAdmin Boolean        @default(false) /// 최고 관리자 여부
+  permissions  String[] /// 부여된 메뉴 접근 권한 배열 (레거시/개별권한)
+  createdAt    DateTime       @default(now()) /// 계정 생성일시
+  updatedAt    DateTime       @updatedAt /// 계정 수정일시
 }
 
 model MIN_SHOP_NOTICE {

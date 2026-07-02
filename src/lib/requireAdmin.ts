@@ -26,7 +26,8 @@ export async function requireAdmin(requiredPermission?: string) {
   
   // 실제 DB에 존재하는 관리자인지 다시 한 번 검증
   const admin = await prisma.mIN_SHOP_ADMIN.findUnique({
-    where: { id: sessionPayload.id }
+    where: { id: sessionPayload.id },
+    include: { adminRole: true }
   });
 
   if (!admin) {
@@ -35,7 +36,8 @@ export async function requireAdmin(requiredPermission?: string) {
 
   // RBAC: 필요한 메뉴 접근 권한 체크 (requiredPermission이 있을 때만 동작)
   if (requiredPermission && !admin.isSuperAdmin) {
-    if (!admin.permissions.includes(requiredPermission)) {
+    const rolePerms = admin.adminRole?.permissions || [];
+    if (!rolePerms.includes(requiredPermission)) {
       redirect("/admin/orders"); // 대시보드 역할인 첫 화면으로 튕겨냄
     }
   }

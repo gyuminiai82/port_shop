@@ -283,12 +283,21 @@ exports.Prisma.MIN_SHOP_USER_COUPONScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.MIN_SHOP_ROLEScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  permissions: 'permissions',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
 exports.Prisma.MIN_SHOP_ADMINScalarFieldEnum = {
   id: 'id',
   email: 'email',
   password: 'password',
   name: 'name',
   role: 'role',
+  roleId: 'roleId',
   isSuperAdmin: 'isSuperAdmin',
   permissions: 'permissions',
   createdAt: 'createdAt',
@@ -366,6 +375,7 @@ exports.Prisma.ModelName = {
   MIN_SHOP_DELIVERY: 'MIN_SHOP_DELIVERY',
   MIN_SHOP_COUPON: 'MIN_SHOP_COUPON',
   MIN_SHOP_USER_COUPON: 'MIN_SHOP_USER_COUPON',
+  MIN_SHOP_ROLE: 'MIN_SHOP_ROLE',
   MIN_SHOP_ADMIN: 'MIN_SHOP_ADMIN',
   MIN_SHOP_NOTICE: 'MIN_SHOP_NOTICE',
   MIN_SHOP_INQUIRY: 'MIN_SHOP_INQUIRY',

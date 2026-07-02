@@ -7,31 +7,23 @@ export interface ManagerData {
   email: string;
   password?: string;
   name: string;
-  permissions: string[];
+  roleId: string | null;
 }
 
 interface ManagerFormModalProps {
   isOpen: boolean;
   initialData?: ManagerData | null;
+  roles: any[];
   onClose: () => void;
   onSave: (data: ManagerData) => Promise<void>;
 }
 
-const AVAILABLE_PERMISSIONS = [
-  { id: "PRODUCTS", label: "상품 및 카테고리 관리" },
-  { id: "ORDERS", label: "주문 관리" },
-  { id: "POINTS", label: "포인트 내역 관리" },
-  { id: "INQUIRIES", label: "문의 관리" },
-  { id: "USERS", label: "회원 관리" },
-  { id: "MANAGERS", label: "운영진 관리" },
-];
-
-export default function ManagerFormModal({ isOpen, initialData, onClose, onSave }: ManagerFormModalProps) {
+export default function ManagerFormModal({ isOpen, initialData, roles, onClose, onSave }: ManagerFormModalProps) {
   const [formData, setFormData] = useState<ManagerData>({
     email: "",
     password: "",
     name: "",
-    permissions: []
+    roleId: null
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -42,34 +34,23 @@ export default function ManagerFormModal({ isOpen, initialData, onClose, onSave 
         email: initialData.email,
         password: "", // 수정 시 비밀번호는 비워둠
         name: initialData.name,
-        permissions: initialData.permissions || []
+        roleId: initialData.roleId || null
       });
     } else {
       setFormData({
         email: "",
         password: "",
         name: "",
-        permissions: []
+        roleId: null
       });
     }
   }, [initialData, isOpen]);
 
   if (!isOpen) return null;
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handlePermissionToggle = (permId: string) => {
-    setFormData(prev => {
-      const perms = prev.permissions;
-      if (perms.includes(permId)) {
-        return { ...prev, permissions: perms.filter(p => p !== permId) };
-      } else {
-        return { ...prev, permissions: [...perms, permId] };
-      }
-    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -102,9 +83,7 @@ export default function ManagerFormModal({ isOpen, initialData, onClose, onSave 
         padding: "2rem",
         borderRadius: "16px",
         width: "90%",
-        maxWidth: "500px",
-        maxHeight: "90vh",
-        overflowY: "auto",
+        maxWidth: "400px",
         boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
         animation: "slideIn 0.2s ease-out"
       }}>
@@ -153,20 +132,18 @@ export default function ManagerFormModal({ isOpen, initialData, onClose, onSave 
           </div>
 
           <div>
-            <label style={{ display: "block", marginBottom: "0.75rem", fontSize: "0.875rem", fontWeight: 600, color: "var(--text-secondary)" }}>메뉴 접근 권한</label>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
-              {AVAILABLE_PERMISSIONS.map(perm => (
-                <label key={perm.id} style={{ display: "flex", alignItems: "center", gap: "0.5rem", cursor: "pointer", fontSize: "0.875rem" }}>
-                  <input 
-                    type="checkbox"
-                    checked={formData.permissions.includes(perm.id)}
-                    onChange={() => handlePermissionToggle(perm.id)}
-                    style={{ cursor: "pointer", width: "1.125rem", height: "1.125rem" }}
-                  />
-                  {perm.label}
-                </label>
+            <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.875rem", fontWeight: 600, color: "var(--text-secondary)" }}>부여할 역할 (Role)</label>
+            <select 
+              name="roleId"
+              value={formData.roleId || ""}
+              onChange={handleChange}
+              style={{ width: "100%", padding: "0.75rem", borderRadius: "8px", border: "1px solid var(--glass-border)", outline: "none", background: "white" }}
+            >
+              <option value="">역할을 선택하세요</option>
+              {roles.map(role => (
+                <option key={role.id} value={role.id}>{role.name}</option>
               ))}
-            </div>
+            </select>
           </div>
 
           <div style={{ display: "flex", gap: "1rem", justifyContent: "flex-end", marginTop: "1rem" }}>

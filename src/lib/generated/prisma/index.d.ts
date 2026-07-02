@@ -94,6 +94,11 @@ export type MIN_SHOP_COUPON = $Result.DefaultSelection<Prisma.$MIN_SHOP_COUPONPa
  */
 export type MIN_SHOP_USER_COUPON = $Result.DefaultSelection<Prisma.$MIN_SHOP_USER_COUPONPayload>
 /**
+ * Model MIN_SHOP_ROLE
+ * 
+ */
+export type MIN_SHOP_ROLE = $Result.DefaultSelection<Prisma.$MIN_SHOP_ROLEPayload>
+/**
  * Model MIN_SHOP_ADMIN
  * 
  */
@@ -401,6 +406,16 @@ export class PrismaClient<
     * ```
     */
   get mIN_SHOP_USER_COUPON(): Prisma.MIN_SHOP_USER_COUPONDelegate<ExtArgs>;
+
+  /**
+   * `prisma.mIN_SHOP_ROLE`: Exposes CRUD operations for the **MIN_SHOP_ROLE** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more MIN_SHOP_ROLES
+    * const mIN_SHOP_ROLES = await prisma.mIN_SHOP_ROLE.findMany()
+    * ```
+    */
+  get mIN_SHOP_ROLE(): Prisma.MIN_SHOP_ROLEDelegate<ExtArgs>;
 
   /**
    * `prisma.mIN_SHOP_ADMIN`: Exposes CRUD operations for the **MIN_SHOP_ADMIN** model.
@@ -908,6 +923,7 @@ export namespace Prisma {
     MIN_SHOP_DELIVERY: 'MIN_SHOP_DELIVERY',
     MIN_SHOP_COUPON: 'MIN_SHOP_COUPON',
     MIN_SHOP_USER_COUPON: 'MIN_SHOP_USER_COUPON',
+    MIN_SHOP_ROLE: 'MIN_SHOP_ROLE',
     MIN_SHOP_ADMIN: 'MIN_SHOP_ADMIN',
     MIN_SHOP_NOTICE: 'MIN_SHOP_NOTICE',
     MIN_SHOP_INQUIRY: 'MIN_SHOP_INQUIRY',
@@ -928,7 +944,7 @@ export namespace Prisma {
 
   export type TypeMap<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> = {
     meta: {
-      modelProps: "mIN_SHOP_USER" | "mIN_SHOP_CATEGORY" | "mIN_SHOP_PRODUCT" | "mIN_SHOP_PRODUCT_IMAGE" | "mIN_SHOP_PRODUCT_OPTION" | "mIN_SHOP_REVIEW" | "mIN_SHOP_WISHLIST" | "mIN_SHOP_WISHLIST_ITEM" | "mIN_SHOP_CART" | "mIN_SHOP_CART_ITEM" | "mIN_SHOP_ORDER" | "mIN_SHOP_ORDER_ITEM" | "mIN_SHOP_PAYMENT" | "mIN_SHOP_DELIVERY" | "mIN_SHOP_COUPON" | "mIN_SHOP_USER_COUPON" | "mIN_SHOP_ADMIN" | "mIN_SHOP_NOTICE" | "mIN_SHOP_INQUIRY" | "mIN_SHOP_POINT_LOG" | "user"
+      modelProps: "mIN_SHOP_USER" | "mIN_SHOP_CATEGORY" | "mIN_SHOP_PRODUCT" | "mIN_SHOP_PRODUCT_IMAGE" | "mIN_SHOP_PRODUCT_OPTION" | "mIN_SHOP_REVIEW" | "mIN_SHOP_WISHLIST" | "mIN_SHOP_WISHLIST_ITEM" | "mIN_SHOP_CART" | "mIN_SHOP_CART_ITEM" | "mIN_SHOP_ORDER" | "mIN_SHOP_ORDER_ITEM" | "mIN_SHOP_PAYMENT" | "mIN_SHOP_DELIVERY" | "mIN_SHOP_COUPON" | "mIN_SHOP_USER_COUPON" | "mIN_SHOP_ROLE" | "mIN_SHOP_ADMIN" | "mIN_SHOP_NOTICE" | "mIN_SHOP_INQUIRY" | "mIN_SHOP_POINT_LOG" | "user"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -2052,6 +2068,76 @@ export namespace Prisma {
           }
         }
       }
+      MIN_SHOP_ROLE: {
+        payload: Prisma.$MIN_SHOP_ROLEPayload<ExtArgs>
+        fields: Prisma.MIN_SHOP_ROLEFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.MIN_SHOP_ROLEFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MIN_SHOP_ROLEPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.MIN_SHOP_ROLEFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MIN_SHOP_ROLEPayload>
+          }
+          findFirst: {
+            args: Prisma.MIN_SHOP_ROLEFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MIN_SHOP_ROLEPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.MIN_SHOP_ROLEFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MIN_SHOP_ROLEPayload>
+          }
+          findMany: {
+            args: Prisma.MIN_SHOP_ROLEFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MIN_SHOP_ROLEPayload>[]
+          }
+          create: {
+            args: Prisma.MIN_SHOP_ROLECreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MIN_SHOP_ROLEPayload>
+          }
+          createMany: {
+            args: Prisma.MIN_SHOP_ROLECreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.MIN_SHOP_ROLECreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MIN_SHOP_ROLEPayload>[]
+          }
+          delete: {
+            args: Prisma.MIN_SHOP_ROLEDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MIN_SHOP_ROLEPayload>
+          }
+          update: {
+            args: Prisma.MIN_SHOP_ROLEUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MIN_SHOP_ROLEPayload>
+          }
+          deleteMany: {
+            args: Prisma.MIN_SHOP_ROLEDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.MIN_SHOP_ROLEUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.MIN_SHOP_ROLEUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MIN_SHOP_ROLEPayload>
+          }
+          aggregate: {
+            args: Prisma.MIN_SHOP_ROLEAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateMIN_SHOP_ROLE>
+          }
+          groupBy: {
+            args: Prisma.MIN_SHOP_ROLEGroupByArgs<ExtArgs>
+            result: $Utils.Optional<MIN_SHOP_ROLEGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.MIN_SHOP_ROLECountArgs<ExtArgs>
+            result: $Utils.Optional<MIN_SHOP_ROLECountAggregateOutputType> | number
+          }
+        }
+      }
       MIN_SHOP_ADMIN: {
         payload: Prisma.$MIN_SHOP_ADMINPayload<ExtArgs>
         fields: Prisma.MIN_SHOP_ADMINFieldRefs
@@ -2866,6 +2952,37 @@ export namespace Prisma {
    */
   export type MIN_SHOP_COUPONCountOutputTypeCountUserCouponsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: MIN_SHOP_USER_COUPONWhereInput
+  }
+
+
+  /**
+   * Count Type MIN_SHOP_ROLECountOutputType
+   */
+
+  export type MIN_SHOP_ROLECountOutputType = {
+    admins: number
+  }
+
+  export type MIN_SHOP_ROLECountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    admins?: boolean | MIN_SHOP_ROLECountOutputTypeCountAdminsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * MIN_SHOP_ROLECountOutputType without action
+   */
+  export type MIN_SHOP_ROLECountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MIN_SHOP_ROLECountOutputType
+     */
+    select?: MIN_SHOP_ROLECountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * MIN_SHOP_ROLECountOutputType without action
+   */
+  export type MIN_SHOP_ROLECountOutputTypeCountAdminsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: MIN_SHOP_ADMINWhereInput
   }
 
 
@@ -19005,6 +19122,965 @@ export namespace Prisma {
 
 
   /**
+   * Model MIN_SHOP_ROLE
+   */
+
+  export type AggregateMIN_SHOP_ROLE = {
+    _count: MIN_SHOP_ROLECountAggregateOutputType | null
+    _min: MIN_SHOP_ROLEMinAggregateOutputType | null
+    _max: MIN_SHOP_ROLEMaxAggregateOutputType | null
+  }
+
+  export type MIN_SHOP_ROLEMinAggregateOutputType = {
+    id: string | null
+    name: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type MIN_SHOP_ROLEMaxAggregateOutputType = {
+    id: string | null
+    name: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type MIN_SHOP_ROLECountAggregateOutputType = {
+    id: number
+    name: number
+    permissions: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type MIN_SHOP_ROLEMinAggregateInputType = {
+    id?: true
+    name?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type MIN_SHOP_ROLEMaxAggregateInputType = {
+    id?: true
+    name?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type MIN_SHOP_ROLECountAggregateInputType = {
+    id?: true
+    name?: true
+    permissions?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type MIN_SHOP_ROLEAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which MIN_SHOP_ROLE to aggregate.
+     */
+    where?: MIN_SHOP_ROLEWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of MIN_SHOP_ROLES to fetch.
+     */
+    orderBy?: MIN_SHOP_ROLEOrderByWithRelationInput | MIN_SHOP_ROLEOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: MIN_SHOP_ROLEWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` MIN_SHOP_ROLES from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` MIN_SHOP_ROLES.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned MIN_SHOP_ROLES
+    **/
+    _count?: true | MIN_SHOP_ROLECountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: MIN_SHOP_ROLEMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: MIN_SHOP_ROLEMaxAggregateInputType
+  }
+
+  export type GetMIN_SHOP_ROLEAggregateType<T extends MIN_SHOP_ROLEAggregateArgs> = {
+        [P in keyof T & keyof AggregateMIN_SHOP_ROLE]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateMIN_SHOP_ROLE[P]>
+      : GetScalarType<T[P], AggregateMIN_SHOP_ROLE[P]>
+  }
+
+
+
+
+  export type MIN_SHOP_ROLEGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: MIN_SHOP_ROLEWhereInput
+    orderBy?: MIN_SHOP_ROLEOrderByWithAggregationInput | MIN_SHOP_ROLEOrderByWithAggregationInput[]
+    by: MIN_SHOP_ROLEScalarFieldEnum[] | MIN_SHOP_ROLEScalarFieldEnum
+    having?: MIN_SHOP_ROLEScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: MIN_SHOP_ROLECountAggregateInputType | true
+    _min?: MIN_SHOP_ROLEMinAggregateInputType
+    _max?: MIN_SHOP_ROLEMaxAggregateInputType
+  }
+
+  export type MIN_SHOP_ROLEGroupByOutputType = {
+    id: string
+    name: string
+    permissions: string[]
+    createdAt: Date
+    updatedAt: Date
+    _count: MIN_SHOP_ROLECountAggregateOutputType | null
+    _min: MIN_SHOP_ROLEMinAggregateOutputType | null
+    _max: MIN_SHOP_ROLEMaxAggregateOutputType | null
+  }
+
+  type GetMIN_SHOP_ROLEGroupByPayload<T extends MIN_SHOP_ROLEGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<MIN_SHOP_ROLEGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof MIN_SHOP_ROLEGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], MIN_SHOP_ROLEGroupByOutputType[P]>
+            : GetScalarType<T[P], MIN_SHOP_ROLEGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type MIN_SHOP_ROLESelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    permissions?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    admins?: boolean | MIN_SHOP_ROLE$adminsArgs<ExtArgs>
+    _count?: boolean | MIN_SHOP_ROLECountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["mIN_SHOP_ROLE"]>
+
+  export type MIN_SHOP_ROLESelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    permissions?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["mIN_SHOP_ROLE"]>
+
+  export type MIN_SHOP_ROLESelectScalar = {
+    id?: boolean
+    name?: boolean
+    permissions?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type MIN_SHOP_ROLEInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    admins?: boolean | MIN_SHOP_ROLE$adminsArgs<ExtArgs>
+    _count?: boolean | MIN_SHOP_ROLECountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type MIN_SHOP_ROLEIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+
+  export type $MIN_SHOP_ROLEPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "MIN_SHOP_ROLE"
+    objects: {
+      admins: Prisma.$MIN_SHOP_ADMINPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      /**
+       * 역할 고유 ID
+       */
+      id: string
+      /**
+       * 역할명 (예: 상품 관리자)
+       */
+      name: string
+      /**
+       * 해당 역할에 부여된 메뉴 접근 권한 배열
+       */
+      permissions: string[]
+      /**
+       * 생성일시
+       */
+      createdAt: Date
+      /**
+       * 수정일시
+       */
+      updatedAt: Date
+    }, ExtArgs["result"]["mIN_SHOP_ROLE"]>
+    composites: {}
+  }
+
+  type MIN_SHOP_ROLEGetPayload<S extends boolean | null | undefined | MIN_SHOP_ROLEDefaultArgs> = $Result.GetResult<Prisma.$MIN_SHOP_ROLEPayload, S>
+
+  type MIN_SHOP_ROLECountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<MIN_SHOP_ROLEFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: MIN_SHOP_ROLECountAggregateInputType | true
+    }
+
+  export interface MIN_SHOP_ROLEDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['MIN_SHOP_ROLE'], meta: { name: 'MIN_SHOP_ROLE' } }
+    /**
+     * Find zero or one MIN_SHOP_ROLE that matches the filter.
+     * @param {MIN_SHOP_ROLEFindUniqueArgs} args - Arguments to find a MIN_SHOP_ROLE
+     * @example
+     * // Get one MIN_SHOP_ROLE
+     * const mIN_SHOP_ROLE = await prisma.mIN_SHOP_ROLE.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends MIN_SHOP_ROLEFindUniqueArgs>(args: SelectSubset<T, MIN_SHOP_ROLEFindUniqueArgs<ExtArgs>>): Prisma__MIN_SHOP_ROLEClient<$Result.GetResult<Prisma.$MIN_SHOP_ROLEPayload<ExtArgs>, T, "findUnique"> | null, null, ExtArgs>
+
+    /**
+     * Find one MIN_SHOP_ROLE that matches the filter or throw an error with `error.code='P2025'` 
+     * if no matches were found.
+     * @param {MIN_SHOP_ROLEFindUniqueOrThrowArgs} args - Arguments to find a MIN_SHOP_ROLE
+     * @example
+     * // Get one MIN_SHOP_ROLE
+     * const mIN_SHOP_ROLE = await prisma.mIN_SHOP_ROLE.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends MIN_SHOP_ROLEFindUniqueOrThrowArgs>(args: SelectSubset<T, MIN_SHOP_ROLEFindUniqueOrThrowArgs<ExtArgs>>): Prisma__MIN_SHOP_ROLEClient<$Result.GetResult<Prisma.$MIN_SHOP_ROLEPayload<ExtArgs>, T, "findUniqueOrThrow">, never, ExtArgs>
+
+    /**
+     * Find the first MIN_SHOP_ROLE that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MIN_SHOP_ROLEFindFirstArgs} args - Arguments to find a MIN_SHOP_ROLE
+     * @example
+     * // Get one MIN_SHOP_ROLE
+     * const mIN_SHOP_ROLE = await prisma.mIN_SHOP_ROLE.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends MIN_SHOP_ROLEFindFirstArgs>(args?: SelectSubset<T, MIN_SHOP_ROLEFindFirstArgs<ExtArgs>>): Prisma__MIN_SHOP_ROLEClient<$Result.GetResult<Prisma.$MIN_SHOP_ROLEPayload<ExtArgs>, T, "findFirst"> | null, null, ExtArgs>
+
+    /**
+     * Find the first MIN_SHOP_ROLE that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MIN_SHOP_ROLEFindFirstOrThrowArgs} args - Arguments to find a MIN_SHOP_ROLE
+     * @example
+     * // Get one MIN_SHOP_ROLE
+     * const mIN_SHOP_ROLE = await prisma.mIN_SHOP_ROLE.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends MIN_SHOP_ROLEFindFirstOrThrowArgs>(args?: SelectSubset<T, MIN_SHOP_ROLEFindFirstOrThrowArgs<ExtArgs>>): Prisma__MIN_SHOP_ROLEClient<$Result.GetResult<Prisma.$MIN_SHOP_ROLEPayload<ExtArgs>, T, "findFirstOrThrow">, never, ExtArgs>
+
+    /**
+     * Find zero or more MIN_SHOP_ROLES that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MIN_SHOP_ROLEFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all MIN_SHOP_ROLES
+     * const mIN_SHOP_ROLES = await prisma.mIN_SHOP_ROLE.findMany()
+     * 
+     * // Get first 10 MIN_SHOP_ROLES
+     * const mIN_SHOP_ROLES = await prisma.mIN_SHOP_ROLE.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const mIN_SHOP_ROLEWithIdOnly = await prisma.mIN_SHOP_ROLE.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends MIN_SHOP_ROLEFindManyArgs>(args?: SelectSubset<T, MIN_SHOP_ROLEFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MIN_SHOP_ROLEPayload<ExtArgs>, T, "findMany">>
+
+    /**
+     * Create a MIN_SHOP_ROLE.
+     * @param {MIN_SHOP_ROLECreateArgs} args - Arguments to create a MIN_SHOP_ROLE.
+     * @example
+     * // Create one MIN_SHOP_ROLE
+     * const MIN_SHOP_ROLE = await prisma.mIN_SHOP_ROLE.create({
+     *   data: {
+     *     // ... data to create a MIN_SHOP_ROLE
+     *   }
+     * })
+     * 
+     */
+    create<T extends MIN_SHOP_ROLECreateArgs>(args: SelectSubset<T, MIN_SHOP_ROLECreateArgs<ExtArgs>>): Prisma__MIN_SHOP_ROLEClient<$Result.GetResult<Prisma.$MIN_SHOP_ROLEPayload<ExtArgs>, T, "create">, never, ExtArgs>
+
+    /**
+     * Create many MIN_SHOP_ROLES.
+     * @param {MIN_SHOP_ROLECreateManyArgs} args - Arguments to create many MIN_SHOP_ROLES.
+     * @example
+     * // Create many MIN_SHOP_ROLES
+     * const mIN_SHOP_ROLE = await prisma.mIN_SHOP_ROLE.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends MIN_SHOP_ROLECreateManyArgs>(args?: SelectSubset<T, MIN_SHOP_ROLECreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many MIN_SHOP_ROLES and returns the data saved in the database.
+     * @param {MIN_SHOP_ROLECreateManyAndReturnArgs} args - Arguments to create many MIN_SHOP_ROLES.
+     * @example
+     * // Create many MIN_SHOP_ROLES
+     * const mIN_SHOP_ROLE = await prisma.mIN_SHOP_ROLE.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many MIN_SHOP_ROLES and only return the `id`
+     * const mIN_SHOP_ROLEWithIdOnly = await prisma.mIN_SHOP_ROLE.createManyAndReturn({ 
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends MIN_SHOP_ROLECreateManyAndReturnArgs>(args?: SelectSubset<T, MIN_SHOP_ROLECreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MIN_SHOP_ROLEPayload<ExtArgs>, T, "createManyAndReturn">>
+
+    /**
+     * Delete a MIN_SHOP_ROLE.
+     * @param {MIN_SHOP_ROLEDeleteArgs} args - Arguments to delete one MIN_SHOP_ROLE.
+     * @example
+     * // Delete one MIN_SHOP_ROLE
+     * const MIN_SHOP_ROLE = await prisma.mIN_SHOP_ROLE.delete({
+     *   where: {
+     *     // ... filter to delete one MIN_SHOP_ROLE
+     *   }
+     * })
+     * 
+     */
+    delete<T extends MIN_SHOP_ROLEDeleteArgs>(args: SelectSubset<T, MIN_SHOP_ROLEDeleteArgs<ExtArgs>>): Prisma__MIN_SHOP_ROLEClient<$Result.GetResult<Prisma.$MIN_SHOP_ROLEPayload<ExtArgs>, T, "delete">, never, ExtArgs>
+
+    /**
+     * Update one MIN_SHOP_ROLE.
+     * @param {MIN_SHOP_ROLEUpdateArgs} args - Arguments to update one MIN_SHOP_ROLE.
+     * @example
+     * // Update one MIN_SHOP_ROLE
+     * const mIN_SHOP_ROLE = await prisma.mIN_SHOP_ROLE.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends MIN_SHOP_ROLEUpdateArgs>(args: SelectSubset<T, MIN_SHOP_ROLEUpdateArgs<ExtArgs>>): Prisma__MIN_SHOP_ROLEClient<$Result.GetResult<Prisma.$MIN_SHOP_ROLEPayload<ExtArgs>, T, "update">, never, ExtArgs>
+
+    /**
+     * Delete zero or more MIN_SHOP_ROLES.
+     * @param {MIN_SHOP_ROLEDeleteManyArgs} args - Arguments to filter MIN_SHOP_ROLES to delete.
+     * @example
+     * // Delete a few MIN_SHOP_ROLES
+     * const { count } = await prisma.mIN_SHOP_ROLE.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends MIN_SHOP_ROLEDeleteManyArgs>(args?: SelectSubset<T, MIN_SHOP_ROLEDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more MIN_SHOP_ROLES.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MIN_SHOP_ROLEUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many MIN_SHOP_ROLES
+     * const mIN_SHOP_ROLE = await prisma.mIN_SHOP_ROLE.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends MIN_SHOP_ROLEUpdateManyArgs>(args: SelectSubset<T, MIN_SHOP_ROLEUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one MIN_SHOP_ROLE.
+     * @param {MIN_SHOP_ROLEUpsertArgs} args - Arguments to update or create a MIN_SHOP_ROLE.
+     * @example
+     * // Update or create a MIN_SHOP_ROLE
+     * const mIN_SHOP_ROLE = await prisma.mIN_SHOP_ROLE.upsert({
+     *   create: {
+     *     // ... data to create a MIN_SHOP_ROLE
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the MIN_SHOP_ROLE we want to update
+     *   }
+     * })
+     */
+    upsert<T extends MIN_SHOP_ROLEUpsertArgs>(args: SelectSubset<T, MIN_SHOP_ROLEUpsertArgs<ExtArgs>>): Prisma__MIN_SHOP_ROLEClient<$Result.GetResult<Prisma.$MIN_SHOP_ROLEPayload<ExtArgs>, T, "upsert">, never, ExtArgs>
+
+
+    /**
+     * Count the number of MIN_SHOP_ROLES.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MIN_SHOP_ROLECountArgs} args - Arguments to filter MIN_SHOP_ROLES to count.
+     * @example
+     * // Count the number of MIN_SHOP_ROLES
+     * const count = await prisma.mIN_SHOP_ROLE.count({
+     *   where: {
+     *     // ... the filter for the MIN_SHOP_ROLES we want to count
+     *   }
+     * })
+    **/
+    count<T extends MIN_SHOP_ROLECountArgs>(
+      args?: Subset<T, MIN_SHOP_ROLECountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], MIN_SHOP_ROLECountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a MIN_SHOP_ROLE.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MIN_SHOP_ROLEAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends MIN_SHOP_ROLEAggregateArgs>(args: Subset<T, MIN_SHOP_ROLEAggregateArgs>): Prisma.PrismaPromise<GetMIN_SHOP_ROLEAggregateType<T>>
+
+    /**
+     * Group by MIN_SHOP_ROLE.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MIN_SHOP_ROLEGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends MIN_SHOP_ROLEGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: MIN_SHOP_ROLEGroupByArgs['orderBy'] }
+        : { orderBy?: MIN_SHOP_ROLEGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, MIN_SHOP_ROLEGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetMIN_SHOP_ROLEGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the MIN_SHOP_ROLE model
+   */
+  readonly fields: MIN_SHOP_ROLEFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for MIN_SHOP_ROLE.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__MIN_SHOP_ROLEClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    admins<T extends MIN_SHOP_ROLE$adminsArgs<ExtArgs> = {}>(args?: Subset<T, MIN_SHOP_ROLE$adminsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MIN_SHOP_ADMINPayload<ExtArgs>, T, "findMany"> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the MIN_SHOP_ROLE model
+   */ 
+  interface MIN_SHOP_ROLEFieldRefs {
+    readonly id: FieldRef<"MIN_SHOP_ROLE", 'String'>
+    readonly name: FieldRef<"MIN_SHOP_ROLE", 'String'>
+    readonly permissions: FieldRef<"MIN_SHOP_ROLE", 'String[]'>
+    readonly createdAt: FieldRef<"MIN_SHOP_ROLE", 'DateTime'>
+    readonly updatedAt: FieldRef<"MIN_SHOP_ROLE", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * MIN_SHOP_ROLE findUnique
+   */
+  export type MIN_SHOP_ROLEFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MIN_SHOP_ROLE
+     */
+    select?: MIN_SHOP_ROLESelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ROLEInclude<ExtArgs> | null
+    /**
+     * Filter, which MIN_SHOP_ROLE to fetch.
+     */
+    where: MIN_SHOP_ROLEWhereUniqueInput
+  }
+
+  /**
+   * MIN_SHOP_ROLE findUniqueOrThrow
+   */
+  export type MIN_SHOP_ROLEFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MIN_SHOP_ROLE
+     */
+    select?: MIN_SHOP_ROLESelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ROLEInclude<ExtArgs> | null
+    /**
+     * Filter, which MIN_SHOP_ROLE to fetch.
+     */
+    where: MIN_SHOP_ROLEWhereUniqueInput
+  }
+
+  /**
+   * MIN_SHOP_ROLE findFirst
+   */
+  export type MIN_SHOP_ROLEFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MIN_SHOP_ROLE
+     */
+    select?: MIN_SHOP_ROLESelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ROLEInclude<ExtArgs> | null
+    /**
+     * Filter, which MIN_SHOP_ROLE to fetch.
+     */
+    where?: MIN_SHOP_ROLEWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of MIN_SHOP_ROLES to fetch.
+     */
+    orderBy?: MIN_SHOP_ROLEOrderByWithRelationInput | MIN_SHOP_ROLEOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for MIN_SHOP_ROLES.
+     */
+    cursor?: MIN_SHOP_ROLEWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` MIN_SHOP_ROLES from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` MIN_SHOP_ROLES.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of MIN_SHOP_ROLES.
+     */
+    distinct?: MIN_SHOP_ROLEScalarFieldEnum | MIN_SHOP_ROLEScalarFieldEnum[]
+  }
+
+  /**
+   * MIN_SHOP_ROLE findFirstOrThrow
+   */
+  export type MIN_SHOP_ROLEFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MIN_SHOP_ROLE
+     */
+    select?: MIN_SHOP_ROLESelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ROLEInclude<ExtArgs> | null
+    /**
+     * Filter, which MIN_SHOP_ROLE to fetch.
+     */
+    where?: MIN_SHOP_ROLEWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of MIN_SHOP_ROLES to fetch.
+     */
+    orderBy?: MIN_SHOP_ROLEOrderByWithRelationInput | MIN_SHOP_ROLEOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for MIN_SHOP_ROLES.
+     */
+    cursor?: MIN_SHOP_ROLEWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` MIN_SHOP_ROLES from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` MIN_SHOP_ROLES.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of MIN_SHOP_ROLES.
+     */
+    distinct?: MIN_SHOP_ROLEScalarFieldEnum | MIN_SHOP_ROLEScalarFieldEnum[]
+  }
+
+  /**
+   * MIN_SHOP_ROLE findMany
+   */
+  export type MIN_SHOP_ROLEFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MIN_SHOP_ROLE
+     */
+    select?: MIN_SHOP_ROLESelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ROLEInclude<ExtArgs> | null
+    /**
+     * Filter, which MIN_SHOP_ROLES to fetch.
+     */
+    where?: MIN_SHOP_ROLEWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of MIN_SHOP_ROLES to fetch.
+     */
+    orderBy?: MIN_SHOP_ROLEOrderByWithRelationInput | MIN_SHOP_ROLEOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing MIN_SHOP_ROLES.
+     */
+    cursor?: MIN_SHOP_ROLEWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` MIN_SHOP_ROLES from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` MIN_SHOP_ROLES.
+     */
+    skip?: number
+    distinct?: MIN_SHOP_ROLEScalarFieldEnum | MIN_SHOP_ROLEScalarFieldEnum[]
+  }
+
+  /**
+   * MIN_SHOP_ROLE create
+   */
+  export type MIN_SHOP_ROLECreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MIN_SHOP_ROLE
+     */
+    select?: MIN_SHOP_ROLESelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ROLEInclude<ExtArgs> | null
+    /**
+     * The data needed to create a MIN_SHOP_ROLE.
+     */
+    data: XOR<MIN_SHOP_ROLECreateInput, MIN_SHOP_ROLEUncheckedCreateInput>
+  }
+
+  /**
+   * MIN_SHOP_ROLE createMany
+   */
+  export type MIN_SHOP_ROLECreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many MIN_SHOP_ROLES.
+     */
+    data: MIN_SHOP_ROLECreateManyInput | MIN_SHOP_ROLECreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * MIN_SHOP_ROLE createManyAndReturn
+   */
+  export type MIN_SHOP_ROLECreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MIN_SHOP_ROLE
+     */
+    select?: MIN_SHOP_ROLESelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * The data used to create many MIN_SHOP_ROLES.
+     */
+    data: MIN_SHOP_ROLECreateManyInput | MIN_SHOP_ROLECreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * MIN_SHOP_ROLE update
+   */
+  export type MIN_SHOP_ROLEUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MIN_SHOP_ROLE
+     */
+    select?: MIN_SHOP_ROLESelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ROLEInclude<ExtArgs> | null
+    /**
+     * The data needed to update a MIN_SHOP_ROLE.
+     */
+    data: XOR<MIN_SHOP_ROLEUpdateInput, MIN_SHOP_ROLEUncheckedUpdateInput>
+    /**
+     * Choose, which MIN_SHOP_ROLE to update.
+     */
+    where: MIN_SHOP_ROLEWhereUniqueInput
+  }
+
+  /**
+   * MIN_SHOP_ROLE updateMany
+   */
+  export type MIN_SHOP_ROLEUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update MIN_SHOP_ROLES.
+     */
+    data: XOR<MIN_SHOP_ROLEUpdateManyMutationInput, MIN_SHOP_ROLEUncheckedUpdateManyInput>
+    /**
+     * Filter which MIN_SHOP_ROLES to update
+     */
+    where?: MIN_SHOP_ROLEWhereInput
+  }
+
+  /**
+   * MIN_SHOP_ROLE upsert
+   */
+  export type MIN_SHOP_ROLEUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MIN_SHOP_ROLE
+     */
+    select?: MIN_SHOP_ROLESelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ROLEInclude<ExtArgs> | null
+    /**
+     * The filter to search for the MIN_SHOP_ROLE to update in case it exists.
+     */
+    where: MIN_SHOP_ROLEWhereUniqueInput
+    /**
+     * In case the MIN_SHOP_ROLE found by the `where` argument doesn't exist, create a new MIN_SHOP_ROLE with this data.
+     */
+    create: XOR<MIN_SHOP_ROLECreateInput, MIN_SHOP_ROLEUncheckedCreateInput>
+    /**
+     * In case the MIN_SHOP_ROLE was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<MIN_SHOP_ROLEUpdateInput, MIN_SHOP_ROLEUncheckedUpdateInput>
+  }
+
+  /**
+   * MIN_SHOP_ROLE delete
+   */
+  export type MIN_SHOP_ROLEDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MIN_SHOP_ROLE
+     */
+    select?: MIN_SHOP_ROLESelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ROLEInclude<ExtArgs> | null
+    /**
+     * Filter which MIN_SHOP_ROLE to delete.
+     */
+    where: MIN_SHOP_ROLEWhereUniqueInput
+  }
+
+  /**
+   * MIN_SHOP_ROLE deleteMany
+   */
+  export type MIN_SHOP_ROLEDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which MIN_SHOP_ROLES to delete
+     */
+    where?: MIN_SHOP_ROLEWhereInput
+  }
+
+  /**
+   * MIN_SHOP_ROLE.admins
+   */
+  export type MIN_SHOP_ROLE$adminsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MIN_SHOP_ADMIN
+     */
+    select?: MIN_SHOP_ADMINSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ADMINInclude<ExtArgs> | null
+    where?: MIN_SHOP_ADMINWhereInput
+    orderBy?: MIN_SHOP_ADMINOrderByWithRelationInput | MIN_SHOP_ADMINOrderByWithRelationInput[]
+    cursor?: MIN_SHOP_ADMINWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: MIN_SHOP_ADMINScalarFieldEnum | MIN_SHOP_ADMINScalarFieldEnum[]
+  }
+
+  /**
+   * MIN_SHOP_ROLE without action
+   */
+  export type MIN_SHOP_ROLEDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MIN_SHOP_ROLE
+     */
+    select?: MIN_SHOP_ROLESelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ROLEInclude<ExtArgs> | null
+  }
+
+
+  /**
    * Model MIN_SHOP_ADMIN
    */
 
@@ -19020,6 +20096,7 @@ export namespace Prisma {
     password: string | null
     name: string | null
     role: string | null
+    roleId: string | null
     isSuperAdmin: boolean | null
     createdAt: Date | null
     updatedAt: Date | null
@@ -19031,6 +20108,7 @@ export namespace Prisma {
     password: string | null
     name: string | null
     role: string | null
+    roleId: string | null
     isSuperAdmin: boolean | null
     createdAt: Date | null
     updatedAt: Date | null
@@ -19042,6 +20120,7 @@ export namespace Prisma {
     password: number
     name: number
     role: number
+    roleId: number
     isSuperAdmin: number
     permissions: number
     createdAt: number
@@ -19056,6 +20135,7 @@ export namespace Prisma {
     password?: true
     name?: true
     role?: true
+    roleId?: true
     isSuperAdmin?: true
     createdAt?: true
     updatedAt?: true
@@ -19067,6 +20147,7 @@ export namespace Prisma {
     password?: true
     name?: true
     role?: true
+    roleId?: true
     isSuperAdmin?: true
     createdAt?: true
     updatedAt?: true
@@ -19078,6 +20159,7 @@ export namespace Prisma {
     password?: true
     name?: true
     role?: true
+    roleId?: true
     isSuperAdmin?: true
     permissions?: true
     createdAt?: true
@@ -19163,6 +20245,7 @@ export namespace Prisma {
     password: string
     name: string
     role: string
+    roleId: string | null
     isSuperAdmin: boolean
     permissions: string[]
     createdAt: Date
@@ -19192,10 +20275,12 @@ export namespace Prisma {
     password?: boolean
     name?: boolean
     role?: boolean
+    roleId?: boolean
     isSuperAdmin?: boolean
     permissions?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    adminRole?: boolean | MIN_SHOP_ADMIN$adminRoleArgs<ExtArgs>
   }, ExtArgs["result"]["mIN_SHOP_ADMIN"]>
 
   export type MIN_SHOP_ADMINSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -19204,10 +20289,12 @@ export namespace Prisma {
     password?: boolean
     name?: boolean
     role?: boolean
+    roleId?: boolean
     isSuperAdmin?: boolean
     permissions?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    adminRole?: boolean | MIN_SHOP_ADMIN$adminRoleArgs<ExtArgs>
   }, ExtArgs["result"]["mIN_SHOP_ADMIN"]>
 
   export type MIN_SHOP_ADMINSelectScalar = {
@@ -19216,16 +20303,25 @@ export namespace Prisma {
     password?: boolean
     name?: boolean
     role?: boolean
+    roleId?: boolean
     isSuperAdmin?: boolean
     permissions?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
+  export type MIN_SHOP_ADMINInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    adminRole?: boolean | MIN_SHOP_ADMIN$adminRoleArgs<ExtArgs>
+  }
+  export type MIN_SHOP_ADMINIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    adminRole?: boolean | MIN_SHOP_ADMIN$adminRoleArgs<ExtArgs>
+  }
 
   export type $MIN_SHOP_ADMINPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "MIN_SHOP_ADMIN"
-    objects: {}
+    objects: {
+      adminRole: Prisma.$MIN_SHOP_ROLEPayload<ExtArgs> | null
+    }
     scalars: $Extensions.GetPayloadResult<{
       /**
        * 관리자 고유 ID
@@ -19244,15 +20340,19 @@ export namespace Prisma {
        */
       name: string
       /**
-       * 권한
+       * 권한 (레거시)
        */
       role: string
+      /**
+       * 역할 ID
+       */
+      roleId: string | null
       /**
        * 최고 관리자 여부
        */
       isSuperAdmin: boolean
       /**
-       * 부여된 메뉴 접근 권한 배열 (PostgreSQL 배열 타입)
+       * 부여된 메뉴 접근 권한 배열 (레거시/개별권한)
        */
       permissions: string[]
       /**
@@ -19627,6 +20727,7 @@ export namespace Prisma {
    */
   export interface Prisma__MIN_SHOP_ADMINClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
+    adminRole<T extends MIN_SHOP_ADMIN$adminRoleArgs<ExtArgs> = {}>(args?: Subset<T, MIN_SHOP_ADMIN$adminRoleArgs<ExtArgs>>): Prisma__MIN_SHOP_ROLEClient<$Result.GetResult<Prisma.$MIN_SHOP_ROLEPayload<ExtArgs>, T, "findUniqueOrThrow"> | null, null, ExtArgs>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -19661,6 +20762,7 @@ export namespace Prisma {
     readonly password: FieldRef<"MIN_SHOP_ADMIN", 'String'>
     readonly name: FieldRef<"MIN_SHOP_ADMIN", 'String'>
     readonly role: FieldRef<"MIN_SHOP_ADMIN", 'String'>
+    readonly roleId: FieldRef<"MIN_SHOP_ADMIN", 'String'>
     readonly isSuperAdmin: FieldRef<"MIN_SHOP_ADMIN", 'Boolean'>
     readonly permissions: FieldRef<"MIN_SHOP_ADMIN", 'String[]'>
     readonly createdAt: FieldRef<"MIN_SHOP_ADMIN", 'DateTime'>
@@ -19678,6 +20780,10 @@ export namespace Prisma {
      */
     select?: MIN_SHOP_ADMINSelect<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ADMINInclude<ExtArgs> | null
+    /**
      * Filter, which MIN_SHOP_ADMIN to fetch.
      */
     where: MIN_SHOP_ADMINWhereUniqueInput
@@ -19692,6 +20798,10 @@ export namespace Prisma {
      */
     select?: MIN_SHOP_ADMINSelect<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ADMINInclude<ExtArgs> | null
+    /**
      * Filter, which MIN_SHOP_ADMIN to fetch.
      */
     where: MIN_SHOP_ADMINWhereUniqueInput
@@ -19705,6 +20815,10 @@ export namespace Prisma {
      * Select specific fields to fetch from the MIN_SHOP_ADMIN
      */
     select?: MIN_SHOP_ADMINSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ADMINInclude<ExtArgs> | null
     /**
      * Filter, which MIN_SHOP_ADMIN to fetch.
      */
@@ -19750,6 +20864,10 @@ export namespace Prisma {
      */
     select?: MIN_SHOP_ADMINSelect<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ADMINInclude<ExtArgs> | null
+    /**
      * Filter, which MIN_SHOP_ADMIN to fetch.
      */
     where?: MIN_SHOP_ADMINWhereInput
@@ -19794,6 +20912,10 @@ export namespace Prisma {
      */
     select?: MIN_SHOP_ADMINSelect<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ADMINInclude<ExtArgs> | null
+    /**
      * Filter, which MIN_SHOP_ADMINS to fetch.
      */
     where?: MIN_SHOP_ADMINWhereInput
@@ -19833,6 +20955,10 @@ export namespace Prisma {
      */
     select?: MIN_SHOP_ADMINSelect<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ADMINInclude<ExtArgs> | null
+    /**
      * The data needed to create a MIN_SHOP_ADMIN.
      */
     data: XOR<MIN_SHOP_ADMINCreateInput, MIN_SHOP_ADMINUncheckedCreateInput>
@@ -19862,6 +20988,10 @@ export namespace Prisma {
      */
     data: MIN_SHOP_ADMINCreateManyInput | MIN_SHOP_ADMINCreateManyInput[]
     skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ADMINIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -19872,6 +21002,10 @@ export namespace Prisma {
      * Select specific fields to fetch from the MIN_SHOP_ADMIN
      */
     select?: MIN_SHOP_ADMINSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ADMINInclude<ExtArgs> | null
     /**
      * The data needed to update a MIN_SHOP_ADMIN.
      */
@@ -19905,6 +21039,10 @@ export namespace Prisma {
      */
     select?: MIN_SHOP_ADMINSelect<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ADMINInclude<ExtArgs> | null
+    /**
      * The filter to search for the MIN_SHOP_ADMIN to update in case it exists.
      */
     where: MIN_SHOP_ADMINWhereUniqueInput
@@ -19927,6 +21065,10 @@ export namespace Prisma {
      */
     select?: MIN_SHOP_ADMINSelect<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ADMINInclude<ExtArgs> | null
+    /**
      * Filter which MIN_SHOP_ADMIN to delete.
      */
     where: MIN_SHOP_ADMINWhereUniqueInput
@@ -19943,6 +21085,21 @@ export namespace Prisma {
   }
 
   /**
+   * MIN_SHOP_ADMIN.adminRole
+   */
+  export type MIN_SHOP_ADMIN$adminRoleArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MIN_SHOP_ROLE
+     */
+    select?: MIN_SHOP_ROLESelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ROLEInclude<ExtArgs> | null
+    where?: MIN_SHOP_ROLEWhereInput
+  }
+
+  /**
    * MIN_SHOP_ADMIN without action
    */
   export type MIN_SHOP_ADMINDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -19950,6 +21107,10 @@ export namespace Prisma {
      * Select specific fields to fetch from the MIN_SHOP_ADMIN
      */
     select?: MIN_SHOP_ADMINSelect<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MIN_SHOP_ADMINInclude<ExtArgs> | null
   }
 
 
@@ -23961,12 +25122,24 @@ export namespace Prisma {
   export type MIN_SHOP_USER_COUPONScalarFieldEnum = (typeof MIN_SHOP_USER_COUPONScalarFieldEnum)[keyof typeof MIN_SHOP_USER_COUPONScalarFieldEnum]
 
 
+  export const MIN_SHOP_ROLEScalarFieldEnum: {
+    id: 'id',
+    name: 'name',
+    permissions: 'permissions',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type MIN_SHOP_ROLEScalarFieldEnum = (typeof MIN_SHOP_ROLEScalarFieldEnum)[keyof typeof MIN_SHOP_ROLEScalarFieldEnum]
+
+
   export const MIN_SHOP_ADMINScalarFieldEnum: {
     id: 'id',
     email: 'email',
     password: 'password',
     name: 'name',
     role: 'role',
+    roleId: 'roleId',
     isSuperAdmin: 'isSuperAdmin',
     permissions: 'permissions',
     createdAt: 'createdAt',
@@ -25237,6 +26410,61 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"MIN_SHOP_USER_COUPON"> | Date | string
   }
 
+  export type MIN_SHOP_ROLEWhereInput = {
+    AND?: MIN_SHOP_ROLEWhereInput | MIN_SHOP_ROLEWhereInput[]
+    OR?: MIN_SHOP_ROLEWhereInput[]
+    NOT?: MIN_SHOP_ROLEWhereInput | MIN_SHOP_ROLEWhereInput[]
+    id?: StringFilter<"MIN_SHOP_ROLE"> | string
+    name?: StringFilter<"MIN_SHOP_ROLE"> | string
+    permissions?: StringNullableListFilter<"MIN_SHOP_ROLE">
+    createdAt?: DateTimeFilter<"MIN_SHOP_ROLE"> | Date | string
+    updatedAt?: DateTimeFilter<"MIN_SHOP_ROLE"> | Date | string
+    admins?: MIN_SHOP_ADMINListRelationFilter
+  }
+
+  export type MIN_SHOP_ROLEOrderByWithRelationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    permissions?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    admins?: MIN_SHOP_ADMINOrderByRelationAggregateInput
+  }
+
+  export type MIN_SHOP_ROLEWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    name?: string
+    AND?: MIN_SHOP_ROLEWhereInput | MIN_SHOP_ROLEWhereInput[]
+    OR?: MIN_SHOP_ROLEWhereInput[]
+    NOT?: MIN_SHOP_ROLEWhereInput | MIN_SHOP_ROLEWhereInput[]
+    permissions?: StringNullableListFilter<"MIN_SHOP_ROLE">
+    createdAt?: DateTimeFilter<"MIN_SHOP_ROLE"> | Date | string
+    updatedAt?: DateTimeFilter<"MIN_SHOP_ROLE"> | Date | string
+    admins?: MIN_SHOP_ADMINListRelationFilter
+  }, "id" | "name">
+
+  export type MIN_SHOP_ROLEOrderByWithAggregationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    permissions?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: MIN_SHOP_ROLECountOrderByAggregateInput
+    _max?: MIN_SHOP_ROLEMaxOrderByAggregateInput
+    _min?: MIN_SHOP_ROLEMinOrderByAggregateInput
+  }
+
+  export type MIN_SHOP_ROLEScalarWhereWithAggregatesInput = {
+    AND?: MIN_SHOP_ROLEScalarWhereWithAggregatesInput | MIN_SHOP_ROLEScalarWhereWithAggregatesInput[]
+    OR?: MIN_SHOP_ROLEScalarWhereWithAggregatesInput[]
+    NOT?: MIN_SHOP_ROLEScalarWhereWithAggregatesInput | MIN_SHOP_ROLEScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"MIN_SHOP_ROLE"> | string
+    name?: StringWithAggregatesFilter<"MIN_SHOP_ROLE"> | string
+    permissions?: StringNullableListFilter<"MIN_SHOP_ROLE">
+    createdAt?: DateTimeWithAggregatesFilter<"MIN_SHOP_ROLE"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"MIN_SHOP_ROLE"> | Date | string
+  }
+
   export type MIN_SHOP_ADMINWhereInput = {
     AND?: MIN_SHOP_ADMINWhereInput | MIN_SHOP_ADMINWhereInput[]
     OR?: MIN_SHOP_ADMINWhereInput[]
@@ -25246,10 +26474,12 @@ export namespace Prisma {
     password?: StringFilter<"MIN_SHOP_ADMIN"> | string
     name?: StringFilter<"MIN_SHOP_ADMIN"> | string
     role?: StringFilter<"MIN_SHOP_ADMIN"> | string
+    roleId?: StringNullableFilter<"MIN_SHOP_ADMIN"> | string | null
     isSuperAdmin?: BoolFilter<"MIN_SHOP_ADMIN"> | boolean
     permissions?: StringNullableListFilter<"MIN_SHOP_ADMIN">
     createdAt?: DateTimeFilter<"MIN_SHOP_ADMIN"> | Date | string
     updatedAt?: DateTimeFilter<"MIN_SHOP_ADMIN"> | Date | string
+    adminRole?: XOR<MIN_SHOP_ROLENullableRelationFilter, MIN_SHOP_ROLEWhereInput> | null
   }
 
   export type MIN_SHOP_ADMINOrderByWithRelationInput = {
@@ -25258,10 +26488,12 @@ export namespace Prisma {
     password?: SortOrder
     name?: SortOrder
     role?: SortOrder
+    roleId?: SortOrderInput | SortOrder
     isSuperAdmin?: SortOrder
     permissions?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    adminRole?: MIN_SHOP_ROLEOrderByWithRelationInput
   }
 
   export type MIN_SHOP_ADMINWhereUniqueInput = Prisma.AtLeast<{
@@ -25273,10 +26505,12 @@ export namespace Prisma {
     password?: StringFilter<"MIN_SHOP_ADMIN"> | string
     name?: StringFilter<"MIN_SHOP_ADMIN"> | string
     role?: StringFilter<"MIN_SHOP_ADMIN"> | string
+    roleId?: StringNullableFilter<"MIN_SHOP_ADMIN"> | string | null
     isSuperAdmin?: BoolFilter<"MIN_SHOP_ADMIN"> | boolean
     permissions?: StringNullableListFilter<"MIN_SHOP_ADMIN">
     createdAt?: DateTimeFilter<"MIN_SHOP_ADMIN"> | Date | string
     updatedAt?: DateTimeFilter<"MIN_SHOP_ADMIN"> | Date | string
+    adminRole?: XOR<MIN_SHOP_ROLENullableRelationFilter, MIN_SHOP_ROLEWhereInput> | null
   }, "id" | "email">
 
   export type MIN_SHOP_ADMINOrderByWithAggregationInput = {
@@ -25285,6 +26519,7 @@ export namespace Prisma {
     password?: SortOrder
     name?: SortOrder
     role?: SortOrder
+    roleId?: SortOrderInput | SortOrder
     isSuperAdmin?: SortOrder
     permissions?: SortOrder
     createdAt?: SortOrder
@@ -25303,6 +26538,7 @@ export namespace Prisma {
     password?: StringWithAggregatesFilter<"MIN_SHOP_ADMIN"> | string
     name?: StringWithAggregatesFilter<"MIN_SHOP_ADMIN"> | string
     role?: StringWithAggregatesFilter<"MIN_SHOP_ADMIN"> | string
+    roleId?: StringNullableWithAggregatesFilter<"MIN_SHOP_ADMIN"> | string | null
     isSuperAdmin?: BoolWithAggregatesFilter<"MIN_SHOP_ADMIN"> | boolean
     permissions?: StringNullableListFilter<"MIN_SHOP_ADMIN">
     createdAt?: DateTimeWithAggregatesFilter<"MIN_SHOP_ADMIN"> | Date | string
@@ -26733,6 +27969,66 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type MIN_SHOP_ROLECreateInput = {
+    id?: string
+    name: string
+    permissions?: MIN_SHOP_ROLECreatepermissionsInput | string[]
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    admins?: MIN_SHOP_ADMINCreateNestedManyWithoutAdminRoleInput
+  }
+
+  export type MIN_SHOP_ROLEUncheckedCreateInput = {
+    id?: string
+    name: string
+    permissions?: MIN_SHOP_ROLECreatepermissionsInput | string[]
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    admins?: MIN_SHOP_ADMINUncheckedCreateNestedManyWithoutAdminRoleInput
+  }
+
+  export type MIN_SHOP_ROLEUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    permissions?: MIN_SHOP_ROLEUpdatepermissionsInput | string[]
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    admins?: MIN_SHOP_ADMINUpdateManyWithoutAdminRoleNestedInput
+  }
+
+  export type MIN_SHOP_ROLEUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    permissions?: MIN_SHOP_ROLEUpdatepermissionsInput | string[]
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    admins?: MIN_SHOP_ADMINUncheckedUpdateManyWithoutAdminRoleNestedInput
+  }
+
+  export type MIN_SHOP_ROLECreateManyInput = {
+    id?: string
+    name: string
+    permissions?: MIN_SHOP_ROLECreatepermissionsInput | string[]
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type MIN_SHOP_ROLEUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    permissions?: MIN_SHOP_ROLEUpdatepermissionsInput | string[]
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MIN_SHOP_ROLEUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    permissions?: MIN_SHOP_ROLEUpdatepermissionsInput | string[]
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type MIN_SHOP_ADMINCreateInput = {
     id?: string
     email: string
@@ -26743,6 +28039,7 @@ export namespace Prisma {
     permissions?: MIN_SHOP_ADMINCreatepermissionsInput | string[]
     createdAt?: Date | string
     updatedAt?: Date | string
+    adminRole?: MIN_SHOP_ROLECreateNestedOneWithoutAdminsInput
   }
 
   export type MIN_SHOP_ADMINUncheckedCreateInput = {
@@ -26751,6 +28048,7 @@ export namespace Prisma {
     password: string
     name: string
     role?: string
+    roleId?: string | null
     isSuperAdmin?: boolean
     permissions?: MIN_SHOP_ADMINCreatepermissionsInput | string[]
     createdAt?: Date | string
@@ -26767,6 +28065,7 @@ export namespace Prisma {
     permissions?: MIN_SHOP_ADMINUpdatepermissionsInput | string[]
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    adminRole?: MIN_SHOP_ROLEUpdateOneWithoutAdminsNestedInput
   }
 
   export type MIN_SHOP_ADMINUncheckedUpdateInput = {
@@ -26775,6 +28074,7 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
+    roleId?: NullableStringFieldUpdateOperationsInput | string | null
     isSuperAdmin?: BoolFieldUpdateOperationsInput | boolean
     permissions?: MIN_SHOP_ADMINUpdatepermissionsInput | string[]
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -26787,6 +28087,7 @@ export namespace Prisma {
     password: string
     name: string
     role?: string
+    roleId?: string | null
     isSuperAdmin?: boolean
     permissions?: MIN_SHOP_ADMINCreatepermissionsInput | string[]
     createdAt?: Date | string
@@ -26811,6 +28112,7 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     role?: StringFieldUpdateOperationsInput | string
+    roleId?: NullableStringFieldUpdateOperationsInput | string | null
     isSuperAdmin?: BoolFieldUpdateOperationsInput | boolean
     permissions?: MIN_SHOP_ADMINUpdatepermissionsInput | string[]
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -27982,12 +29284,50 @@ export namespace Prisma {
     isEmpty?: boolean
   }
 
+  export type MIN_SHOP_ADMINListRelationFilter = {
+    every?: MIN_SHOP_ADMINWhereInput
+    some?: MIN_SHOP_ADMINWhereInput
+    none?: MIN_SHOP_ADMINWhereInput
+  }
+
+  export type MIN_SHOP_ADMINOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type MIN_SHOP_ROLECountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    permissions?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type MIN_SHOP_ROLEMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type MIN_SHOP_ROLEMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type MIN_SHOP_ROLENullableRelationFilter = {
+    is?: MIN_SHOP_ROLEWhereInput | null
+    isNot?: MIN_SHOP_ROLEWhereInput | null
+  }
+
   export type MIN_SHOP_ADMINCountOrderByAggregateInput = {
     id?: SortOrder
     email?: SortOrder
     password?: SortOrder
     name?: SortOrder
     role?: SortOrder
+    roleId?: SortOrder
     isSuperAdmin?: SortOrder
     permissions?: SortOrder
     createdAt?: SortOrder
@@ -28000,6 +29340,7 @@ export namespace Prisma {
     password?: SortOrder
     name?: SortOrder
     role?: SortOrder
+    roleId?: SortOrder
     isSuperAdmin?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -28011,6 +29352,7 @@ export namespace Prisma {
     password?: SortOrder
     name?: SortOrder
     role?: SortOrder
+    roleId?: SortOrder
     isSuperAdmin?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -29105,13 +30447,80 @@ export namespace Prisma {
     update?: XOR<XOR<MIN_SHOP_COUPONUpdateToOneWithWhereWithoutUserCouponsInput, MIN_SHOP_COUPONUpdateWithoutUserCouponsInput>, MIN_SHOP_COUPONUncheckedUpdateWithoutUserCouponsInput>
   }
 
+  export type MIN_SHOP_ROLECreatepermissionsInput = {
+    set: string[]
+  }
+
+  export type MIN_SHOP_ADMINCreateNestedManyWithoutAdminRoleInput = {
+    create?: XOR<MIN_SHOP_ADMINCreateWithoutAdminRoleInput, MIN_SHOP_ADMINUncheckedCreateWithoutAdminRoleInput> | MIN_SHOP_ADMINCreateWithoutAdminRoleInput[] | MIN_SHOP_ADMINUncheckedCreateWithoutAdminRoleInput[]
+    connectOrCreate?: MIN_SHOP_ADMINCreateOrConnectWithoutAdminRoleInput | MIN_SHOP_ADMINCreateOrConnectWithoutAdminRoleInput[]
+    createMany?: MIN_SHOP_ADMINCreateManyAdminRoleInputEnvelope
+    connect?: MIN_SHOP_ADMINWhereUniqueInput | MIN_SHOP_ADMINWhereUniqueInput[]
+  }
+
+  export type MIN_SHOP_ADMINUncheckedCreateNestedManyWithoutAdminRoleInput = {
+    create?: XOR<MIN_SHOP_ADMINCreateWithoutAdminRoleInput, MIN_SHOP_ADMINUncheckedCreateWithoutAdminRoleInput> | MIN_SHOP_ADMINCreateWithoutAdminRoleInput[] | MIN_SHOP_ADMINUncheckedCreateWithoutAdminRoleInput[]
+    connectOrCreate?: MIN_SHOP_ADMINCreateOrConnectWithoutAdminRoleInput | MIN_SHOP_ADMINCreateOrConnectWithoutAdminRoleInput[]
+    createMany?: MIN_SHOP_ADMINCreateManyAdminRoleInputEnvelope
+    connect?: MIN_SHOP_ADMINWhereUniqueInput | MIN_SHOP_ADMINWhereUniqueInput[]
+  }
+
+  export type MIN_SHOP_ROLEUpdatepermissionsInput = {
+    set?: string[]
+    push?: string | string[]
+  }
+
+  export type MIN_SHOP_ADMINUpdateManyWithoutAdminRoleNestedInput = {
+    create?: XOR<MIN_SHOP_ADMINCreateWithoutAdminRoleInput, MIN_SHOP_ADMINUncheckedCreateWithoutAdminRoleInput> | MIN_SHOP_ADMINCreateWithoutAdminRoleInput[] | MIN_SHOP_ADMINUncheckedCreateWithoutAdminRoleInput[]
+    connectOrCreate?: MIN_SHOP_ADMINCreateOrConnectWithoutAdminRoleInput | MIN_SHOP_ADMINCreateOrConnectWithoutAdminRoleInput[]
+    upsert?: MIN_SHOP_ADMINUpsertWithWhereUniqueWithoutAdminRoleInput | MIN_SHOP_ADMINUpsertWithWhereUniqueWithoutAdminRoleInput[]
+    createMany?: MIN_SHOP_ADMINCreateManyAdminRoleInputEnvelope
+    set?: MIN_SHOP_ADMINWhereUniqueInput | MIN_SHOP_ADMINWhereUniqueInput[]
+    disconnect?: MIN_SHOP_ADMINWhereUniqueInput | MIN_SHOP_ADMINWhereUniqueInput[]
+    delete?: MIN_SHOP_ADMINWhereUniqueInput | MIN_SHOP_ADMINWhereUniqueInput[]
+    connect?: MIN_SHOP_ADMINWhereUniqueInput | MIN_SHOP_ADMINWhereUniqueInput[]
+    update?: MIN_SHOP_ADMINUpdateWithWhereUniqueWithoutAdminRoleInput | MIN_SHOP_ADMINUpdateWithWhereUniqueWithoutAdminRoleInput[]
+    updateMany?: MIN_SHOP_ADMINUpdateManyWithWhereWithoutAdminRoleInput | MIN_SHOP_ADMINUpdateManyWithWhereWithoutAdminRoleInput[]
+    deleteMany?: MIN_SHOP_ADMINScalarWhereInput | MIN_SHOP_ADMINScalarWhereInput[]
+  }
+
+  export type MIN_SHOP_ADMINUncheckedUpdateManyWithoutAdminRoleNestedInput = {
+    create?: XOR<MIN_SHOP_ADMINCreateWithoutAdminRoleInput, MIN_SHOP_ADMINUncheckedCreateWithoutAdminRoleInput> | MIN_SHOP_ADMINCreateWithoutAdminRoleInput[] | MIN_SHOP_ADMINUncheckedCreateWithoutAdminRoleInput[]
+    connectOrCreate?: MIN_SHOP_ADMINCreateOrConnectWithoutAdminRoleInput | MIN_SHOP_ADMINCreateOrConnectWithoutAdminRoleInput[]
+    upsert?: MIN_SHOP_ADMINUpsertWithWhereUniqueWithoutAdminRoleInput | MIN_SHOP_ADMINUpsertWithWhereUniqueWithoutAdminRoleInput[]
+    createMany?: MIN_SHOP_ADMINCreateManyAdminRoleInputEnvelope
+    set?: MIN_SHOP_ADMINWhereUniqueInput | MIN_SHOP_ADMINWhereUniqueInput[]
+    disconnect?: MIN_SHOP_ADMINWhereUniqueInput | MIN_SHOP_ADMINWhereUniqueInput[]
+    delete?: MIN_SHOP_ADMINWhereUniqueInput | MIN_SHOP_ADMINWhereUniqueInput[]
+    connect?: MIN_SHOP_ADMINWhereUniqueInput | MIN_SHOP_ADMINWhereUniqueInput[]
+    update?: MIN_SHOP_ADMINUpdateWithWhereUniqueWithoutAdminRoleInput | MIN_SHOP_ADMINUpdateWithWhereUniqueWithoutAdminRoleInput[]
+    updateMany?: MIN_SHOP_ADMINUpdateManyWithWhereWithoutAdminRoleInput | MIN_SHOP_ADMINUpdateManyWithWhereWithoutAdminRoleInput[]
+    deleteMany?: MIN_SHOP_ADMINScalarWhereInput | MIN_SHOP_ADMINScalarWhereInput[]
+  }
+
   export type MIN_SHOP_ADMINCreatepermissionsInput = {
     set: string[]
+  }
+
+  export type MIN_SHOP_ROLECreateNestedOneWithoutAdminsInput = {
+    create?: XOR<MIN_SHOP_ROLECreateWithoutAdminsInput, MIN_SHOP_ROLEUncheckedCreateWithoutAdminsInput>
+    connectOrCreate?: MIN_SHOP_ROLECreateOrConnectWithoutAdminsInput
+    connect?: MIN_SHOP_ROLEWhereUniqueInput
   }
 
   export type MIN_SHOP_ADMINUpdatepermissionsInput = {
     set?: string[]
     push?: string | string[]
+  }
+
+  export type MIN_SHOP_ROLEUpdateOneWithoutAdminsNestedInput = {
+    create?: XOR<MIN_SHOP_ROLECreateWithoutAdminsInput, MIN_SHOP_ROLEUncheckedCreateWithoutAdminsInput>
+    connectOrCreate?: MIN_SHOP_ROLECreateOrConnectWithoutAdminsInput
+    upsert?: MIN_SHOP_ROLEUpsertWithoutAdminsInput
+    disconnect?: MIN_SHOP_ROLEWhereInput | boolean
+    delete?: MIN_SHOP_ROLEWhereInput | boolean
+    connect?: MIN_SHOP_ROLEWhereUniqueInput
+    update?: XOR<XOR<MIN_SHOP_ROLEUpdateToOneWithWhereWithoutAdminsInput, MIN_SHOP_ROLEUpdateWithoutAdminsInput>, MIN_SHOP_ROLEUncheckedUpdateWithoutAdminsInput>
   }
 
   export type MIN_SHOP_USERCreateNestedOneWithoutPointLogsInput = {
@@ -31304,6 +32713,120 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type MIN_SHOP_ADMINCreateWithoutAdminRoleInput = {
+    id?: string
+    email: string
+    password: string
+    name: string
+    role?: string
+    isSuperAdmin?: boolean
+    permissions?: MIN_SHOP_ADMINCreatepermissionsInput | string[]
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type MIN_SHOP_ADMINUncheckedCreateWithoutAdminRoleInput = {
+    id?: string
+    email: string
+    password: string
+    name: string
+    role?: string
+    isSuperAdmin?: boolean
+    permissions?: MIN_SHOP_ADMINCreatepermissionsInput | string[]
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type MIN_SHOP_ADMINCreateOrConnectWithoutAdminRoleInput = {
+    where: MIN_SHOP_ADMINWhereUniqueInput
+    create: XOR<MIN_SHOP_ADMINCreateWithoutAdminRoleInput, MIN_SHOP_ADMINUncheckedCreateWithoutAdminRoleInput>
+  }
+
+  export type MIN_SHOP_ADMINCreateManyAdminRoleInputEnvelope = {
+    data: MIN_SHOP_ADMINCreateManyAdminRoleInput | MIN_SHOP_ADMINCreateManyAdminRoleInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type MIN_SHOP_ADMINUpsertWithWhereUniqueWithoutAdminRoleInput = {
+    where: MIN_SHOP_ADMINWhereUniqueInput
+    update: XOR<MIN_SHOP_ADMINUpdateWithoutAdminRoleInput, MIN_SHOP_ADMINUncheckedUpdateWithoutAdminRoleInput>
+    create: XOR<MIN_SHOP_ADMINCreateWithoutAdminRoleInput, MIN_SHOP_ADMINUncheckedCreateWithoutAdminRoleInput>
+  }
+
+  export type MIN_SHOP_ADMINUpdateWithWhereUniqueWithoutAdminRoleInput = {
+    where: MIN_SHOP_ADMINWhereUniqueInput
+    data: XOR<MIN_SHOP_ADMINUpdateWithoutAdminRoleInput, MIN_SHOP_ADMINUncheckedUpdateWithoutAdminRoleInput>
+  }
+
+  export type MIN_SHOP_ADMINUpdateManyWithWhereWithoutAdminRoleInput = {
+    where: MIN_SHOP_ADMINScalarWhereInput
+    data: XOR<MIN_SHOP_ADMINUpdateManyMutationInput, MIN_SHOP_ADMINUncheckedUpdateManyWithoutAdminRoleInput>
+  }
+
+  export type MIN_SHOP_ADMINScalarWhereInput = {
+    AND?: MIN_SHOP_ADMINScalarWhereInput | MIN_SHOP_ADMINScalarWhereInput[]
+    OR?: MIN_SHOP_ADMINScalarWhereInput[]
+    NOT?: MIN_SHOP_ADMINScalarWhereInput | MIN_SHOP_ADMINScalarWhereInput[]
+    id?: StringFilter<"MIN_SHOP_ADMIN"> | string
+    email?: StringFilter<"MIN_SHOP_ADMIN"> | string
+    password?: StringFilter<"MIN_SHOP_ADMIN"> | string
+    name?: StringFilter<"MIN_SHOP_ADMIN"> | string
+    role?: StringFilter<"MIN_SHOP_ADMIN"> | string
+    roleId?: StringNullableFilter<"MIN_SHOP_ADMIN"> | string | null
+    isSuperAdmin?: BoolFilter<"MIN_SHOP_ADMIN"> | boolean
+    permissions?: StringNullableListFilter<"MIN_SHOP_ADMIN">
+    createdAt?: DateTimeFilter<"MIN_SHOP_ADMIN"> | Date | string
+    updatedAt?: DateTimeFilter<"MIN_SHOP_ADMIN"> | Date | string
+  }
+
+  export type MIN_SHOP_ROLECreateWithoutAdminsInput = {
+    id?: string
+    name: string
+    permissions?: MIN_SHOP_ROLECreatepermissionsInput | string[]
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type MIN_SHOP_ROLEUncheckedCreateWithoutAdminsInput = {
+    id?: string
+    name: string
+    permissions?: MIN_SHOP_ROLECreatepermissionsInput | string[]
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type MIN_SHOP_ROLECreateOrConnectWithoutAdminsInput = {
+    where: MIN_SHOP_ROLEWhereUniqueInput
+    create: XOR<MIN_SHOP_ROLECreateWithoutAdminsInput, MIN_SHOP_ROLEUncheckedCreateWithoutAdminsInput>
+  }
+
+  export type MIN_SHOP_ROLEUpsertWithoutAdminsInput = {
+    update: XOR<MIN_SHOP_ROLEUpdateWithoutAdminsInput, MIN_SHOP_ROLEUncheckedUpdateWithoutAdminsInput>
+    create: XOR<MIN_SHOP_ROLECreateWithoutAdminsInput, MIN_SHOP_ROLEUncheckedCreateWithoutAdminsInput>
+    where?: MIN_SHOP_ROLEWhereInput
+  }
+
+  export type MIN_SHOP_ROLEUpdateToOneWithWhereWithoutAdminsInput = {
+    where?: MIN_SHOP_ROLEWhereInput
+    data: XOR<MIN_SHOP_ROLEUpdateWithoutAdminsInput, MIN_SHOP_ROLEUncheckedUpdateWithoutAdminsInput>
+  }
+
+  export type MIN_SHOP_ROLEUpdateWithoutAdminsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    permissions?: MIN_SHOP_ROLEUpdatepermissionsInput | string[]
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MIN_SHOP_ROLEUncheckedUpdateWithoutAdminsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    permissions?: MIN_SHOP_ROLEUpdatepermissionsInput | string[]
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type MIN_SHOP_USERCreateWithoutPointLogsInput = {
     id?: string
     email: string
@@ -31920,6 +33443,54 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type MIN_SHOP_ADMINCreateManyAdminRoleInput = {
+    id?: string
+    email: string
+    password: string
+    name: string
+    role?: string
+    isSuperAdmin?: boolean
+    permissions?: MIN_SHOP_ADMINCreatepermissionsInput | string[]
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type MIN_SHOP_ADMINUpdateWithoutAdminRoleInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    isSuperAdmin?: BoolFieldUpdateOperationsInput | boolean
+    permissions?: MIN_SHOP_ADMINUpdatepermissionsInput | string[]
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MIN_SHOP_ADMINUncheckedUpdateWithoutAdminRoleInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    isSuperAdmin?: BoolFieldUpdateOperationsInput | boolean
+    permissions?: MIN_SHOP_ADMINUpdatepermissionsInput | string[]
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MIN_SHOP_ADMINUncheckedUpdateManyWithoutAdminRoleInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    isSuperAdmin?: BoolFieldUpdateOperationsInput | boolean
+    permissions?: MIN_SHOP_ADMINUpdatepermissionsInput | string[]
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
 
 
   /**
@@ -31957,6 +33528,10 @@ export namespace Prisma {
      * @deprecated Use MIN_SHOP_COUPONCountOutputTypeDefaultArgs instead
      */
     export type MIN_SHOP_COUPONCountOutputTypeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = MIN_SHOP_COUPONCountOutputTypeDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use MIN_SHOP_ROLECountOutputTypeDefaultArgs instead
+     */
+    export type MIN_SHOP_ROLECountOutputTypeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = MIN_SHOP_ROLECountOutputTypeDefaultArgs<ExtArgs>
     /**
      * @deprecated Use MIN_SHOP_USERDefaultArgs instead
      */
@@ -32021,6 +33596,10 @@ export namespace Prisma {
      * @deprecated Use MIN_SHOP_USER_COUPONDefaultArgs instead
      */
     export type MIN_SHOP_USER_COUPONArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = MIN_SHOP_USER_COUPONDefaultArgs<ExtArgs>
+    /**
+     * @deprecated Use MIN_SHOP_ROLEDefaultArgs instead
+     */
+    export type MIN_SHOP_ROLEArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = MIN_SHOP_ROLEDefaultArgs<ExtArgs>
     /**
      * @deprecated Use MIN_SHOP_ADMINDefaultArgs instead
      */

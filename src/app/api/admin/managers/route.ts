@@ -16,6 +16,8 @@ export async function GET() {
         email: true,
         name: true,
         role: true,
+        roleId: true,
+        adminRole: { select: { id: true, name: true, permissions: true } },
         isSuperAdmin: true,
         permissions: true,
         createdAt: true,
@@ -37,7 +39,7 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { email, password, name, permissions } = body;
+    const { email, password, name, roleId } = body;
 
     // 이메일 중복 체크
     const existing = await prisma.mIN_SHOP_ADMIN.findUnique({ where: { email } });
@@ -51,16 +53,17 @@ export async function POST(request: Request) {
         password, // 실무에서는 반드시 해싱해야 합니다
         name,
         role: "ADMIN",
+        roleId: roleId || null,
         isSuperAdmin: false,
-        permissions: permissions || [],
+        permissions: [],
       },
       select: {
         id: true,
         email: true,
         name: true,
-        role: true,
+        roleId: true,
+        adminRole: { select: { id: true, name: true, permissions: true } },
         isSuperAdmin: true,
-        permissions: true,
         createdAt: true,
       }
     });

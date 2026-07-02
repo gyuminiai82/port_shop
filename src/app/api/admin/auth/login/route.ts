@@ -10,7 +10,8 @@ export async function POST(request: Request) {
 
     // 실제 DB에서 관리자 조회
     const admin = await prisma.mIN_SHOP_ADMIN.findUnique({
-      where: { email }
+      where: { email },
+      include: { adminRole: true }
     });
 
     // 주의: 테스트 환경을 위해 임시로 평문 비교를 허용할 수 있으나, 
@@ -27,7 +28,7 @@ export async function POST(request: Request) {
         name: admin.name,
         role: admin.role,
         isSuperAdmin: admin.isSuperAdmin,
-        permissions: admin.permissions || []
+        permissions: admin.adminRole?.permissions || admin.permissions || []
       };
 
       // 3. Redis에 세션 저장 (예: 24시간)

@@ -6,6 +6,7 @@ import ConfirmModal from "@/components/admin/ConfirmModal";
 
 export default function ManagerListClient() {
   const [managers, setManagers] = useState<any[]>([]);
+  const [roles, setRoles] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   
   // Modals state
@@ -15,13 +16,21 @@ export default function ManagerListClient() {
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
   const [deletingId, setDeletingId] = useState<string | null>(null);
 
-  const fetchManagers = async () => {
+  const fetchData = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch("/api/admin/managers");
-      if (res.ok) {
-        const data = await res.json();
-        setManagers(data);
+      const [mgrRes, rolesRes] = await Promise.all([
+        fetch("/api/admin/managers"),
+        fetch("/api/admin/roles")
+      ]);
+      
+      if (mgrRes.ok) {
+        const mgrData = await mgrRes.json();
+        setManagers(mgrData);
+      }
+      if (rolesRes.ok) {
+        const rolesData = await rolesRes.json();
+        setRoles(rolesData);
       }
     } catch (error) {
       console.error(error);
@@ -31,7 +40,7 @@ export default function ManagerListClient() {
   };
 
   useEffect(() => {
-    fetchManagers();
+    fetchData();
   }, []);
 
   const handleCreate = () => {
@@ -65,7 +74,7 @@ export default function ManagerListClient() {
       throw new Error(errorData.error || "저장에 실패했습니다.");
     }
 
-    await fetchManagers();
+    await fetchData();
   };
 
   const handleConfirmDelete = async () => {
@@ -76,7 +85,7 @@ export default function ManagerListClient() {
         const errorData = await res.json().catch(() => ({}));
         alert(errorData.error || "삭제에 실패했습니다.");
       } else {
-        await fetchManagers();
+        await fetchData();
       }
     } catch (error) {
       console.error(error);
@@ -107,7 +116,7 @@ export default function ManagerListClient() {
               <tr style={{ borderBottom: "2px solid #f3f4f6", textAlign: "left" }}>
                 <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600 }}>이름</th>
                 <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600 }}>이메일(ID)</th>
-                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600 }}>권한</th>
+                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600 }}>부여된 역할(Role)</th>
                 <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600 }}>가입일</th>
                 <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600, textAlign: "right" }}>관리</th>
               </tr>
@@ -122,16 +131,13 @@ export default function ManagerListClient() {
                   <td style={{ padding: "1rem", color: "var(--text-secondary)" }}>{manager.email}</td>
                   <td style={{ padding: "1rem" }}>
                     {manager.isSuperAdmin ? (
-                      <span style={{ fontSize: "0.875rem", color: "var(--text-secondary)" }}>모든 권한</span>
+                      <span style={{ fontSize: "0.875rem", color: "var(--text-secondary)", fontWeight: 700 }}>모든 권한</span>
+                    ) : manager.adminRole ? (
+                      <span style={{ fontSize: "0.875rem", background: "#f3f4f6", padding: "0.4rem 0.75rem", borderRadius: "8px", fontWeight: 600 }}>
+                        {manager.adminRole.name}
+                      </span>
                     ) : (
-                      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.25rem" }}>
-                        {manager.permissions.map((p: string) => (
-                          <span key={p} style={{ fontSize: "0.75rem", background: "#f3f4f6", padding: "0.25rem 0.5rem", borderRadius: "4px" }}>
-                            {p}
-                          </span>
-                        ))}
-                        {manager.permissions.length === 0 && <span style={{ fontSize: "0.875rem", color: "#ef4444" }}>권한 없음</span>}
-                      </div>
+                      <span style={{ fontSize: "0.875rem", color: "#ef4444" }}>역할 없음</span>
                     )}
                   </td>
                   <td style={{ padding: "1rem", color: "var(--text-secondary)" }}>
@@ -168,6 +174,7 @@ export default function ManagerListClient() {
       <ManagerFormModal 
         isOpen={isFormOpen} 
         initialData={editingManager} 
+        roles={roles}
         onClose={() => setIsFormOpen(false)} 
         onSave={handleSave} 
       />
