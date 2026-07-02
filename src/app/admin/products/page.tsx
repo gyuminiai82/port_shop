@@ -22,7 +22,8 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
         images: {
           where: { isMain: true },
           take: 1
-        }
+        },
+        options: true
       },
       orderBy: { createdAt: 'desc' },
       skip,

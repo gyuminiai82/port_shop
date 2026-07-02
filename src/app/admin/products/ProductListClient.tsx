@@ -60,34 +60,48 @@ export default function ProductListClient({
                 <td colSpan={5} style={{ padding: "3rem", textAlign: "center", color: "#9ca3af" }}>등록된 상품이 없습니다.</td>
               </tr>
             ) : (
-              products.map((product) => (
-                <tr key={product.id} style={{ borderBottom: "1px solid #f1f5f9" }}>
-                  <td style={{ padding: "1rem" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-                      <div style={{ width: "64px", height: "64px", borderRadius: "12px", background: "#f8f9fc", position: "relative", overflow: "hidden" }}>
-                        {product.images[0] ? (
-                          <Image src={product.images[0].url} alt={product.name} fill style={{ objectFit: 'cover' }} sizes="64px" />
-                        ) : (
-                          <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "#9ca3af", fontSize: "0.75rem" }}>No Img</div>
+              products.map((product) => {
+                const hasOptions = product.options && product.options.length > 0;
+                const totalStock = hasOptions 
+                  ? product.options.reduce((sum: number, opt: any) => sum + opt.stock, 0)
+                  : product.stock;
+
+                return (
+                  <tr key={product.id} style={{ borderBottom: "1px solid #f1f5f9" }}>
+                    <td style={{ padding: "1rem" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+                        <div style={{ width: "64px", height: "64px", borderRadius: "12px", background: "#f8f9fc", position: "relative", overflow: "hidden" }}>
+                          {product.images[0] ? (
+                            <Image src={product.images[0].url} alt={product.name} fill style={{ objectFit: 'cover' }} sizes="64px" />
+                          ) : (
+                            <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "#9ca3af", fontSize: "0.75rem" }}>No Img</div>
+                          )}
+                        </div>
+                        <Link href={`/product/${product.id}`} style={{ fontWeight: 700, color: "#1f2937", textDecoration: "none" }}>
+                          {product.name}
+                        </Link>
+                      </div>
+                    </td>
+                    <td style={{ padding: "1rem", color: "#64748b" }}>{product.category?.name || "미지정"}</td>
+                    <td style={{ padding: "1rem", fontWeight: 600, color: "#1f2937" }}>₩{product.price.toLocaleString()}</td>
+                    <td style={{ padding: "1rem" }}>
+                      <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem", alignItems: "flex-start" }}>
+                        <span style={{ padding: "0.25rem 0.75rem", borderRadius: "99px", background: totalStock > 0 ? "rgba(34, 197, 94, 0.1)" : "rgba(239, 68, 68, 0.1)", color: totalStock > 0 ? "#16a34a" : "#dc2626", fontWeight: 600, fontSize: "0.875rem" }}>
+                          {totalStock > 0 ? `${totalStock.toLocaleString()}개` : "품절"}
+                        </span>
+                        {hasOptions && (
+                          <span style={{ fontSize: "0.75rem", color: "#64748b", fontWeight: 500, paddingLeft: "0.25rem" }}>
+                            (옵션 {product.options.length}개)
+                          </span>
                         )}
                       </div>
-                      <Link href={`/product/${product.id}`} style={{ fontWeight: 700, color: "#1f2937", textDecoration: "none" }}>
-                        {product.name}
-                      </Link>
-                    </div>
-                  </td>
-                  <td style={{ padding: "1rem", color: "#64748b" }}>{product.category?.name || "미지정"}</td>
-                  <td style={{ padding: "1rem", fontWeight: 600, color: "#1f2937" }}>₩{product.price.toLocaleString()}</td>
-                  <td style={{ padding: "1rem" }}>
-                    <span style={{ padding: "0.25rem 0.75rem", borderRadius: "99px", background: product.stock > 0 ? "rgba(34, 197, 94, 0.1)" : "rgba(239, 68, 68, 0.1)", color: product.stock > 0 ? "#16a34a" : "#dc2626", fontWeight: 600, fontSize: "0.875rem" }}>
-                      {product.stock > 0 ? `${product.stock}개` : "품절"}
-                    </span>
-                  </td>
-                  <td style={{ padding: "1rem" }}>
-                    <button style={{ padding: "0.5rem 1rem", background: "white", border: "1px solid #e2e8f0", borderRadius: "8px", fontWeight: 600, color: "#64748b", cursor: "pointer" }}>수정</button>
-                  </td>
-                </tr>
-              ))
+                    </td>
+                    <td style={{ padding: "1rem" }}>
+                      <button style={{ padding: "0.5rem 1rem", background: "white", border: "1px solid #e2e8f0", borderRadius: "8px", fontWeight: 600, color: "#64748b", cursor: "pointer" }}>수정</button>
+                    </td>
+                  </tr>
+                );
+              })
             )}
           </tbody>
         </table>
