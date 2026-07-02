@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import requireAdmin from "@/lib/requireAdmin";
+import { requireAdmin } from "@/lib/requireAdmin";
 
 export async function PUT(request: Request, props: { params: Promise<{ id: string }> }) {
   try {

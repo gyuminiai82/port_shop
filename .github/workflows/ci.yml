@@ -31,7 +31,7 @@ jobs:
         env:
           # 데이터베이스 URL이 빌드 시점에 필요한 경우를 대비해 더미 변수 설정
           # 실제 프로덕션 DB URL은 GitHub Secrets에 등록해야 합니다.
-          DATABASE_URL: "mysql://dummy:dummy@localhost:3306/dummy"
+          DATABASE_URL: "postgresql://dummy:dummy@localhost:5432/dummy"
 
   deploy:
     needs: build-and-lint
