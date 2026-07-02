@@ -114,22 +114,22 @@ export default function ManagerListClient() {
           <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "800px" }}>
             <thead>
               <tr style={{ borderBottom: "2px solid #f3f4f6", textAlign: "left" }}>
-                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600 }}>이름</th>
-                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600 }}>이메일(ID)</th>
-                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600 }}>부여된 역할(Role)</th>
-                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600 }}>가입일</th>
-                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600, textAlign: "right" }}>관리</th>
+                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600, whiteSpace: "nowrap" }}>이름</th>
+                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600, whiteSpace: "nowrap" }}>이메일(ID)</th>
+                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600, whiteSpace: "nowrap" }}>부여된 역할(Role)</th>
+                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600, whiteSpace: "nowrap" }}>가입일</th>
+                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600, textAlign: "right", whiteSpace: "nowrap" }}>관리</th>
               </tr>
             </thead>
             <tbody>
               {managers.map(manager => (
                 <tr key={manager.id} style={{ borderBottom: "1px solid #f3f4f6" }}>
-                  <td style={{ padding: "1rem", fontWeight: 500 }}>
+                  <td style={{ padding: "1rem", fontWeight: 500, whiteSpace: "nowrap" }}>
                     {manager.name}
                     {manager.isSuperAdmin && <span style={{ marginLeft: "0.5rem", fontSize: "0.75rem", background: "#fef08a", color: "#854d0e", padding: "0.2rem 0.5rem", borderRadius: "4px", fontWeight: 700 }}>최고관리자</span>}
                   </td>
-                  <td style={{ padding: "1rem", color: "var(--text-secondary)" }}>{manager.email}</td>
-                  <td style={{ padding: "1rem" }}>
+                  <td style={{ padding: "1rem", color: "var(--text-secondary)", whiteSpace: "nowrap" }}>{manager.email}</td>
+                  <td style={{ padding: "1rem", whiteSpace: "nowrap" }}>
                     {manager.isSuperAdmin ? (
                       <span style={{ fontSize: "0.875rem", color: "var(--text-secondary)", fontWeight: 700 }}>모든 권한</span>
                     ) : manager.adminRole ? (
@@ -140,10 +140,10 @@ export default function ManagerListClient() {
                       <span style={{ fontSize: "0.875rem", color: "#ef4444" }}>역할 없음</span>
                     )}
                   </td>
-                  <td style={{ padding: "1rem", color: "var(--text-secondary)" }}>
+                  <td style={{ padding: "1rem", color: "var(--text-secondary)", whiteSpace: "nowrap" }}>
                     {new Date(manager.createdAt).toLocaleDateString()}
                   </td>
-                  <td style={{ padding: "1rem", textAlign: "right" }}>
+                  <td style={{ padding: "1rem", textAlign: "right", whiteSpace: "nowrap" }}>
                     <button 
                       onClick={() => handleEdit(manager)}
                       style={{ padding: "0.5rem 1rem", background: "#f3f4f6", border: "1px solid var(--glass-border)", borderRadius: "8px", cursor: "pointer", marginRight: "0.5rem", fontWeight: 500 }}

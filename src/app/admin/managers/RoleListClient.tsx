@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import RoleFormModal, { RoleData } from "./RoleFormModal";
+import RoleFormModal, { RoleData, AVAILABLE_PERMISSIONS } from "./RoleFormModal";
 import ConfirmModal from "@/components/admin/ConfirmModal";
 
 export default function RoleListClient() {
@@ -104,30 +104,33 @@ export default function RoleListClient() {
           <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "800px" }}>
             <thead>
               <tr style={{ borderBottom: "2px solid #f3f4f6", textAlign: "left" }}>
-                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600 }}>역할명</th>
-                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600 }}>부여된 권한</th>
-                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600 }}>소속 운영진 수</th>
-                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600, textAlign: "right" }}>관리</th>
+                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600, whiteSpace: "nowrap" }}>역할명</th>
+                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600, whiteSpace: "nowrap" }}>부여된 권한</th>
+                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600, whiteSpace: "nowrap" }}>소속 운영진 수</th>
+                <th style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 600, textAlign: "right", whiteSpace: "nowrap" }}>관리</th>
               </tr>
             </thead>
             <tbody>
               {roles.map(role => (
                 <tr key={role.id} style={{ borderBottom: "1px solid #f3f4f6" }}>
-                  <td style={{ padding: "1rem", fontWeight: 700 }}>{role.name}</td>
+                  <td style={{ padding: "1rem", fontWeight: 700, whiteSpace: "nowrap" }}>{role.name}</td>
                   <td style={{ padding: "1rem" }}>
                     <div style={{ display: "flex", flexWrap: "wrap", gap: "0.25rem" }}>
-                      {role.permissions.map((p: string) => (
-                        <span key={p} style={{ fontSize: "0.75rem", background: "#f3f4f6", padding: "0.25rem 0.5rem", borderRadius: "4px" }}>
-                          {p}
-                        </span>
-                      ))}
+                      {role.permissions.map((p: string) => {
+                        const permLabel = AVAILABLE_PERMISSIONS.find(perm => perm.id === p)?.label || p;
+                        return (
+                          <span key={p} style={{ fontSize: "0.75rem", background: "#f3f4f6", padding: "0.25rem 0.5rem", borderRadius: "4px" }}>
+                            {permLabel}
+                          </span>
+                        );
+                      })}
                       {role.permissions.length === 0 && <span style={{ fontSize: "0.875rem", color: "#ef4444" }}>권한 없음</span>}
                     </div>
                   </td>
-                  <td style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 500 }}>
+                  <td style={{ padding: "1rem", color: "var(--text-secondary)", fontWeight: 500, whiteSpace: "nowrap" }}>
                     {role._count?.admins || 0}명
                   </td>
-                  <td style={{ padding: "1rem", textAlign: "right" }}>
+                  <td style={{ padding: "1rem", textAlign: "right", whiteSpace: "nowrap" }}>
                     <button 
                       onClick={() => handleEdit(role)}
                       style={{ padding: "0.5rem 1rem", background: "#f3f4f6", border: "1px solid var(--glass-border)", borderRadius: "8px", cursor: "pointer", marginRight: "0.5rem", fontWeight: 500 }}
