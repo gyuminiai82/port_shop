@@ -221,7 +221,9 @@ export default function InquiryListClient({ inquiries, currentPage, totalPages }
                 value={answerInput}
                 onChange={(e) => setAnswerInput(e.target.value)}
                 placeholder="답변 내용을 상세히 입력해주세요."
-                style={{ width: "100%", height: "150px", padding: "1rem", borderRadius: "8px", border: "1px solid var(--glass-border)", outline: "none", resize: "vertical", fontFamily: "inherit" }}
+                style={{ width: "100%", height: "150px", padding: "1rem", borderRadius: "8px", border: "1px solid #d1d5db", background: "#fdfdfd", outline: "none", resize: "vertical", fontFamily: "inherit", fontSize: "0.9375rem" }}
+                onFocus={(e) => e.target.style.borderColor = "var(--accent-color)"}
+                onBlur={(e) => e.target.style.borderColor = "#d1d5db"}
               />
             </div>
 
