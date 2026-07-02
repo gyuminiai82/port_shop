@@ -3,16 +3,34 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function AdminLoginPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("admin@shop.com");
+  const [password, setPassword] = useState("password123");
   const router = useRouter();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const [isPending, setIsPending] = useState(false);
+
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email === "admin@minstudio.app" && password === "admin1234!") {
-      router.push("/admin");
-    } else {
-      alert("이메일 또는 비밀번호가 일치하지 않습니다.");
+    setIsPending(true);
+    
+    try {
+      const res = await fetch("/api/admin/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password })
+      });
+
+      if (res.ok) {
+        // 로그인 성공: 현재 페이지 새로고침(또는 강제 리다이렉트)하여 미들웨어/레이아웃 검사 통과
+        window.location.href = "/admin/orders";
+      } else {
+        const data = await res.json().catch(() => ({}));
+        alert(data.error || "이메일 또는 비밀번호가 일치하지 않습니다.");
+      }
+    } catch (err) {
+      alert("로그인 처리 중 오류가 발생했습니다.");
+    } finally {
+      setIsPending(false);
     }
   };
 
@@ -31,7 +49,7 @@ export default function AdminLoginPage() {
               type="email" 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="admin@minstudio.app"
+              placeholder="admin@shop.com"
               required
               style={{ width: "100%", padding: "1rem", borderRadius: "12px", border: "1px solid var(--glass-border)", background: "#f8f9fc", outline: "none", fontSize: "1rem" }}
             />
@@ -50,9 +68,10 @@ export default function AdminLoginPage() {
           
           <button 
             type="submit"
-            style={{ width: "100%", padding: "1.25rem", marginTop: "1rem", background: "var(--accent-color)", color: "white", border: "none", borderRadius: "12px", fontSize: "1.125rem", fontWeight: 700, cursor: "pointer", transition: "all 0.2s" }}
+            disabled={isPending}
+            style={{ width: "100%", padding: "1.25rem", marginTop: "1rem", background: "var(--accent-color)", color: "white", border: "none", borderRadius: "12px", fontSize: "1.125rem", fontWeight: 700, cursor: isPending ? "not-allowed" : "pointer", opacity: isPending ? 0.7 : 1, transition: "all 0.2s" }}
           >
-            로그인
+            {isPending ? "로그인 중..." : "로그인"}
           </button>
         </form>
       </div>
