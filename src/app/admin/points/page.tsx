@@ -24,10 +24,10 @@ export default async function AdminPointsPage() {
         </div>
       </header>
 
-      <div className="glass" style={{ background: "white", padding: "1.5rem", borderRadius: "24px", boxShadow: "0 10px 40px rgba(0,0,0,0.05)", overflowX: "auto" }}>
+      <div className="glass" style={{ background: "white", padding: "2rem", borderRadius: "24px", boxShadow: "0 10px 40px rgba(0,0,0,0.05)", overflowX: "auto" }}>
         <table style={{ width: "100%", borderCollapse: "collapse", tableLayout: "fixed", minWidth: "800px" }}>
           <thead>
-            <tr style={{ borderBottom: "2px solid var(--glass-border)", color: "var(--text-secondary)", textAlign: "left" }}>
+            <tr style={{ borderBottom: "2px solid #f1f5f9", color: "#64748b", textAlign: "left" }}>
               <th style={{ width: "20%", padding: "1rem", fontWeight: 600 }}>일시</th>
               <th style={{ width: "20%", padding: "1rem", fontWeight: 600 }}>고객명</th>
               <th style={{ width: "25%", padding: "1rem", fontWeight: 600 }}>고객 계정</th>

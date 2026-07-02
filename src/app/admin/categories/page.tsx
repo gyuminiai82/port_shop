@@ -22,7 +22,7 @@ export default async function AdminCategoriesPage() {
         </button>
       </header>
 
-      <div className="glass" style={{ background: "white", padding: "1.5rem", borderRadius: "24px", boxShadow: "0 10px 40px rgba(0,0,0,0.05)", overflowX: "auto" }}>
+      <div className="glass" style={{ background: "white", padding: "2rem", borderRadius: "24px", boxShadow: "0 10px 40px rgba(0,0,0,0.05)", overflowX: "auto" }}>
         <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", tableLayout: "fixed", minWidth: "600px" }}>
           <thead>
             <tr style={{ borderBottom: "2px solid #f1f5f9", color: "#64748b" }}>

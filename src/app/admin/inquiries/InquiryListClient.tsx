@@ -83,7 +83,7 @@ export default function InquiryListClient({ inquiries, currentPage, totalPages, 
 
   return (
     <div>
-      <div className="glass" style={{ background: "white", padding: "1.5rem", borderRadius: "24px", boxShadow: "0 10px 40px rgba(0,0,0,0.05)" }}>
+      <div className="glass" style={{ background: "white", padding: "2rem", borderRadius: "24px", boxShadow: "0 10px 40px rgba(0,0,0,0.05)" }}>
         
         {/* 검색창 */}
         <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "1.5rem" }}>
@@ -107,7 +107,7 @@ export default function InquiryListClient({ inquiries, currentPage, totalPages, 
         <div style={{ overflowX: "auto" }}>
           <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "900px", textAlign: "left", tableLayout: "fixed" }}>
             <thead>
-              <tr style={{ borderBottom: "2px solid #f3f4f6", color: "var(--text-secondary)" }}>
+              <tr style={{ borderBottom: "2px solid #f1f5f9", color: "#64748b" }}>
                 <th style={{ width: "10%", padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>상태</th>
                 <th style={{ width: "10%", padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>문의 유형</th>
                 <th style={{ width: "35%", padding: "1rem", fontWeight: 600, whiteSpace: "nowrap" }}>제목</th>

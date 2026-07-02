@@ -27,7 +27,17 @@ type Order = {
   } | null;
 };
 
-export default function OrderListClient({ orders }: { orders: Order[] }) {
+export default function OrderListClient({ 
+  orders, 
+  currentPage, 
+  totalPages, 
+  searchQuery 
+}: { 
+  orders: Order[],
+  currentPage: number,
+  totalPages: number,
+  searchQuery: string
+}) {
   const router = useRouter();
   
   // 모달 상태 관리
@@ -40,6 +50,12 @@ export default function OrderListClient({ orders }: { orders: Order[] }) {
   const [errorMessage, setErrorMessage] = useState("");
   
   const [isUpdating, setIsUpdating] = useState(false);
+  const [searchInput, setSearchInput] = useState(searchQuery);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    router.push(`/admin/orders?page=1&q=${encodeURIComponent(searchInput)}`);
+  };
 
   // 모달 열기
   const openModal = (order: Order) => {
@@ -107,10 +123,30 @@ export default function OrderListClient({ orders }: { orders: Order[] }) {
 
   return (
     <div>
-      <div className="glass" style={{ background: "white", borderRadius: "16px", overflow: "hidden", border: "1px solid var(--glass-border)", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.05)" }}>
+      <div className="glass" style={{ background: "white", padding: "2rem", borderRadius: "24px", boxShadow: "0 10px 40px rgba(0,0,0,0.05)", overflowX: "auto" }}>
+        
+        {/* 검색창 */}
+        <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "1.5rem" }}>
+          <form onSubmit={handleSearch} style={{ display: "flex", gap: "0.5rem" }}>
+            <input 
+              type="text" 
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+              placeholder="주문번호, 수령인, 송장번호"
+              style={{ padding: "0.5rem 1rem", borderRadius: "8px", border: "1px solid #e2e8f0", outline: "none", width: "250px" }}
+            />
+            <button 
+              type="submit"
+              style={{ padding: "0.5rem 1rem", borderRadius: "8px", background: "#f3f4f6", border: "1px solid #e2e8f0", fontWeight: 600, cursor: "pointer", color: "var(--text-primary)" }}
+            >
+              검색
+            </button>
+          </form>
+        </div>
+
         <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", tableLayout: "fixed", minWidth: "1000px" }}>
           <thead>
-            <tr style={{ background: "#f9fafb", borderBottom: "1px solid #e5e7eb" }}>
+            <tr style={{ borderBottom: "2px solid #f1f5f9", color: "#64748b" }}>
               <th style={{ width: "20%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>주문일시/주문번호</th>
               <th style={{ width: "30%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>주문 상품</th>
               <th style={{ width: "15%", padding: "1rem 1.5rem", fontWeight: 600, color: "#4b5563", fontSize: "0.875rem" }}>총 결제금액</th>
@@ -173,6 +209,48 @@ export default function OrderListClient({ orders }: { orders: Order[] }) {
           </tbody>
         </table>
       </div>
+
+      {/* 페이징 컨트롤 */}
+      {totalPages > 1 && (
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "0.5rem", marginTop: "2rem" }}>
+          <button 
+            onClick={() => router.push(`/admin/orders?page=${Math.max(1, currentPage - 1)}${searchQuery ? `&q=${encodeURIComponent(searchQuery)}` : ''}`)}
+            disabled={currentPage === 1}
+            style={{ padding: "0.5rem 1rem", borderRadius: "8px", border: "1px solid #e2e8f0", background: "white", cursor: currentPage === 1 ? "not-allowed" : "pointer", opacity: currentPage === 1 ? 0.5 : 1 }}
+          >
+            이전
+          </button>
+          
+          <div style={{ display: "flex", gap: "0.25rem" }}>
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map(pageNum => (
+              <button
+                key={pageNum}
+                onClick={() => router.push(`/admin/orders?page=${pageNum}${searchQuery ? `&q=${encodeURIComponent(searchQuery)}` : ''}`)}
+                style={{
+                  width: "2.5rem", height: "2.5rem",
+                  borderRadius: "8px",
+                  border: pageNum === currentPage ? "none" : "1px solid #e2e8f0",
+                  background: pageNum === currentPage ? "var(--accent-color)" : "white",
+                  color: pageNum === currentPage ? "white" : "#374151",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  display: "flex", alignItems: "center", justifyContent: "center"
+                }}
+              >
+                {pageNum}
+              </button>
+            ))}
+          </div>
+
+          <button 
+            onClick={() => router.push(`/admin/orders?page=${Math.min(totalPages, currentPage + 1)}${searchQuery ? `&q=${encodeURIComponent(searchQuery)}` : ''}`)}
+            disabled={currentPage === totalPages}
+            style={{ padding: "0.5rem 1rem", borderRadius: "8px", border: "1px solid #e2e8f0", background: "white", cursor: currentPage === totalPages ? "not-allowed" : "pointer", opacity: currentPage === totalPages ? 0.5 : 1 }}
+          >
+            다음
+          </button>
+        </div>
+      )}
 
       {/* 상태 변경 모달 */}
       {selectedOrder && (

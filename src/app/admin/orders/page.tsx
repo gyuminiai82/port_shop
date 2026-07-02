@@ -2,26 +2,47 @@ import { prisma } from "@/lib/prisma";
 import OrderListClient from "./OrderListClient";
 import { requireAdmin } from "@/lib/requireAdmin";
 
-// 이 페이지는 항상 최신 데이터를 불러와야 합니다.
 export const dynamic = "force-dynamic";
 
-export default async function AdminOrdersPage() {
-  await requireAdmin();
+export default async function AdminOrdersPage({ searchParams }: { searchParams: Promise<{ page?: string, q?: string }> }) {
+  await requireAdmin("ORDERS");
 
-  const orders = await prisma.mIN_SHOP_ORDER.findMany({
-    orderBy: { createdAt: "desc" },
-    include: {
-      items: {
-        include: {
-          product: {
-            select: { name: true }
+  const { page, q } = await searchParams;
+  const currentPage = Number(page) || 1;
+  const take = 10;
+  const skip = (currentPage - 1) * take;
+
+  const whereCondition: any = {};
+  if (q && q.trim() !== "") {
+    whereCondition.OR = [
+      { id: { contains: q, mode: 'insensitive' } },
+      { delivery: { recipient: { contains: q, mode: 'insensitive' } } },
+      { delivery: { trackingNo: { contains: q, mode: 'insensitive' } } }
+    ];
+  }
+
+  const [orders, totalCount] = await Promise.all([
+    prisma.mIN_SHOP_ORDER.findMany({
+      where: whereCondition,
+      orderBy: { createdAt: "desc" },
+      skip,
+      take,
+      include: {
+        items: {
+          include: {
+            product: {
+              select: { name: true }
+            }
           }
-        }
-      },
-      payment: true,
-      delivery: true,
-    }
-  });
+        },
+        payment: true,
+        delivery: true,
+      }
+    }),
+    prisma.mIN_SHOP_ORDER.count({ where: whereCondition })
+  ]);
+
+  const totalPages = Math.ceil(totalCount / take);
 
   return (
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1rem" }}>
@@ -32,7 +53,12 @@ export default async function AdminOrdersPage() {
         </div>
       </header>
 
-      <OrderListClient orders={orders} />
+      <OrderListClient 
+        orders={orders} 
+        currentPage={currentPage}
+        totalPages={totalPages}
+        searchQuery={q || ""}
+      />
     </div>
   );
 }

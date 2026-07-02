@@ -28,7 +28,7 @@ export default function ProductListClient({
   };
 
   return (
-    <div className="glass" style={{ background: "white", padding: "1.5rem", borderRadius: "24px", boxShadow: "0 10px 40px rgba(0,0,0,0.05)" }}>
+    <div className="glass" style={{ background: "white", padding: "2rem", borderRadius: "24px", boxShadow: "0 10px 40px rgba(0,0,0,0.05)" }}>
       {/* 카테고리 필터 */}
       <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "1.5rem" }}>
         <select 

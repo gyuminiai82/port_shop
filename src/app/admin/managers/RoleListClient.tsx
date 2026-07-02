@@ -103,7 +103,7 @@ export default function RoleListClient() {
         <div style={{ overflowX: "auto" }}>
           <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "800px", tableLayout: "fixed" }}>
             <thead>
-              <tr style={{ borderBottom: "2px solid #f3f4f6", textAlign: "left" }}>
+              <tr style={{ borderBottom: "2px solid #f1f5f9", textAlign: "left" }}>
                 <th style={{ width: "20%", padding: "1rem", color: "var(--text-secondary)", fontWeight: 600, whiteSpace: "nowrap" }}>역할명</th>
                 <th style={{ width: "40%", padding: "1rem", color: "var(--text-secondary)", fontWeight: 600, whiteSpace: "nowrap" }}>부여된 권한</th>
                 <th style={{ width: "20%", padding: "1rem", color: "var(--text-secondary)", fontWeight: 600, whiteSpace: "nowrap" }}>소속 운영진 수</th>
