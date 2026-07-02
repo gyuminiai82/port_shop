@@ -5,7 +5,7 @@ import { prisma } from "@/lib/prisma";
 
 export async function requireAdmin(requiredPermission?: string) {
   const cookieStore = await cookies();
-  const sessionToken = cookieStore.get("session")?.value;
+  const sessionToken = cookieStore.get("admin_session")?.value;
   
   if (!sessionToken) {
     redirect("/admin/login");

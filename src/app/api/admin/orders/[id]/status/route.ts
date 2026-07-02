@@ -5,7 +5,7 @@ import { redis } from "@/lib/redis";
 
 async function getAdminUser() {
   const cookieStore = await cookies();
-  const sessionToken = cookieStore.get("session")?.value;
+  const sessionToken = cookieStore.get("admin_session")?.value;
   if (!sessionToken) return null;
   const sessionData = await redis.get(`session:${sessionToken}`);
   if (!sessionData) return null;

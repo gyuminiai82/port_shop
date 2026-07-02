@@ -36,7 +36,7 @@ export async function POST(request: Request) {
 
       // 4. 쿠키 설정
       const cookieStore = await cookies();
-      cookieStore.set("session", sessionToken, {
+      cookieStore.set("admin_session", sessionToken, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
         sameSite: "lax",
