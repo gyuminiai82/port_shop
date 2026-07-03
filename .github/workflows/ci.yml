@@ -15,8 +15,9 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
-            if [ ! -d "/home/gyumin/port_shop" ]; then
-              echo "프로젝트 폴더가 없습니다. 최초 1회 git clone을 진행합니다."
+            if [ ! -d "/home/gyumin/port_shop/.git" ]; then
+              echo "Git 저장소가 아닙니다. 기존 폴더를 삭제하고 새로 clone 합니다."
+              rm -rf /home/gyumin/port_shop
               cd /home/gyumin
               git clone https://github.com/gyuminiai82/port_shop.git
               cd port_shop
@@ -27,4 +28,4 @@ jobs:
             fi
             
             # 도커 이미지를 새로 빌드하고 재시작합니다.
-            docker-compose up -d --build
+            docker compose up -d --build
