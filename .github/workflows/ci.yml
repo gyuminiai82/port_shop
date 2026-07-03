@@ -1,87 +1,25 @@
-name: CI/CD Pipeline
+name: Deploy to Production
 
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  build-and-push:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Log in to the Container registry
-        if: github.event_name != 'pull_request'
-        uses: docker/login-action@v3
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags: |
-            type=raw,value=latest,enable={{is_default_branch}}
-
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-
   deploy:
-    needs: build-and-push
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout repository (for docker-compose.yml)
-        uses: actions/checkout@v4
-
-      - name: Copy docker-compose.yml to Server
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.SSH_PASSWORD }}
-          port: 22
-          source: "docker-compose.yml"
-          target: ${{ secrets.PROJECT_PATH }}
-
-      - name: Deploy to Server
+      - name: Deploy to Server via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.SSH_PASSWORD }}
-          port: 22
+          host: gyumini.iptime.org
+          username: gyumin
+          password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd ${{ secrets.PROJECT_PATH }}
+            # 실서버 내부의 프로젝트 폴더로 이동합니다.
+            cd /home/gyumin/port_shop
             
-            # GHCR 로그인 (서버 측 이미지 Pull 권한)
-            echo ${{ secrets.GHCR_PAT }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            # 최신 코드를 다운로드 받습니다.
+            git pull origin main
             
-            # 최신 도커 이미지 다운로드
-            docker-compose pull
-            
-            # 기존 컨테이너 중지 및 새 컨테이너 띄우기
-            docker-compose up -d
-            
-            # 불필요한 과거 쓰레기 이미지 정리
-            docker image prune -f
+            # 도커 이미지를 새로 빌드하고 재시작합니다.
+            docker-compose up -d --build

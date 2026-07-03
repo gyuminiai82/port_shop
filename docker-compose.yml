@@ -3,7 +3,6 @@ version: '3.8'
 services:
   port_shop_app:
     container_name: port_shop_app
-    image: ghcr.io/gyuminiai82/port_shop:latest
     build:
       context: .
       dockerfile: Dockerfile
