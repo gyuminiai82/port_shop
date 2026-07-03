@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CancelOrderButton from "./CancelOrderButton";
 import CancelOrderItemButton from "./CancelOrderItemButton";
+import ConfirmDeliveryButton from "./ConfirmDeliveryButton";
 
 async function getUserSession() {
   const cookieStore = await cookies();
@@ -81,6 +82,9 @@ export default async function ProfileOrdersPage() {
                   {(order.status === 'PAID' || order.status === 'PENDING') && 
                    (!order.delivery || (order.delivery.status !== 'SHIPPING' && order.delivery.status !== 'DELIVERED')) && (
                     <CancelOrderButton orderId={order.id} />
+                  )}
+                  {order.delivery && order.delivery.status === 'SHIPPING' && (
+                    <ConfirmDeliveryButton orderId={order.id} />
                   )}
                 </div>
               </div>
