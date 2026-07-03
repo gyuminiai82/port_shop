@@ -43,6 +43,17 @@ export function proxy(request: NextRequest) {
     return NextResponse.redirect(redirectUrl);
   }
 
+  // 3. 어드민 페이지 라우트 보호
+  if (request.nextUrl.pathname.startsWith('/admin')) {
+    if (request.nextUrl.pathname === '/admin/login') {
+      return NextResponse.next();
+    }
+    const adminSession = request.cookies.get('admin_session');
+    if (!adminSession) {
+      return NextResponse.redirect(new URL('/admin/login', request.url));
+    }
+  }
+
   return NextResponse.next();
 }
 
