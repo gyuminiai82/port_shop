@@ -11,9 +11,9 @@ jobs:
       - name: Deploy to Server via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: gyumini.iptime.org
-          username: gyumin
-          password: ${{ secrets.SERVER_PASSWORD }}
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
           script: |
             if [ ! -d "/home/gyumin/port_shop" ]; then
               echo "프로젝트 폴더가 없습니다. 최초 1회 git clone을 진행합니다."

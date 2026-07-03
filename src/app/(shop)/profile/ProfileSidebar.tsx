@@ -41,12 +41,12 @@ export default function ProfileSidebar({ userName, userTier, userPoints }: { use
                 padding: "1rem 1.25rem",
                 borderRadius: "12px",
                 textDecoration: "none",
-                fontWeight: isActive ? 700 : 500,
-                color: isActive ? "var(--accent-color)" : "var(--text-secondary)",
-                background: isActive ? "var(--bg-color)" : "transparent",
-                border: isActive ? "1px solid var(--glass-border)" : "1px solid transparent",
-                transition: "all 0.2s ease",
-                boxShadow: isActive ? "0 4px 12px rgba(0,0,0,0.03)" : "none",
+                fontWeight: isActive ? 700 : 600,
+                color: isActive ? "white" : "var(--text-primary)",
+                background: isActive ? "var(--accent-color)" : "transparent",
+                border: "none",
+                transition: "all 0.2s cubic-bezier(0.16, 1, 0.3, 1)",
+                boxShadow: isActive ? "0 4px 12px rgba(59, 130, 246, 0.3)" : "none",
                 boxSizing: "border-box"
               }}
             >

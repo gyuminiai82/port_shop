@@ -43,7 +43,7 @@ export default async function CartPage() {
   const items = cart?.items || [];
 
   return (
-    <main className="main-content" style={{ padding: "4rem 2rem", maxWidth: "1200px", margin: "0 auto", marginTop: "var(--nav-height)" }}>
+    <main className="main-content" style={{ padding: "4rem 2rem", width: "100%", maxWidth: "1440px", margin: "0 auto", marginTop: "var(--nav-height)", boxSizing: "border-box" }}>
       <h1 style={{ fontSize: "2.5rem", fontWeight: 800, marginBottom: "3rem", letterSpacing: "-0.04em" }}>장바구니</h1>
       <CartClient items={items} />
     </main>
