@@ -8,15 +8,20 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3001:3001"
+    env_file:
+      - .env
     environment:
       - NODE_ENV=production
-      # Uncomment and replace with your actual DB URL when deploying
-      # - DATABASE_URL=mysql://user:password@host:3306/dbname
-      # - REDIS_URL=redis://localhost:6379
     volumes:
       # 상품 업로드 이미지 유지를 위한 볼륨 설정
       - port_shop_uploads:/app/public/uploads
     restart: unless-stopped
+    networks:
+      - proxy-network
 
 volumes:
   port_shop_uploads:
+
+networks:
+  proxy-network:
+    external: true
