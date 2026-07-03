@@ -15,11 +15,16 @@ jobs:
           username: gyumin
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            # 실서버 내부의 프로젝트 폴더로 이동합니다.
-            cd /home/gyumin/port_shop
-            
-            # 최신 코드를 다운로드 받습니다.
-            git pull origin main
+            if [ ! -d "/home/gyumin/port_shop" ]; then
+              echo "프로젝트 폴더가 없습니다. 최초 1회 git clone을 진행합니다."
+              cd /home/gyumin
+              git clone https://github.com/gyuminiai82/port_shop.git
+              cd port_shop
+            else
+              echo "프로젝트 폴더가 존재합니다. 최신 코드를 당겨옵니다."
+              cd /home/gyumin/port_shop
+              git pull origin main
+            fi
             
             # 도커 이미지를 새로 빌드하고 재시작합니다.
             docker-compose up -d --build
