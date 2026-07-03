@@ -27,5 +27,9 @@ jobs:
               git pull origin main
             fi
             
+            # 런타임 및 빌드 시 필요한 .env 파일을 서버에 동적으로 자동 생성합니다.
+            echo 'REDIS_URL="redis://:03040228@192.168.0.2:6379/0"' > .env
+            echo 'DATABASE_URL="postgresql://gyumin:03040228@192.168.0.2:5432/PORT_SHOP?schema=public"' >> .env
+            
             # 도커 이미지를 새로 빌드하고 재시작합니다.
             docker compose up -d --build
