@@ -5,7 +5,7 @@ generator client {
 
 generator client_shop {
   provider = "prisma-client-js"
-  output   = "../../port_shop/src/lib/generated/prisma"
+  output   = "./"
   binaryTargets = ["native", "linux-musl", "linux-musl-openssl-3.0.x"]
 }
 
