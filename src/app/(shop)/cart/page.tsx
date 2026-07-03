@@ -17,7 +17,7 @@ export default async function CartPage() {
   const user = await getUser();
   
   if (!user) {
-    redirect(`https://auth.minstudio.app/login?redirect=http://localhost:3001/cart`);
+    redirect(`https://auth.minstudio.app/login?redirect=${process.env.NEXT_PUBLIC_SITE_URL}/cart`);
   }
 
   const cart = await prisma.mIN_SHOP_CART.findUnique({

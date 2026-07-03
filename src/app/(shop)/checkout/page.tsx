@@ -17,7 +17,7 @@ export default async function CheckoutPage() {
   const user = await getUser();
   
   if (!user) {
-    redirect(`https://auth.minstudio.app/login?redirect=http://localhost:3001/checkout`);
+    redirect(`https://auth.minstudio.app/login?redirect=${process.env.NEXT_PUBLIC_SITE_URL}/checkout`);
   }
 
   const dbUser = await prisma.mIN_SHOP_USER.findUnique({

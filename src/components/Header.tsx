@@ -48,16 +48,16 @@ export default async function Header() {
               <Link href="/cart" className="btn btn-secondary" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}>
                 장바구니
               </Link>
-              <Link href="https://auth.minstudio.app/logout?redirect=http://localhost:3001" className="btn btn-secondary" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}>
+              <Link href={`https://auth.minstudio.app/logout?redirect=${process.env.NEXT_PUBLIC_SITE_URL}`} className="btn btn-secondary" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}>
                 로그아웃
               </Link>
             </>
           ) : (
             <>
-              <Link href="https://auth.minstudio.app/login?redirect=http://localhost:3001" className="btn btn-primary" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}>
+              <Link href={`https://auth.minstudio.app/login?redirect=${process.env.NEXT_PUBLIC_SITE_URL}`} className="btn btn-primary" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}>
                 로그인
               </Link>
-              <Link href="https://auth.minstudio.app/register?redirect=http://localhost:3001" className="btn" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem", color: "var(--text-primary)" }}>
+              <Link href={`https://auth.minstudio.app/register?redirect=${process.env.NEXT_PUBLIC_SITE_URL}`} className="btn" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem", color: "var(--text-primary)" }}>
                 회원가입
               </Link>
             </>

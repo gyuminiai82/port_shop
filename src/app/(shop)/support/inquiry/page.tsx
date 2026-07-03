@@ -17,7 +17,7 @@ export default async function InquiryPage() {
   const user = await getUser();
   
   if (!user) {
-    redirect(`https://auth.minstudio.app/login?redirect=http://localhost:3001/support/inquiry`);
+    redirect(`https://auth.minstudio.app/login?redirect=${process.env.NEXT_PUBLIC_SITE_URL}/support/inquiry`);
   }
 
   const inquiries = await prisma.mIN_SHOP_INQUIRY.findMany({

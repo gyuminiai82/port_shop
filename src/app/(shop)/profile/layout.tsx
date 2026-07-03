@@ -20,7 +20,7 @@ export default async function ProfileLayout({ children }: { children: React.Reac
   const sessionUser = await getUserSession();
   
   if (!sessionUser) {
-    redirect("https://auth.minstudio.app/login?redirect=http://localhost:3001/profile");
+    redirect(`https://auth.minstudio.app/login?redirect=${process.env.NEXT_PUBLIC_SITE_URL}/profile`);
   }
 
   let user = await prisma.mIN_SHOP_USER.findUnique({
