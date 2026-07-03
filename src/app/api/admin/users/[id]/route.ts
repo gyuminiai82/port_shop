@@ -11,7 +11,7 @@ async function getAdminUser() {
   if (!sessionData) return null;
   
   const user = JSON.parse(sessionData as string);
-  if (user.email !== "admin@minstudio.app") return null;
+  if (user.type !== "ADMIN") return null;
   
   return user;
 }
