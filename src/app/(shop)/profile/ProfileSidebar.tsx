@@ -8,7 +8,8 @@ export default function ProfileSidebar({ userName, userTier, userPoints }: { use
 
   const navItems = [
     { name: "결제 및 주문 내역", path: "/profile" },
-    { name: "내 정보 수정", path: "/profile/edit" }
+    { name: "내 정보 수정", path: "/profile/edit" },
+    { name: "포인트 혜택 안내", path: "/profile/benefits" }
   ];
 
   return (

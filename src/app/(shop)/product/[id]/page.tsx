@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ProductActions from "@/components/ProductActions";
 import RecentlyViewedTracker from "@/components/RecentlyViewedTracker";
+import ReviewForm from "@/components/ReviewForm";
 
 export default async function ProductDetailPage(props: { params: Promise<{ id: string }> }) {
   const { id } = await props.params;
@@ -175,6 +176,8 @@ export default async function ProductDetailPage(props: { params: Promise<{ id: s
           <div className="glass" style={{ padding: "5rem 4rem", borderRadius: "32px", marginBottom: "4rem" }}>
             <h2 style={{ fontSize: "2rem", fontWeight: 800, marginBottom: "3rem" }}>고객 리뷰 <span style={{ color: "var(--accent-color)" }}>{product.reviews.length}</span></h2>
             
+            <ReviewForm productId={product.id} />
+
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", gap: "2rem" }}>
               {reviewsWithUser.length > 0 ? (
                 reviewsWithUser.map(review => (
