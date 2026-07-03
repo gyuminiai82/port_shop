@@ -24,7 +24,8 @@ jobs:
             else
               echo "프로젝트 폴더가 존재합니다. 최신 코드를 당겨옵니다."
               cd /home/gyumin/port_shop
-              git pull origin main
+              git fetch --all
+              git reset --hard origin/main
             fi
             
             # 런타임 및 빌드 시 필요한 .env 파일을 서버에 동적으로 자동 생성합니다.
