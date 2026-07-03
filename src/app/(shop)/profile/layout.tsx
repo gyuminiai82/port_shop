@@ -41,7 +41,7 @@ export default async function ProfileLayout({ children }: { children: React.Reac
   }
 
   return (
-    <main className="main-content" style={{ padding: "4rem 2rem", width: "1200px", margin: "0 auto", marginTop: "var(--nav-height)" }}>
+    <main className="main-content" style={{ padding: "4rem 2rem", width: "100%", maxWidth: "1200px", margin: "0 auto", marginTop: "var(--nav-height)" }}>
       <div style={{ display: "grid", gridTemplateColumns: "300px 1fr", gap: "2rem", alignItems: "start" }}>
         <ProfileSidebar userName={user.name || "고객"} userTier={user.tier} userPoints={user.points} />
         <div className="profile-content-area" style={{ width: "100%", minWidth: 0 }}>

@@ -53,7 +53,7 @@ export default async function ProductDetailPage(props: { params: Promise<{ id: s
 
   return (
     <>
-      <main className="main-content" style={{ padding: "4rem 2rem", maxWidth: "1440px", margin: "0 auto", marginTop: "var(--nav-height)" }}>
+      <main className="main-content" style={{ padding: "4rem 2rem", maxWidth: "1200px", margin: "0 auto", marginTop: "var(--nav-height)" }}>
         
         {/* Product Layout */}
         <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "6rem", marginBottom: "8rem" }} className="product-detail-grid">

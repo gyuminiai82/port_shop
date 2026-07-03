@@ -63,7 +63,7 @@ export default async function CheckoutPage() {
   const orderId = `order_${new Date().getTime()}_${Math.random().toString(36).substring(2, 9)}`;
 
   return (
-    <main className="main-content" style={{ padding: "4rem 2rem", width: "100%", maxWidth: "1440px", margin: "0 auto", marginTop: "var(--nav-height)", boxSizing: "border-box" }}>
+    <main className="main-content" style={{ padding: "4rem 2rem", width: "100%", maxWidth: "1200px", margin: "0 auto", marginTop: "var(--nav-height)", boxSizing: "border-box" }}>
       <h1 style={{ fontSize: "2.5rem", fontWeight: 800, marginBottom: "3rem", letterSpacing: "-0.04em" }}>결제하기</h1>
       <CheckoutClient 
         user={dbUser} 
