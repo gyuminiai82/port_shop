@@ -5,9 +5,40 @@ import { notFound } from "next/navigation";
 import ProductActions from "@/components/ProductActions";
 import RecentlyViewedTracker from "@/components/RecentlyViewedTracker";
 import ReviewForm from "@/components/ReviewForm";
+import { cookies } from "next/headers";
+import { redis } from "@/lib/redis";
+
+async function getUserSession() {
+  const cookieStore = await cookies();
+  const sessionToken = cookieStore.get("session")?.value;
+  if (!sessionToken) return null;
+  const sessionData = await redis.get(`session:${sessionToken}`);
+  if (!sessionData) return null;
+  return JSON.parse(sessionData as string);
+}
 
 export default async function ProductDetailPage(props: { params: Promise<{ id: string }> }) {
   const { id } = await props.params;
+
+  const sessionUser = await getUserSession();
+  let hasPurchased = false;
+
+  if (sessionUser) {
+    const purchaseRecord = await prisma.mIN_SHOP_ORDER_ITEM.findFirst({
+      where: {
+        productId: id,
+        order: {
+          userId: sessionUser.id,
+          delivery: {
+            status: "DELIVERED"
+          }
+        }
+      }
+    });
+    if (purchaseRecord) {
+      hasPurchased = true;
+    }
+  }
 
   const product = await prisma.mIN_SHOP_PRODUCT.findUnique({
     where: { id },
@@ -176,7 +207,15 @@ export default async function ProductDetailPage(props: { params: Promise<{ id: s
           <div className="glass" style={{ padding: "5rem 4rem", borderRadius: "32px", marginBottom: "4rem" }}>
             <h2 style={{ fontSize: "2rem", fontWeight: 800, marginBottom: "3rem" }}>고객 리뷰 <span style={{ color: "var(--accent-color)" }}>{product.reviews.length}</span></h2>
             
-            <ReviewForm productId={product.id} />
+            {hasPurchased ? (
+              <ReviewForm productId={product.id} />
+            ) : (
+              <div style={{ background: "rgba(0,0,0,0.02)", border: "1px dashed var(--glass-border)", padding: "3rem", borderRadius: "24px", marginBottom: "2rem", textAlign: "center" }}>
+                <div style={{ fontSize: "2rem", marginBottom: "1rem" }}>📦</div>
+                <h3 style={{ fontSize: "1.25rem", fontWeight: 700, marginBottom: "0.5rem", color: "var(--text-primary)" }}>리뷰 작성 권한이 없습니다</h3>
+                <p style={{ color: "var(--text-secondary)", lineHeight: 1.6 }}>이 상품을 실제로 구매하시고 배송이 완료된 고객님만 리뷰를 남기실 수 있습니다.<br/>(상품 구매를 통해 소중한 경험을 들려주세요!)</p>
+              </div>
+            )}
 
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", gap: "2rem" }}>
               {reviewsWithUser.length > 0 ? (

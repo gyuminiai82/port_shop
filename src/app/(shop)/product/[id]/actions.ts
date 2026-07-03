@@ -2,34 +2,52 @@
 
 import { prisma } from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
+import { cookies } from "next/headers";
+import { redis } from "@/lib/redis";
+
+async function getUserSession() {
+  const cookieStore = await cookies();
+  const sessionToken = cookieStore.get("session")?.value;
+  if (!sessionToken) return null;
+  const sessionData = await redis.get(`session:${sessionToken}`);
+  if (!sessionData) return null;
+  return JSON.parse(sessionData as string);
+}
 
 export async function createReview(productId: string, rating: number, content: string) {
   try {
-    // 임시로 데이터베이스에 있는 첫 번째 유저를 작성자로 사용합니다.
-    let user = await prisma.mIN_SHOP_USER.findFirst();
+    const sessionUser = await getUserSession();
+    if (!sessionUser) {
+      return { success: false, error: "로그인이 필요합니다." };
+    }
 
-    if (!user) {
-      // 유저가 하나도 없다면 임시 유저를 생성합니다.
-      user = await prisma.mIN_SHOP_USER.create({
-        data: {
-          email: `temp_${Date.now()}@test.com`,
-          name: "게스트 유저",
+    // 구매(배송완료) 여부 검증
+    const hasPurchased = await prisma.mIN_SHOP_ORDER_ITEM.findFirst({
+      where: {
+        productId,
+        order: {
+          userId: sessionUser.id,
+          delivery: {
+            status: "DELIVERED"
+          }
         }
-      });
+      }
+    });
+
+    if (!hasPurchased) {
+      return { success: false, error: "이 상품을 구매하고 배송이 완료된 고객만 리뷰를 작성할 수 있습니다." };
     }
 
     await prisma.mIN_SHOP_REVIEW.create({
       data: {
         productId,
-        userId: user.id,
+        userId: sessionUser.id,
         rating,
         content,
       }
     });
 
-    // 해당 페이지 데이터를 다시 가져오도록 캐시 무효화
     revalidatePath(`/product/${productId}`);
-    
     return { success: true };
   } catch (error) {
     console.error("Failed to create review:", error);
