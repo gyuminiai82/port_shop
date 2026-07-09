@@ -56,13 +56,13 @@ export default async function AdminDashboardPage() {
 
   return (
     <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
-      <header style={{ marginBottom: "2rem" }}>
-        <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "#1f2937" }}>대시보드</h1>
+      <header className="dashboard-header">
+        <h1>대시보드</h1>
         <p style={{ color: "#64748b", marginTop: "0.5rem" }}>쇼핑몰의 핵심 지표와 최근 주요 현황을 한눈에 파악하세요.</p>
       </header>
       
       {/* 1. 요약 카드 섹션 */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", marginBottom: "2rem" }}>
+      <div className="dashboard-grid">
         
         {/* 매출 카드 (강조형) */}
         <div style={{ background: "linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%)", padding: "2rem", borderRadius: "24px", boxShadow: "0 10px 25px rgba(59,130,246,0.3)", color: "white", position: "relative", overflow: "hidden" }}>
@@ -88,7 +88,7 @@ export default async function AdminDashboardPage() {
       </div>
 
       {/* 2. 최근 데이터 섹션 (2단 그리드) */}
-      <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: "1.5rem" }}>
+      <div className="dashboard-recent">
         
         {/* 최근 주문 내역 */}
         <div style={{ background: "white", padding: "2rem", borderRadius: "24px", boxShadow: "0 4px 20px rgba(0,0,0,0.03)", border: "1px solid #f1f5f9" }}>

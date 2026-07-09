@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import AdminSidebar from "./AdminSidebar";
+import "./admin.css";
 
 export default function AdminLayout({
   children,
@@ -16,10 +17,10 @@ export default function AdminLayout({
   }
 
   return (
-    <div style={{ display: "flex", minHeight: "100vh", background: "#f8f9fc" }}>
+    <div className="admin-layout">
       <AdminSidebar />
 
-      <main style={{ flex: 1, padding: "3rem 4rem", overflowY: "auto", overflowX: "hidden" }}>
+      <main className="admin-main">
         {children}
       </main>
     </div>

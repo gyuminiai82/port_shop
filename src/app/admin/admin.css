@@ -1,0 +1,133 @@
+/* src/app/admin/admin.css */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f8f9fc;
+}
+
+.admin-sidebar {
+  width: 260px;
+  background: #1f2937;
+  color: white;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+}
+
+.sidebar-menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.sidebar-footer {
+  padding: 0 2rem;
+  margin-top: 1rem;
+}
+
+.admin-main {
+  flex: 1;
+  padding: 3rem 4rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Dashboard page specific */
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1f2937;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-recent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Override global min-width for Admin pages */
+html:has(.admin-layout),
+body:has(.admin-layout) {
+  min-width: auto !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .dashboard-recent {
+    grid-template-columns: 1fr;
+  }
+  .admin-main {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-layout {
+    flex-direction: column;
+  }
+  
+  .admin-sidebar {
+    width: 100%;
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .sidebar-header {
+    margin-bottom: 1rem;
+    padding: 0;
+    text-align: center;
+  }
+
+  .sidebar-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    gap: 0.5rem;
+  }
+  
+  .sidebar-menu > a {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem;
+    margin-bottom: 0 !important;
+    flex: 0 0 auto;
+  }
+
+  .sidebar-footer {
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .admin-main {
+    padding: 1.5rem 1rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+}
