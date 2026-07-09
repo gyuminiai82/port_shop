@@ -43,15 +43,15 @@ export default function AdminSidebar() {
   });
 
   return (
-    <aside style={{ width: "260px", background: "#1f2937", color: "white", padding: "2rem 0", display: "flex", flexDirection: "column", flexShrink: 0 }}>
-      <div style={{ padding: "0 2rem", marginBottom: "3rem" }}>
+    <aside className="admin-sidebar">
+      <div className="sidebar-header">
         <h1 style={{ fontSize: "1.5rem", fontWeight: 800, letterSpacing: "-0.05em" }}>
           MINSTUDIO
           <span style={{ display: "block", fontSize: "0.875rem", fontWeight: 500, color: "#9ca3af", marginTop: "0.25rem" }}>Admin Center</span>
         </h1>
       </div>
 
-      <div role="navigation" style={{ flex: 1, display: "flex", flexDirection: "column", gap: "0.5rem", padding: "0 1rem" }}>
+      <div role="navigation" className="sidebar-menu">
           {filteredNavItems.map((item) => {
             const isActive = item.href === "/admin" 
               ? pathname === "/admin" 
@@ -79,7 +79,7 @@ export default function AdminSidebar() {
           })}
       </div>
 
-      <div style={{ padding: "0 2rem" }}>
+      <div className="sidebar-footer">
         <Link href="/" style={{ color: "#9ca3af", textDecoration: "none", fontSize: "0.875rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
           <span>←</span> 쇼핑몰로 돌아가기
         </Link>
